@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="cc" red="cc" type="rgb"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[360, 250]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace pref="254" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane3" alignment="1" min="-2" pref="96" max="-2" attributes="1"/>
+                  <Component id="jLabel1" alignment="1" min="-2" pref="96" max="-2" attributes="1"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="jLabel14" max="32767" attributes="0"/>
+                      <Component id="RB_BetaFull" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="RB_BetaAvg" alignment="1" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace pref="189" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jLabel1" min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane3" min="-2" pref="192" max="-2" attributes="1"/>
+              <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="RB_BetaFull" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="RB_BetaAvg" min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <Component id="jLabel14" min="-2" pref="57" max="-2" attributes="0"/>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JRadioButton" name="RB_BetaFull">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="&#x3b2; Full Energy Spectrum"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="RB_BetaAvg">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x3b2; Average Energy Spectrum"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="12" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Radionuclide"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JList" name="radList">
+          <Properties>
+            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+              <StringArray count="327">
+                <StringItem index="0" value="Ac-225"/>
+                <StringItem index="1" value="Ag-109m"/>
+                <StringItem index="2" value="Ag-111"/>
+                <StringItem index="3" value="Al-28"/>
+                <StringItem index="4" value="Am-241"/>
+                <StringItem index="5" value="Ar-37"/>
+                <StringItem index="6" value="As-72"/>
+                <StringItem index="7" value="As-73"/>
+                <StringItem index="8" value="As-74"/>
+                <StringItem index="9" value="As-76"/>
+                <StringItem index="10" value="As-77"/>
+                <StringItem index="11" value="At-211"/>
+                <StringItem index="12" value="At-217"/>
+                <StringItem index="13" value="At-218"/>
+                <StringItem index="14" value="Au-195"/>
+                <StringItem index="15" value="Au-195m"/>
+                <StringItem index="16" value="Au-198"/>
+                <StringItem index="17" value="Au-198m"/>
+                <StringItem index="18" value="Au-199"/>
+                <StringItem index="19" value="Ba-128"/>
+                <StringItem index="20" value="Ba-131"/>
+                <StringItem index="21" value="Ba-131m"/>
+                <StringItem index="22" value="Ba-133"/>
+                <StringItem index="23" value="Ba-133m"/>
+                <StringItem index="24" value="Ba-135m"/>
+                <StringItem index="25" value="Ba-137m"/>
+                <StringItem index="26" value="Ba-140"/>
+                <StringItem index="27" value="Be-7"/>
+                <StringItem index="28" value="Bi-204"/>
+                <StringItem index="29" value="Bi-206"/>
+                <StringItem index="30" value="Bi-207"/>
+                <StringItem index="31" value="Bi-210"/>
+                <StringItem index="32" value="Bi-211"/>
+                <StringItem index="33" value="Bi-212"/>
+                <StringItem index="34" value="Bi-213"/>
+                <StringItem index="35" value="Bi-214"/>
+                <StringItem index="36" value="Br-75"/>
+                <StringItem index="37" value="Br-76"/>
+                <StringItem index="38" value="Br-77"/>
+                <StringItem index="39" value="Br-77m"/>
+                <StringItem index="40" value="Br-80"/>
+                <StringItem index="41" value="Br-80m"/>
+                <StringItem index="42" value="Br-82"/>
+                <StringItem index="43" value="C-10"/>
+                <StringItem index="44" value="C-11"/>
+                <StringItem index="45" value="C-14"/>
+                <StringItem index="46" value="Ca-45"/>
+                <StringItem index="47" value="Ca-47"/>
+                <StringItem index="48" value="Ca-49"/>
+                <StringItem index="49" value="Cd-109"/>
+                <StringItem index="50" value="Cd-115"/>
+                <StringItem index="51" value="Cd-115m"/>
+                <StringItem index="52" value="Ce-134"/>
+                <StringItem index="53" value="Ce-139"/>
+                <StringItem index="54" value="Ce-141"/>
+                <StringItem index="55" value="Cf-252"/>
+                <StringItem index="56" value="Cl-34"/>
+                <StringItem index="57" value="Cl-34m"/>
+                <StringItem index="58" value="Cl-36"/>
+                <StringItem index="59" value="Cl-38"/>
+                <StringItem index="60" value="Co-55"/>
+                <StringItem index="61" value="Co-56"/>
+                <StringItem index="62" value="Co-57"/>
+                <StringItem index="63" value="Co-58"/>
+                <StringItem index="64" value="Co-60"/>
+                <StringItem index="65" value="Cr-48"/>
+                <StringItem index="66" value="Cr-51"/>
+                <StringItem index="67" value="Cs-128"/>
+                <StringItem index="68" value="Cs-129"/>
+                <StringItem index="69" value="Cs-130"/>
+                <StringItem index="70" value="Cs-131"/>
+                <StringItem index="71" value="Cs-132"/>
+                <StringItem index="72" value="Cs-134"/>
+                <StringItem index="73" value="Cs-134m"/>
+                <StringItem index="74" value="Cs-137"/>
+                <StringItem index="75" value="Cu-57"/>
+                <StringItem index="76" value="Cu-61"/>
+                <StringItem index="77" value="Cu-62"/>
+                <StringItem index="78" value="Cu-64"/>
+                <StringItem index="79" value="Cu-67"/>
+                <StringItem index="80" value="Cy-157"/>
+                <StringItem index="81" value="Cy-159"/>
+                <StringItem index="82" value="Cy-165"/>
+                <StringItem index="83" value="Cy-166"/>
+                <StringItem index="84" value="Er-165"/>
+                <StringItem index="85" value="Er-167m"/>
+                <StringItem index="86" value="Er-169"/>
+                <StringItem index="87" value="Er-171"/>
+                <StringItem index="88" value="Eu-145"/>
+                <StringItem index="89" value="Eu-147"/>
+                <StringItem index="90" value="Eu-152"/>
+                <StringItem index="91" value="Eu-152m"/>
+                <StringItem index="92" value="Eu-154"/>
+                <StringItem index="93" value="F-17"/>
+                <StringItem index="94" value="F-18"/>
+                <StringItem index="95" value="Fe-52"/>
+                <StringItem index="96" value="Fe-55"/>
+                <StringItem index="97" value="Fe-59"/>
+                <StringItem index="98" value="Fr-221"/>
+                <StringItem index="99" value="Ga-66"/>
+                <StringItem index="100" value="Ga-67"/>
+                <StringItem index="101" value="Ga-68"/>
+                <StringItem index="102" value="Ga-72"/>
+                <StringItem index="103" value="Gd-147"/>
+                <StringItem index="104" value="Gd-148"/>
+                <StringItem index="105" value="Gd-153"/>
+                <StringItem index="106" value="Ge-68"/>
+                <StringItem index="107" value="Ge-77"/>
+                <StringItem index="108" value="H-3"/>
+                <StringItem index="109" value="Hg-195"/>
+                <StringItem index="110" value="Hg-195m"/>
+                <StringItem index="111" value="Hg-197"/>
+                <StringItem index="112" value="Hg-197m"/>
+                <StringItem index="113" value="Hg-203"/>
+                <StringItem index="114" value="Hg-206"/>
+                <StringItem index="115" value="Ho-166"/>
+                <StringItem index="116" value="I-120"/>
+                <StringItem index="117" value="I-120m"/>
+                <StringItem index="118" value="I-122"/>
+                <StringItem index="119" value="I-123"/>
+                <StringItem index="120" value="I-124"/>
+                <StringItem index="121" value="I-125"/>
+                <StringItem index="122" value="I-130"/>
+                <StringItem index="123" value="I-131"/>
+                <StringItem index="124" value="I-132"/>
+                <StringItem index="125" value="I-132m"/>
+                <StringItem index="126" value="I-133"/>
+                <StringItem index="127" value="I-135"/>
+                <StringItem index="128" value="In-109"/>
+                <StringItem index="129" value="In-109m"/>
+                <StringItem index="130" value="In-110"/>
+                <StringItem index="131" value="In-110m"/>
+                <StringItem index="132" value="In-111"/>
+                <StringItem index="133" value="In-111m"/>
+                <StringItem index="134" value="In-133m"/>
+                <StringItem index="135" value="In-114"/>
+                <StringItem index="136" value="In-114m"/>
+                <StringItem index="137" value="In-115m"/>
+                <StringItem index="138" value="Ir-190"/>
+                <StringItem index="139" value="Ir-190m"/>
+                <StringItem index="140" value="Ir-190n"/>
+                <StringItem index="141" value="Ir-191m"/>
+                <StringItem index="142" value="Ir-192"/>
+                <StringItem index="143" value="Ir-192m"/>
+                <StringItem index="144" value="K-38"/>
+                <StringItem index="145" value="K-40"/>
+                <StringItem index="146" value="K-42"/>
+                <StringItem index="147" value="K-43"/>
+                <StringItem index="148" value="Kr-77"/>
+                <StringItem index="149" value="Kr-79"/>
+                <StringItem index="150" value="Kr-81"/>
+                <StringItem index="151" value="Kr-81m"/>
+                <StringItem index="152" value="Kr-83m"/>
+                <StringItem index="153" value="Kr-85"/>
+                <StringItem index="154" value="Kr-85m"/>
+                <StringItem index="155" value="La-134"/>
+                <StringItem index="156" value="La-140"/>
+                <StringItem index="157" value="Lu-176"/>
+                <StringItem index="158" value="Lu-177"/>
+                <StringItem index="159" value="Mg-28"/>
+                <StringItem index="160" value="Mn-51"/>
+                <StringItem index="161" value="Mn-52"/>
+                <StringItem index="162" value="Mn-52m"/>
+                <StringItem index="163" value="Mn-54"/>
+                <StringItem index="164" value="Mo-99"/>
+                <StringItem index="165" value="N-13"/>
+                <StringItem index="166" value="Na-22"/>
+                <StringItem index="167" value="Na-24"/>
+                <StringItem index="168" value="Nb-90"/>
+                <StringItem index="169" value="Nb-95"/>
+                <StringItem index="170" value="Nb-95m"/>
+                <StringItem index="171" value="Nd-140"/>
+                <StringItem index="172" value="Ne-19"/>
+                <StringItem index="173" value="Ni-57"/>
+                <StringItem index="174" value="Ni-63"/>
+                <StringItem index="175" value="O-14"/>
+                <StringItem index="176" value="O-15"/>
+                <StringItem index="177" value="O-19"/>
+                <StringItem index="178" value="Os-190m"/>
+                <StringItem index="179" value="Os-191"/>
+                <StringItem index="180" value="Os-191m"/>
+                <StringItem index="181" value="P-30"/>
+                <StringItem index="182" value="P-32"/>
+                <StringItem index="183" value="P-33"/>
+                <StringItem index="184" value="Pb-201"/>
+                <StringItem index="185" value="Pb-201m"/>
+                <StringItem index="186" value="Pb-203"/>
+                <StringItem index="187" value="Pb-204m"/>
+                <StringItem index="188" value="Pb-209"/>
+                <StringItem index="189" value="Pb-210"/>
+                <StringItem index="190" value="Pb-211"/>
+                <StringItem index="191" value="Pb-212"/>
+                <StringItem index="192" value="Pb-214"/>
+                <StringItem index="193" value="Pd-100"/>
+                <StringItem index="194" value="Pd-103"/>
+                <StringItem index="195" value="Pd-109"/>
+                <StringItem index="196" value="Pm-145"/>
+                <StringItem index="197" value="Pm-147"/>
+                <StringItem index="198" value="Pm-149"/>
+                <StringItem index="199" value="Po-209"/>
+                <StringItem index="200" value="Po-210"/>
+                <StringItem index="201" value="Po-211"/>
+                <StringItem index="202" value="Po-212"/>
+                <StringItem index="203" value="Po-213"/>
+                <StringItem index="204" value="Po-214"/>
+                <StringItem index="205" value="Po-215"/>
+                <StringItem index="206" value="Po-216"/>
+                <StringItem index="207" value="Po-218"/>
+                <StringItem index="208" value="Pr-140"/>
+                <StringItem index="209" value="Pr-143"/>
+                <StringItem index="210" value="Pt-191"/>
+                <StringItem index="211" value="Pt-193"/>
+                <StringItem index="212" value="Pt-193m"/>
+                <StringItem index="213" value="Pt-195m"/>
+                <StringItem index="214" value="Pt-197"/>
+                <StringItem index="215" value="Pt-197m"/>
+                <StringItem index="216" value="Pu-238"/>
+                <StringItem index="217" value="Ra-223"/>
+                <StringItem index="218" value="Ra-224"/>
+                <StringItem index="219" value="Ra-226"/>
+                <StringItem index="220" value="Rb-77"/>
+                <StringItem index="221" value="Rb-79"/>
+                <StringItem index="222" value="Rb-81"/>
+                <StringItem index="223" value="Rb-82"/>
+                <StringItem index="224" value="Rb-82m"/>
+                <StringItem index="225" value="Rb-83"/>
+                <StringItem index="226" value="Rb-84"/>
+                <StringItem index="227" value="Rb-86"/>
+                <StringItem index="228" value="Re-186"/>
+                <StringItem index="229" value="Re-188"/>
+                <StringItem index="230" value="Rh-100"/>
+                <StringItem index="231" value="Rh-103m"/>
+                <StringItem index="232" value="Rh-105"/>
+                <StringItem index="233" value="Rn-219"/>
+                <StringItem index="234" value="Rn-220"/>
+                <StringItem index="235" value="Rn-222"/>
+                <StringItem index="236" value="Ru-97"/>
+                <StringItem index="237" value="Ru-103"/>
+                <StringItem index="238" value="Ru-105"/>
+                <StringItem index="239" value="S-35"/>
+                <StringItem index="240" value="Sb-118"/>
+                <StringItem index="241" value="Sb-118m"/>
+                <StringItem index="242" value="Sb-119"/>
+                <StringItem index="243" value="Sc-46"/>
+                <StringItem index="244" value="Sc-47"/>
+                <StringItem index="245" value="Sc-49"/>
+                <StringItem index="246" value="Se-72"/>
+                <StringItem index="247" value="Se-73"/>
+                <StringItem index="248" value="Se-73m"/>
+                <StringItem index="249" value="Se-75"/>
+                <StringItem index="250" value="Se-77m"/>
+                <StringItem index="251" value="Sm145"/>
+                <StringItem index="252" value="Sm-153"/>
+                <StringItem index="253" value="Sn-110"/>
+                <StringItem index="254" value="Sn-113"/>
+                <StringItem index="255" value="Sn-113m"/>
+                <StringItem index="256" value="Sn-117m"/>
+                <StringItem index="257" value="Sr-82"/>
+                <StringItem index="258" value="Sr-83"/>
+                <StringItem index="259" value="Sr-85"/>
+                <StringItem index="260" value="Sr-85m"/>
+                <StringItem index="261" value="Sr-87m"/>
+                <StringItem index="262" value="Sr-89"/>
+                <StringItem index="263" value="Sr-90"/>
+                <StringItem index="264" value="Ta-177"/>
+                <StringItem index="265" value="Ta-178m"/>
+                <StringItem index="266" value="Ta-179"/>
+                <StringItem index="267" value="Ta-182"/>
+                <StringItem index="268" value="Ta-182m"/>
+                <StringItem index="269" value="Tb-146"/>
+                <StringItem index="270" value="Tb-149"/>
+                <StringItem index="271" value="Tb-152"/>
+                <StringItem index="272" value="Tb-157"/>
+                <StringItem index="273" value="Tc-92"/>
+                <StringItem index="274" value="Tc-93"/>
+                <StringItem index="275" value="Tc-94"/>
+                <StringItem index="276" value="Tc-94m"/>
+                <StringItem index="277" value="Tc-95"/>
+                <StringItem index="278" value="Tc-95m"/>
+                <StringItem index="279" value="Tc-96"/>
+                <StringItem index="280" value="Tc-97m"/>
+                <StringItem index="281" value="Tc-99"/>
+                <StringItem index="282" value="Tc-99m"/>
+                <StringItem index="283" value="Te-118"/>
+                <StringItem index="284" value="Te-123"/>
+                <StringItem index="285" value="Te-123m"/>
+                <StringItem index="286" value="Th-227"/>
+                <StringItem index="287" value="Tl-200"/>
+                <StringItem index="288" value="Tl-201"/>
+                <StringItem index="289" value="Tl-202"/>
+                <StringItem index="290" value="Tl-206"/>
+                <StringItem index="291" value="Tl-207"/>
+                <StringItem index="292" value="Tl-208"/>
+                <StringItem index="293" value="Tl-209"/>
+                <StringItem index="294" value="Tl-210"/>
+                <StringItem index="295" value="Tm-167"/>
+                <StringItem index="296" value="Tm-170"/>
+                <StringItem index="297" value="Tm-171"/>
+                <StringItem index="298" value="V-48"/>
+                <StringItem index="299" value="W-177"/>
+                <StringItem index="300" value="W-178"/>
+                <StringItem index="301" value="W-181"/>
+                <StringItem index="302" value="W-188"/>
+                <StringItem index="303" value="Xe-122"/>
+                <StringItem index="304" value="Xe-123"/>
+                <StringItem index="305" value="Xe-127"/>
+                <StringItem index="306" value="Xe-127m"/>
+                <StringItem index="307" value="Xe-129m"/>
+                <StringItem index="308" value="Xe-131m"/>
+                <StringItem index="309" value="Xe-133"/>
+                <StringItem index="310" value="Xe-135"/>
+                <StringItem index="311" value="Xe-135m"/>
+                <StringItem index="312" value="Y-86"/>
+                <StringItem index="313" value="Y-87"/>
+                <StringItem index="314" value="Y-88"/>
+                <StringItem index="315" value="Y-89m"/>
+                <StringItem index="316" value="Y-90"/>
+                <StringItem index="317" value="Y-91"/>
+                <StringItem index="318" value="Y-91m"/>
+                <StringItem index="319" value="Yb-169"/>
+                <StringItem index="320" value="Zn-62"/>
+                <StringItem index="321" value="Zn-63"/>
+                <StringItem index="322" value="Zn-65"/>
+                <StringItem index="323" value="Zn-69"/>
+                <StringItem index="324" value="Zn-69m"/>
+                <StringItem index="325" value="Zr-89"/>
+                <StringItem index="326" value="Zr-95"/>
+              </StringArray>
+            </Property>
+            <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="99" red="0" type="rgb"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

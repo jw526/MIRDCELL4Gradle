@@ -1,0 +1,25 @@
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+description = 'cell dosimetry app'
+
+mainClassName = 'MIRDCell.StartApp'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+dependencies {
+    testImplementation     'junit:junit:4.13'
+    compile "com.skew.slsqp4j:slsqp4j:0.1"
+    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
+    // https://mvnrepository.com/artifact/org.jfree/jcommon
+    implementation group: 'org.jfree', name: 'jcommon', version: '1.0.17'
+    // https://mvnrepository.com/artifact/org.jfree/jfreechart
+    implementation group: 'org.jfree', name: 'jfreechart', version: '1.0.14'
+    // https://mvnrepository.com/artifact/org.netbeans.external/swing-layout-1.0.4
+    implementation group: 'org.netbeans.external', name: 'swing-layout-1.0.4', version: 'RELEASE731'
+}
