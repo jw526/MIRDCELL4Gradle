@@ -1489,6 +1489,7 @@ public class Home1 extends JApplet implements ActionListener {
 
         jTextField15.setText("100");
         jTextField15.setName("rn"); // NOI18N
+        jTextField15.setPreferredSize(new java.awt.Dimension(75, 35));
         jTextField15.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField15KeyReleased(evt);
@@ -1497,6 +1498,7 @@ public class Home1 extends JApplet implements ActionListener {
 
         jTextField16.setText("0");
         jTextField16.setName("rn"); // NOI18N
+        jTextField16.setPreferredSize(new java.awt.Dimension(75, 35));
         jTextField16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField16ActionPerformed(evt);
@@ -1510,6 +1512,7 @@ public class Home1 extends JApplet implements ActionListener {
 
         jTextField17.setText("0");
         jTextField17.setName("rn"); // NOI18N
+        jTextField17.setPreferredSize(new java.awt.Dimension(75, 35));
         jTextField17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField17ActionPerformed(evt);
@@ -1555,14 +1558,17 @@ public class Home1 extends JApplet implements ActionListener {
                             .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                             .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jTextField15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(jPanel42Layout.createSequentialGroup()
+                                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel42Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(62, 62, 62))
+                        .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)))
+                .addGap(40, 40, 40))
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1576,7 +1582,7 @@ public class Home1 extends JApplet implements ActionListener {
                             .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField16)
+                            .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1719,7 +1725,11 @@ public class Home1 extends JApplet implements ActionListener {
         jLabel68.setEnabled(true);
         jLabel16.setVisible(true);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/equation.gif"))); // NOI18N
+        try{
+            jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/equation.gif"))); // NOI18N
+        } catch (Exception e){
+            jLabel10.setText("<html><h2>P = e <sup>-&alpha;<sub>self</sub>D<sub>self</sub>-&beta;<sub>self</sub>D<sup>2</sup><sub>self</sub></sup> &times; e <sup>-&alpha;<sub>cross</sub>D<sub>cross</sub>-&beta;<sub>cross</sub>D<sup>2</sup><sub>cross</sub></sup></h2></html>");
+        }
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -1741,9 +1751,9 @@ public class Home1 extends JApplet implements ActionListener {
                             .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(24, 24, 24)))
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel59)
-                            .addComponent(jLabel64)
+                            .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1762,8 +1772,8 @@ public class Home1 extends JApplet implements ActionListener {
                                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(427, Short.MAX_VALUE))))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -10799,8 +10809,8 @@ public class Home1 extends JApplet implements ActionListener {
         double surv = 1.0;
         int radTgt = drugPanels[drug].jComboBox2.getSelectedIndex();
         Double[] af = drugPanels[drug].aFractions;
-        double L = drugPanels[drug].L;
-        double Tau = drugPanels[drug].tiac * 3600.0 * drugPanels[drug].amt;
+        double L = inputCheck.getNum(drugPanels[drug].TF_L);
+        double Tau = inputCheck.getNum(drugPanels[drug].TF_TimeIntegratedAct) * 3600.0 * inputCheck.getNum(drugPanels[drug].TF_Amount);
         double acti = drugList.get(drug).get(index) * L * sa * Math.pow(10, 9) / (6.02 * Math.pow(10, 23));
         double dose = 0;
         switch (radTgt){
