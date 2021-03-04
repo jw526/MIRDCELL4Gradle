@@ -147,6 +147,7 @@ public class SurvivalCalculationComplex {
 				}
 
 				// then dose that cell feom each labeled cell
+                                double tempdose = 0;
 				for (int ICODE = 0; ICODE < 11; ICODE++) {
                                     
 					for (int j = 0; j < labelCell; j++) {
@@ -164,11 +165,7 @@ public class SurvivalCalculationComplex {
 						}
 
 						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][0] * celllabel[j][5] * activityFractions[2]; /* cross, C->C */
-						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][1] * celllabel[j][5] * activityFractions[3]; /* cross, CS->C */
-						cell[i][7] += crossDoses[i][ICODE];
-                                                 //jianchao 4/23/20
-//                                                crossDose[ICODE+1][0] += SValues[ICODE + 1][(int)dist - 2 * rCell][0] * celllabel[j][5] * activityFractions[2]; /* cross, C->C */
-//                                                crossDose[ICODE+1][1] += SValues[ICODE + 1][(int)dist - 2 * rCell][1] * celllabel[j][5] * activityFractions[3]; /* cross, CS->C */
+						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][1] * celllabel[j][5] * activityFractions[3]; /* cross, CS->C */                                            
 					}
                                        
                                         
@@ -180,7 +177,9 @@ public class SurvivalCalculationComplex {
 							labelRad += crossDoses[i][ICODE];
 						}
 					}
+                                        tempdose += crossDoses[i][ICODE];
 				}
+                                cell[i][7] = tempdose;
                                 
 
 				rand = random.nextDouble();
@@ -485,7 +484,7 @@ public class SurvivalCalculationComplex {
 						}
 					}
 				}
-
+                                double tempdose = 0;
 				for (int ICODE = 0; ICODE < 11; ICODE++) {
 					for (int j = 0; j < labelCell; j++) {
 						x = celllabel[j][1] - cell[i][1];
@@ -503,12 +502,8 @@ public class SurvivalCalculationComplex {
 
 						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][2] * celllabel[j][5] * activityFractions[1]; /* cross, N->N */
 						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][3] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->N */
-						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][4] * celllabel[j][5] * activityFractions[3]; /* cross, CS->N */
-						cell[i][7] += crossDoses[i][ICODE];
-                                                //jianchao 3/24/20
-//                                                crossDose[ICODE+1][2] += SValues[ICODE + 1][(int)dist - 2 * rCell][2] * celllabel[j][5] * activityFractions[1]; /* cross, N->N */
-//                                                crossDose[ICODE+1][3] += SValues[ICODE + 1][(int)dist - 2 * rCell][3] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->N */
-//                                                crossDose[ICODE+1][4] += SValues[ICODE + 1][(int)dist - 2 * rCell][4] * celllabel[j][5] * activityFractions[3]; /* cross, CS->N */
+						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][4] * celllabel[j][5] * activityFractions[3]; /* cross, CS->N */						
+                                                
 					}
 
 					if (complexRadiobiologicalParams[ICODE][6] != 0 || complexRadiobiologicalParams[ICODE][7] != 0) {
@@ -518,18 +513,13 @@ public class SurvivalCalculationComplex {
 							labelRad += crossDoses[i][ICODE];
 						}
 					}
+                                        tempdose += crossDoses[i][ICODE];
 				}
-
+                                cell[i][7] = tempdose;
 				rand = random.nextDouble();
 				if (rand >= Survival[i] || coldLiving[i]) {
 					cell[i][0] = 0;
 				} 
-//                                else {
-//					allLive++;
-//					if (cell[i][4] != 0) {
-//						labeledLive++;
-//					}
-//				}
 
 				//update the progress bar
 				percent = ((double) i / (double) cellnumber) * (double) jWidth;
@@ -856,7 +846,7 @@ public class SurvivalCalculationComplex {
 						}
 					}
 				}
-
+                                double tempdose = 0;
 				for (int ICODE = 0; ICODE < 11; ICODE++) {
 					for (int j = 0; j < labelCell; j++) {
 						/* dose that cell from each labled cell */
@@ -875,11 +865,6 @@ public class SurvivalCalculationComplex {
 						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][5] * celllabel[j][5] * activityFractions[1]; /* cross, N->Cy */
 						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][7] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->Cy */
 						crossDoses[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][6] * celllabel[j][5] * activityFractions[3]; /* cross, CS->Cy */
-						cell[i][7] += crossDoses[i][ICODE];
-                                                //jianchao 4/23/20
-//                                                crossDose[ICODE+1][5] += SValues[ICODE + 1][(int)dist - 2 * rCell][5] * celllabel[j][5] * activityFractions[1]; /* cross, N->Cy */
-//                                                crossDose[ICODE+1][7] += SValues[ICODE + 1][(int)dist - 2 * rCell][7] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->Cy */
-//                                                crossDose[ICODE+1][6] += SValues[ICODE + 1][(int)dist - 2 * rCell][6] * celllabel[j][5] * activityFractions[3]; /* cross, CS->Cy */
 					}
 
 					if (complexRadiobiologicalParams[ICODE][6] != 0 || complexRadiobiologicalParams[ICODE][7] != 0) {
@@ -889,7 +874,9 @@ public class SurvivalCalculationComplex {
 							labelRad += crossDoses[i][ICODE];
 						}
 					}
+				tempdose += crossDoses[i][ICODE];
 				}
+                                cell[i][7] = tempdose;
 
 				rand = random.nextDouble();
 				if (rand >= Survival[i] || coldLiving[i]) {
@@ -1263,7 +1250,7 @@ public class SurvivalCalculationComplex {
 						}
 					}
 				}
-
+                                double tempdose = 0;
 				for (int ICODE = 0; ICODE < 11; ICODE++) {
 					for (int j = 0; j < labelCell; j++) {
 						/* dose that cell from each labled cell */
@@ -1286,20 +1273,11 @@ public class SurvivalCalculationComplex {
 						crossDoses2[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][5] * celllabel[j][5] * activityFractions[1]; /* cross, N->Cy */
 						crossDoses2[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][7] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->Cy */
 						crossDoses2[i][ICODE] += SValues[ICODE + 1][(int)dist - 2 * rCell][6] * celllabel[j][5] * activityFractions[3]; /* cross, CS->Cy */
-						cell[i][7] += crossDoses[i][ICODE];
-						cell[i][7] += crossDoses2[i][ICODE];
+
                                                 // jianchao wang for testing 
                                                 //System.out.print(i+" "+(ICODE+1) + " " +crossDoses[i][ICODE] + " ");
                                                 //System.out.print(crossDoses2[i][ICODE] + " ");
                                                 //System.out.println(cell[i][7]);
-                                                
-                                                //4/23/20 jianchao
-//                                                crossDose[ICODE+1][2] += SValues[ICODE + 1][(int)dist - 2 * rCell][2] * celllabel[j][5] * activityFractions[1]; /* cross, N->N */
-//                                                crossDose[ICODE+1][3] += SValues[ICODE + 1][(int)dist - 2 * rCell][3] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->N */
-//                                                crossDose[ICODE+1][4] += SValues[ICODE + 1][(int)dist - 2 * rCell][4] * celllabel[j][5] * activityFractions[3]; /* cross, CS->N */
-//                                                crossDose[ICODE+1][5] += SValues[ICODE + 1][(int)dist - 2 * rCell][5] * celllabel[j][5] * activityFractions[1]; /* cross, N->Cy */
-//                                                crossDose[ICODE+1][7] += SValues[ICODE + 1][(int)dist - 2 * rCell][7] * celllabel[j][5] * activityFractions[2]; /* cross, Cy->Cy */
-//                                                crossDose[ICODE+1][6] += SValues[ICODE + 1][(int)dist - 2 * rCell][6] * celllabel[j][5] * activityFractions[3]; /* cross, CS->Cy */
 					}
 
 					if (complexRadiobiologicalParams[ICODE][12] != 0 || complexRadiobiologicalParams[ICODE][13] != 0) {
@@ -1316,7 +1294,9 @@ public class SurvivalCalculationComplex {
 							labelRad2 += crossDoses2[i][ICODE];
 						}
 					}
+				tempdose += crossDoses[i][ICODE] + crossDoses2[i][ICODE];
 				}
+                                cell[i][7] = tempdose;
 
 				rand = random.nextDouble();
 				if (rand >= Survival[i] || coldLiving[i]) {

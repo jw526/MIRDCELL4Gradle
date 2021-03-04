@@ -76,7 +76,7 @@ public class RadialHistogram {
                                 seriesR.add(i, ulAvgCrossDose[i]);
                             }
                         }
-                        Ylab = " Mean Cross Dose To Unlabeled Cells";
+                        Ylab = " Mean Cross Dose To Unlabeled Cells (Gy)";
                         break;
                     
                     }
@@ -130,7 +130,7 @@ public class RadialHistogram {
                                 seriesR.add(i, ulAvgCrossDose[i]);
                             }
                         }
-                        Ylab = "Mean Cross Dose To Unlabeled Cells";
+                        Ylab = "Mean Cross Dose To Unlabeled Cells (Gy)";
                         break;
                     }
                 }

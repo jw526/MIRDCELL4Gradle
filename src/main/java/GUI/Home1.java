@@ -1739,41 +1739,44 @@ public class Home1 extends JApplet implements ActionListener {
             .addGroup(panel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(panel1Layout.createSequentialGroup()
-                            .addComponent(jLabel58)
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(panel1Layout.createSequentialGroup()
-                            .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(24, 24, 24)))
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel59)
-                            .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel58)
                             .addGroup(panel1Layout.createSequentialGroup()
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                                    .addComponent(jTextField34))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(427, Short.MAX_VALUE))))
+                                .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel59)
+                                    .addComponent(jLabel64)
+                                    .addGroup(panel1Layout.createSequentialGroup()
+                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                            .addComponent(jTextField34))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(panel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 415, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3040,7 +3043,8 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal Distribution (Random)", "Log-Normal Distribution (Random)", "Uniform Distribution (Random)", "Linear (Radial)", "Exponential (Radial)", "Polynomial (Radial)", "4 Par Log-Normal (Radial)", "Import CSV (r, relative A/cell) (Radial)" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal Distribution (Random)", "Log-Normal Distribution (Random)", "Uniform Distribution (Random)", "Linear (Radial)", "Exponential (Radial)", "Polynomial (Radial)", "4 Par Log-Normal (Radial)", "Import CSV (r, relative A/cell) (Radial)", "Import CSV (r, decay/cell) (Radial)" }));
+        jComboBox5.setSelectedIndex(2);
         jComboBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox5ActionPerformed(evt);
@@ -3109,7 +3113,7 @@ public class Home1 extends JApplet implements ActionListener {
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addComponent(jLabel52)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addComponent(jLabel47)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -5951,7 +5955,7 @@ public class Home1 extends JApplet implements ActionListener {
                     jLabel111.setVisible(false);
 
                     DefaultListSelectionModel model = new DefaultListSelectionModel();
-                    model.addSelectionInterval(0, 7);
+                    model.addSelectionInterval(0, 8);
                     RenderComboBox enableRenderer = new RenderComboBox(model);
                     jComboBox5.setRenderer(enableRenderer);
                     shapeModel = model;
@@ -6165,7 +6169,7 @@ public class Home1 extends JApplet implements ActionListener {
 	}//GEN-LAST:event_jTabbedPane2MouseClicked
 
 	private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-		//Alex Rosen 8/16/2016
+		//Multicelluler geometry tab: 3D Compute
 		long TS = System.currentTimeMillis();
 		if (TS - justRan < 500) {
 			// yes this is a stupid hacky fix but it works
@@ -7003,7 +7007,7 @@ public class Home1 extends JApplet implements ActionListener {
 			jTextField28.setText(String.format("%.3g%n", labelcellp));
 		} else if (jComboBox5.getSelectedIndex() == 7) {
 			// import CSV - user defined 
-                        //Jianchao 4/10/2020 To be modified 
+                        //Jianchao 4/10/2020 
 			double constantProvided = Double.parseDouble(jTextField6.getText()) / 100.0;
 			double b = Double.parseDouble(jTextField33.getText());
 			double shellWidth = 0.0;
@@ -7050,26 +7054,17 @@ public class Home1 extends JApplet implements ActionListener {
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
 			jTextField28.setText(String.format("%.3g%n", labelcellp));
         } else if (jComboBox5.getSelectedIndex() == 8) {
-			// exponential Distribution Non-Zero. Index = 4.
-			double constantProvided = 0;
-			double b = Double.parseDouble(jTextField33.getText());
-			double shellWidth = 0.0;
+			// user upload(r, decay/sec) 030121
+                        double shellWidth = 0.0;
 			if (!jTextField5.getText().isEmpty()) {
 				shellWidth = Double.parseDouble(jTextField5.getText());
 			}
 
-//			cell = ActivityExponentialNonZero.generateActivity(
-//					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
-//					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
-//					Shape,
-//					AccuActivity, b, constantProvided, MeanActivity, Tau,
-//					cell
-//			);
-                        cell = Activity.generateExponentialActivity(
+			cell = ActivityImport.generateActivity(
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					AccuActivity, b, constantProvided, MeanActivity, Tau,
+					radiusActivityMap,1.0, 1.0,
 					cell
 			);
 
@@ -7098,6 +7093,7 @@ public class Home1 extends JApplet implements ActionListener {
 					temp3++;
                                         labeledCellNum++;
 				}
+                                //System.err.println(cell[i][5]+" "+ cell[i][6]);
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
@@ -7577,14 +7573,12 @@ public class Home1 extends JApplet implements ActionListener {
 
 		// output the sctivity as a function of radius from center of mass. it should be noted that this is not necessarily distance from edge
 		jTextArea5.append("Activity | Dose as a function of radius (from the center of mass):\n");
-		jTextArea5.append("Radial position (um)\tActivity (Bq/labeled cell)\t   Dose(Gy)\n");
+		jTextArea5.append("Radial position (um)\tActivity (Bq/labeled cell)\tAvg Dose(Gy/labeled cell)\tAvg Self-Dose(Gy/labeled cell)Avg Cross-Dose(Gy/labeled cell)Avg Cross-Dose(Gy/unlabeled cell)\n");
 
 		DecimalFormat f = new DecimalFormat("0.000E0");
 
-		for (int i = 0; i < avgActivity.length; i++) {
-			if (avgActivity[i] != 0) {
-				jTextArea5.append("" + i + "\t\t" + f.format(avgActivity[i]) + "\t\t   " + f.format(avgDose[i]) + "\n");
-			}
+		for (int i = 0; i < avgActivity.length; i++) {			
+                    jTextArea5.append("" + i + "\t\t" + f.format(avgActivity[i]) + "\t\t   " + f.format(avgDose[i]) + "\t\t   "+ f.format(avgSelfDose[i]) + "\t\t   "+ f.format(avgCrossDose[i]) + "\t\t   "+ f.format(ulAvgCrossDose[i]) +"\n");			
 		}
 
 		// generate the data set
@@ -7650,6 +7644,11 @@ public class Home1 extends JApplet implements ActionListener {
 			jTextField9.setVisible(false);
 			jLabel50.setVisible(false);
                         jTextField29.setEnabled(true);
+                        
+                        jTextField29.setVisible(true);
+                        jTextField31.setVisible(true);
+                        jLabel48.setVisible(true);
+                        jLabel52.setVisible(true);
 		} else if (jComboBox5.getSelectedIndex() == 1) {
 			// log-normal distribution
                         DefaultListSelectionModel model = new DefaultListSelectionModel();
@@ -7666,6 +7665,11 @@ public class Home1 extends JApplet implements ActionListener {
 			jTextField9.setVisible(false);
 			jLabel50.setVisible(false);
                         jTextField29.setEnabled(true);
+                        
+                        jTextField29.setVisible(true);
+                        jTextField31.setVisible(true);
+                        jLabel48.setVisible(true);
+                        jLabel52.setVisible(true);
 		} else if (jComboBox5.getSelectedIndex() == 2) {
 			// uniform distribution
                         DefaultListSelectionModel model = new DefaultListSelectionModel();
@@ -7680,6 +7684,11 @@ public class Home1 extends JApplet implements ActionListener {
 			jTextField9.setVisible(false);
 			jLabel50.setVisible(false);
                         jTextField29.setEnabled(true);
+                        
+                        jTextField29.setVisible(true);
+                        jTextField31.setVisible(true);
+                        jLabel48.setVisible(true);
+                        jLabel52.setVisible(true);
 		} else if (jComboBox5.getSelectedIndex() == 3) {
 			// linear distribution
                         DefaultListSelectionModel model = new DefaultListSelectionModel();
@@ -7699,6 +7708,11 @@ public class Home1 extends JApplet implements ActionListener {
                             jTextField9.setVisible(false);
                             jLabel50.setVisible(false);
                             jTextField29.setEnabled(true);
+                            
+                            jTextField29.setVisible(true);
+                            jTextField31.setVisible(true);
+                            jLabel48.setVisible(true);
+                            jLabel52.setVisible(true);
                         }
 			
 		} else if (jComboBox5.getSelectedIndex() == 4) {
@@ -7714,9 +7728,6 @@ public class Home1 extends JApplet implements ActionListener {
                             jLabel57.setText("Exponential Factor:");
 
                             jTextField33.setText("" + (5.0 / Double.parseDouble(jTextField26.getText())));    // this is the 5/R from the paper
-                            // TODO this will not work for every case
-                            // TODO when Rod or cone have greater radii than height
-                            // TODO or when an ellipse has a longer long axis
 
                             jLabel27.setVisible(false);
                             jTextField6.setVisible(false);
@@ -7726,6 +7737,11 @@ public class Home1 extends JApplet implements ActionListener {
                             jTextField9.setVisible(false);
                             jLabel50.setVisible(false);
                             jTextField29.setEnabled(true);
+                            
+                            jTextField29.setVisible(true);
+                            jTextField31.setVisible(true);
+                            jLabel48.setVisible(true);
+                            jLabel52.setVisible(true);
                         }
 			
 		} else if (jComboBox5.getSelectedIndex() == 5) {
@@ -7749,9 +7765,6 @@ public class Home1 extends JApplet implements ActionListener {
                                     System.out.println(e.getMessage());
                             }
 
-                            //jComboBox2.setSelectedIndex(0);
-                            //jComboBox2.setEnabled(false);
-                            //jCheckBox1.setSelected(false);
                             jCheckBox1.setEnabled(true);
                             jTextField9.setVisible(false);
                             jLabel50.setVisible(false);
@@ -7760,6 +7773,11 @@ public class Home1 extends JApplet implements ActionListener {
                             jTextField33.setVisible(false);
                             jLabel27.setVisible(false);
                             jTextField6.setVisible(false);
+                            
+                            jTextField29.setVisible(true);
+                            jTextField31.setVisible(true);
+                            jLabel48.setVisible(true);
+                            jLabel52.setVisible(true);
                         }
 			
 		} else if (jComboBox5.getSelectedIndex() == 6) {
@@ -7791,10 +7809,15 @@ public class Home1 extends JApplet implements ActionListener {
                             jTextField14.setVisible(true);
                             jLabel104.setText("x0");
                             jTextField29.setEnabled(true);
+                            
+                            jTextField29.setVisible(true);
+                            jTextField31.setVisible(true);
+                            jLabel48.setVisible(true);
+                            jLabel52.setVisible(true);
                         }
 			
 		} else if (jComboBox5.getSelectedIndex() == 7) {
-			// user defined. Jianchao 4/9/20
+			// upload (r, relative acti/cell). Jianchao 4/9/20
                         DefaultListSelectionModel model = new DefaultListSelectionModel();
                         model.addSelectionInterval(0, 0);
                         RenderComboBox enableRenderer = new RenderComboBox(model);
@@ -7814,6 +7837,11 @@ public class Home1 extends JApplet implements ActionListener {
                             jTextField9.setVisible(false);
                             jTextField29.setEnabled(true);
                             jLabel50.setVisible(false);
+                            
+                            jTextField29.setVisible(true);
+                            jTextField31.setVisible(true);
+                            jLabel48.setVisible(true);
+                            jLabel52.setVisible(true);
                             
                             if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                             File file = fileChooser.getSelectedFile();
@@ -7851,30 +7879,66 @@ public class Home1 extends JApplet implements ActionListener {
                                 }
                             }
                             radiusActivityMap = map;
-    //                      System.err.println(radiusActivityMap.size());
                         }
                        }
 		} else if (jComboBox5.getSelectedIndex() == 8) {
-			// exponential Non-Zero distribution. NOT used. Index is 4
+			// upload (r, decay/sec)
                         if(!shapeModel.isSelectedIndex(8)){
                             jComboBox2.setSelectedIndex(0);
                             JOptionPane.showMessageDialog(null, "You can't select Exponential Non-Zero distribution for this shape", "ERROR",JOptionPane.ERROR_MESSAGE);
                         } else{
-                            jLabel57.setText("Exponential Factor:");
-
-                            jTextField33.setText("" + (5.0 / Double.parseDouble(jTextField26.getText())));   // 5/R
-                            // TODO this will not work for every case
-                            // TODO when Rod or cone have greater radii than height
-                            // TODO or when an ellipse has a longer long axis
-
+                            jComboBox2.setEnabled(true);
+                            jCheckBox1.setSelected(false);
+                            jCheckBox1.setEnabled(false);
+                            jLabel57.setVisible(false);
+                            jTextField33.setVisible(false);
                             jLabel27.setVisible(false);
                             jTextField6.setVisible(false);
-                            jLabel57.setVisible(true);
-                            jTextField33.setVisible(true);
-                            jTextField6.setVisible(false);
-                            jTextField9.setVisible(false);
+                            jTextField9.setVisible(false);                            
                             jLabel50.setVisible(false);
-                            jTextField29.setEnabled(true);
+                            //set max mean acti and time integerated act. coef invisible
+                            jTextField29.setVisible(false);
+                            jTextField31.setVisible(false);
+                            jLabel48.setVisible(false);
+                            jLabel52.setVisible(false);
+                            
+                            if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                            File file = fileChooser.getSelectedFile();
+                            String line = "";
+                            BufferedReader br = null;
+                            TreeMap<Double, Double> map = new TreeMap<>();
+                            try {
+                                    double max = -1, min = Double.MAX_VALUE;
+                                    br = new BufferedReader(new FileReader(file));
+                                    while ((line = br.readLine()) != null) {
+                                        if ("".equals(line)) break;
+                                        String arr[] = line.split(",");
+                                        double r = Double.parseDouble(arr[0]); 
+                                        double activity = Double.parseDouble(arr[1]);
+                                        map.put(r, activity);
+                                        max = Math.max (max, r);
+                                        min = Math.min(min, r);
+                                    }
+
+                                    if (map.size()< 2) {
+                                        JOptionPane.showMessageDialog(null, "not enough lines in imported data", "alert", JOptionPane.ERROR_MESSAGE);
+                                    }
+                                    else if (max != Double.parseDouble(jTextField26.getText()) || min != 0){
+                                        JOptionPane.showMessageDialog(null, "Data for maximum and minimum radial positions must match cluster radius and r=0, respectively.", "alert", JOptionPane.ERROR_MESSAGE);
+                                    }                                 
+                            } catch (Exception e) {
+                                JOptionPane.showMessageDialog(null, "Oops, something went wrong. Please check the data", "alert", JOptionPane.ERROR_MESSAGE);
+                            } finally {
+                                if (br != null) {
+                                    try {
+                                        br.close();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                            radiusActivityMap = map;
+                        }
                     }
                 }
 			
