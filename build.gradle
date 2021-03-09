@@ -14,6 +14,7 @@ repositories {
 }
 dependencies {
     testImplementation     'junit:junit:4.13'
+    compileJava {options.encoding = "UTF-8"}
     compile "com.skew.slsqp4j:slsqp4j:0.1"
     implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
     // https://mvnrepository.com/artifact/org.jfree/jcommon

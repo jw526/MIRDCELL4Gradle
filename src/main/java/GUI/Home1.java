@@ -7,7 +7,6 @@ package GUI;
 import Activity.*;
 import Display3D.*;
 import File.*;
-import MIRDCell.temp;
 import Plot.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -106,18 +105,18 @@ public class Home1 extends JApplet implements ActionListener {
 
 	// units: gy^-1 / gy^-2 alternating
 	// columns:
-	// 0            αself ( C←C )
-	// 1            βself ( C←C )
-	// 2            αself ( C←CS )
-	// 3            βself ( C←CS )
-	// 4            αself ( N←N )
-	// 5            βself ( N←N )
-	// 6            αself ( N←Cy )
-	// 7            βself ( N←Cy )
-	// 8            αself ( N←CS )
-	// 9            βself ( N←CS )
-	// 10           αcross ( C←C )
-	// 11           βcross ( C←C )
+	// 0            ?self ( C?C )
+	// 1            ?self ( C?C )
+	// 2            ?self ( C?CS )
+	// 3            ?self ( C?CS )
+	// 4            ?self ( N?N )
+	// 5            ?self ( N?N )
+	// 6            ?self ( N?Cy )
+	// 7            ?self ( N?Cy )
+	// 8            ?self ( N?CS )
+	// 9            ?self ( N?CS )
+	// 10           ?cross ( C?C )
+	// 11           ?cross ( C?C )
 	//Rows:
 	// radiation type (ICODE)
 
@@ -789,7 +788,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel22Layout.setVerticalGroup(
@@ -979,10 +978,10 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton3)
                     .addComponent(jRadioButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 238, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
                     .addGroup(panel4Layout.createSequentialGroup()
                         .addComponent(jLabel75)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1064,7 +1063,7 @@ public class Home1 extends JApplet implements ActionListener {
         jLabel1.setText("Radionuclide");
 
         jRadioButton13.setBackground(new java.awt.Color(204, 204, 255));
-        jRadioButton13.setText("β Full Energy Spectrum");
+        jRadioButton13.setText("<html>&beta Full Energy Spectrum</html>");
         jRadioButton13.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRadioButton13ItemStateChanged(evt);
@@ -1072,7 +1071,7 @@ public class Home1 extends JApplet implements ActionListener {
         });
 
         jRadioButton12.setBackground(new java.awt.Color(204, 204, 255));
-        jRadioButton12.setText("β Average Energy Spectrum");
+        jRadioButton12.setText("<html>&beta Average Energy Spectrum</html>");
         jRadioButton12.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRadioButton12ItemStateChanged(evt);
@@ -1118,8 +1117,8 @@ public class Home1 extends JApplet implements ActionListener {
                             .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panel5Layout.createSequentialGroup()
                                 .addGroup(panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton13)
-                                    .addComponent(jRadioButton12))
+                                    .addComponent(jRadioButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jRadioButton12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1137,7 +1136,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel5Layout.createSequentialGroup()
-                        .addComponent(jRadioButton13)
+                        .addComponent(jRadioButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
@@ -1205,7 +1204,7 @@ public class Home1 extends JApplet implements ActionListener {
                         .addComponent(jScrollPane2)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                        .addGap(0, 121, Short.MAX_VALUE)
+                        .addGap(0, 123, Short.MAX_VALUE)
                         .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(118, 118, 118))))
         );
@@ -1256,7 +1255,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel2.setPreferredSize(new java.awt.Dimension(100, 100));
 
         label_2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        label_2.setText("    Target ←  Source");
+        label_2.setText("    Target ?  Source");
 
         jPanel26.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -1305,7 +1304,7 @@ public class Home1 extends JApplet implements ActionListener {
         });
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jLabel7.setText("μm");
+        jLabel7.setText("um");
 
         jTextField1.setText("5");
         jTextField1.setEditable(false);
@@ -1340,7 +1339,7 @@ public class Home1 extends JApplet implements ActionListener {
         });
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jLabel8.setText("μm");
+        jLabel8.setText("um");
 
         jTextField2.setText("3");
         jTextField2.setEditable(false);
@@ -1440,7 +1439,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
+                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel41Layout.setVerticalGroup(
@@ -1472,13 +1471,13 @@ public class Home1 extends JApplet implements ActionListener {
         jLabel65.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel65.setForeground(new java.awt.Color(255, 255, 255));
         jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel65.setText("             Target Region(s)    ←    Source Region");
+        jLabel65.setText("<html> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Target Region(s) &larr; Source Region</html>");
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
         jPanel45Layout.setHorizontalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel45Layout.setVerticalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1555,15 +1554,15 @@ public class Home1 extends JApplet implements ActionListener {
                     .addGroup(jPanel42Layout.createSequentialGroup()
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel108, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                            .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                             .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGap(18, 22, Short.MAX_VALUE)
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(jTextField15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addGroup(jPanel42Layout.createSequentialGroup()
                                 .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addGap(0, 2, Short.MAX_VALUE))))
                     .addGroup(jPanel42Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1641,7 +1640,7 @@ public class Home1 extends JApplet implements ActionListener {
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(120, 120, 120)
-                    .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+                    .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
                     .addGap(120, 120, 120)))
         );
 
@@ -1691,19 +1690,19 @@ public class Home1 extends JApplet implements ActionListener {
 
         jLabel59.setText("Cross Dose : ");
 
-        jLabel60.setText("<html> <p class=MsoNormal><span lang=EN-US>α<sub>self</sub> = </span></p> </html>");
+        jLabel60.setText("<html> <p class=MsoNormal><span lang=EN-US>&alpha;<sub>self</sub> = </span></p> </html>");
         jLabel60.setEnabled(true);
         jLabel13.setVisible(true);
 
-        jLabel61.setText("<html> <p class=MsoNormal><span lang=EN-US>α<sub>cross</sub> = </span></p> </html>");
+        jLabel61.setText("<html> <p class=MsoNormal><span lang=EN-US>&alpha;<sub>cross</sub> = </span></p> </html>");
         jLabel61.setEnabled(true);
         jLabel13.setVisible(true);
 
-        jLabel62.setText("<html> <p class=MsoNormal><span lang=EN-US>β<sub>self</sub> = </span></p> </html>");
+        jLabel62.setText("<html> <p class=MsoNormal><span lang=EN-US>&beta;<sub>self</sub> = </span></p> </html>");
         jLabel62.setEnabled(true);
         jLabel13.setVisible(true);
 
-        jLabel63.setText("<html> <p class=MsoNormal><span lang=EN-US>β<sub>cross</sub> = </span></p> </html>");
+        jLabel63.setText("<html> <p class=MsoNormal><span lang=EN-US>&beta;<sub>cross</sub> = </span></p> </html>");
         jLabel63.setEnabled(true);
         jLabel13.setVisible(true);
 
@@ -1859,8 +1858,8 @@ public class Home1 extends JApplet implements ActionListener {
         jTable1.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1, 2, 3", "γ-rays, X-rays, AQ",  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0)},
-                {"4, 5, 6", "β+, β-, IE",  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0)},
+                {"1, 2, 3", "<html>&gamma;-rays, X-rays, AQ</html>",  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0)},
+                {"4, 5, 6", "<html>&beta;+, &beta;-, IE</html>",  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0)},
                 {"7", "Auger electrons",  new Double(2.3),  new Double(0.0),  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0),  new Double(0.25),  new Double(0.0)},
                 {"8", "Alpha particles",  new Double(1.4),  new Double(0.0),  new Double(1.4),  new Double(0.0),  new Double(1.4),  new Double(0.0),  new Double(1.4),  new Double(0.0)},
                 {"9", "Daughter recoil (alpha decay)",  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0)},
@@ -1868,7 +1867,7 @@ public class Home1 extends JApplet implements ActionListener {
                 {"11", "Neutrons",  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0),  new Double(0.0)}
             },
             new String [] {
-                "ICODE", "Radiation", "<html> <p>α - self</p> <p>(N←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - cross</p> <p>(N<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - cross</p> <p>(N<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>"
+                "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - cross</p> <p>(N<sub>i</sub>&larr;C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - cross</p> <p>(N<sub>i</sub>&larr;C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>"
             }
         ) {
             Class[] types = new Class [] {
@@ -1988,7 +1987,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, Short.MAX_VALUE)
+                .addComponent(jTabbedPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1052, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
@@ -2072,7 +2071,7 @@ public class Home1 extends JApplet implements ActionListener {
         });
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jLabel9.setText("μm");
+        jLabel9.setText("um");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -2096,7 +2095,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2125,7 +2124,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 676, Short.MAX_VALUE)
+                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel32Layout.setVerticalGroup(
@@ -2146,7 +2145,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 408, Short.MAX_VALUE))
+                .addGap(0, 410, Short.MAX_VALUE))
         );
 
         jPanel50.setBackground(new java.awt.Color(204, 204, 255));
@@ -2420,7 +2419,7 @@ public class Home1 extends JApplet implements ActionListener {
                     .addComponent(jLabel83)
                     .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel100)
+                .addComponent(jLabel100, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2443,7 +2442,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jLabel40.setText("Radius (μm):");
+        jLabel40.setText("Radius (um):");
 
         jTextField41.setText("100");
         jTextField41.addActionListener(new java.awt.event.ActionListener() {
@@ -2457,7 +2456,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jLabel77.setText("Height (μm):");
+        jLabel77.setText("Height (um):");
         jLabel77.setVisible(false);
 
         jTextField42.setText("0");
@@ -2488,7 +2487,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jLabel74.setText("Distance Between Cells (μm):");
+        jLabel74.setText("Distance Between Cells (um):");
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -2518,7 +2517,7 @@ public class Home1 extends JApplet implements ActionListener {
                         .addComponent(jLabel78)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2615,7 +2614,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 576, Short.MAX_VALUE)
+            .addGap(0, 584, Short.MAX_VALUE)
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2628,7 +2627,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel52.setLayout(jPanel52Layout);
         jPanel52Layout.setHorizontalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 576, Short.MAX_VALUE)
+            .addGap(0, 584, Short.MAX_VALUE)
         );
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2766,11 +2765,11 @@ public class Home1 extends JApplet implements ActionListener {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(3, 3, 3))
-                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
-                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
+                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 581, Short.MAX_VALUE)
+                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                 .addGap(23, 23, 23))
         );
         jPanel4Layout.setVerticalGroup(
@@ -2780,7 +2779,7 @@ public class Home1 extends JApplet implements ActionListener {
                     .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, 174, Short.MAX_VALUE)
+                        .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2854,7 +2853,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jLabel17.setText("Radius (μm):");
+        jLabel17.setText("Radius (um):"); // NOI18N
 
         jTextField26.setText("100");
         jTextField26.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2863,7 +2862,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jLabel42.setText("Height (μm):");
+        jLabel42.setText("Height (um):"); // NOI18N
         jLabel42.setVisible(false);
 
         jTextField27.setText("0");
@@ -2895,7 +2894,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jLabel73.setText("Distance Between Cells (μm):");
+        jLabel73.setText("Distance Between Cells (um):");
 
         jCheckBox1.setBackground(new java.awt.Color(204, 204, 255));
         jCheckBox1.setText("Cold Region");
@@ -2906,7 +2905,7 @@ public class Home1 extends JApplet implements ActionListener {
         });
 
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel30.setText("Drug Penetration Depth (μm):");
+        jLabel30.setText("Drug Penetration Depth (um):");
         jLabel30.setVisible(false);
 
         jTextField5.setVisible(false);
@@ -3177,7 +3176,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel104)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -3676,11 +3675,11 @@ public class Home1 extends JApplet implements ActionListener {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 470, Short.MAX_VALUE)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 470, Short.MAX_VALUE)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 566, Short.MAX_VALUE)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -3689,7 +3688,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGap(13, 13, 13)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 179, Short.MAX_VALUE)
+                        .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3889,8 +3888,8 @@ public class Home1 extends JApplet implements ActionListener {
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel64, javax.swing.GroupLayout.DEFAULT_SIZE, 1013, Short.MAX_VALUE)
-                    .addComponent(jPanel63, javax.swing.GroupLayout.DEFAULT_SIZE, 1013, Short.MAX_VALUE)))
+                    .addComponent(jPanel64, javax.swing.GroupLayout.DEFAULT_SIZE, 1047, Short.MAX_VALUE)
+                    .addComponent(jPanel63, javax.swing.GroupLayout.DEFAULT_SIZE, 1047, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3917,7 +3916,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addContainerGap())
             .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel58Layout.createSequentialGroup()
-                    .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, 1025, Short.MAX_VALUE)
+                    .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel58Layout.setVerticalGroup(
@@ -4296,7 +4295,7 @@ public class Home1 extends JApplet implements ActionListener {
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(204, 204, 255));
         jTextPane1.setContentType("text/html"); // NOI18N
-        jTextPane1.setText("<html>\r<font face=\"tahoma\" size=\"2\">\n  <head>\r\n  </head>\r\n  <body>\r\n    <p style=\"margin-top: 0\" >\r\n      \r<html>\n<ul>\n<li><b>Hardware Recommendations</b>\n<ul>\n<li>It is recommended that a PC or Mac with the following specifications be used:  Intel i7-2600 CPU @3.4 GHz, 8GB RAM. Lower performance processors may result in very slow responses which may make the user think that the system is hung.  This can be avoided by selecting options that required less CPU horsepower.\n</ul>\n<li><b>Radionuclide Radiation Data</b>\n<ul>\n<li><b>β Full energy spectrum</b>\n<ul>\n<li>The radiation data were taken from MIRD: Radionuclide Data and Decay Schemes. 1st edition. Society of Nuclear Medicine; 1989. The full logarithmically binned beta spectra were used for all beta particles.  Use of the continuous beta spectrum is essential for some applications of cellular dosimetry. Some of the spectra contained in excess of one thousand different radiations for a given radionuclide, many of which are insignificant for internal dosimetry.  Accordingly, only those radiations which contributed greater than 0.1% to the total delta for that particular radiation type were retained. The different radiation types considered separately in this manner were alpha particles, beta particles, and conversion electrons.  No cutoff was implemented for beta particles or Auger electrons.\n</ul>\n<li><b>β Average radiation spectrum</b>\n<ul>\n<li>Eckerman KF, Endo A. MIRD: Radionuclide Data and Decay Schemes. 2nd edition. Society of Nuclear Medicine; 2008.<a href=\"http://interactive.snm.org/index.cfm?PageID=7581\"> (http://interactive.snm.org/index.cfm?PageID=7581)</a>.  Data were taken from the files in the accompanying CD.\n</ul>\n</ul>\n<li><b>Cellular S Values</b>\n<ul>\n<li>Not included in the S values are contributions from gamma rays, X rays, neutrons, and recoil energy.\n<li>Liquid water is used as the medium for all source and target regions, and the intervening medium.\n<li><b>Self-Dose S Values</b>\n<ul>\n<li>The self-dose S values are calculated using the methods described in Goddu SM, Howell RW, Bouchet LG, Bolch WE, Rao DV. MIRD Cellular S values: self-absorbed dose per unit cumulated activity for selected radionuclides and monoenergetic electron and alpha particle emitters incorporated into different cell compartments. Reston , VA : Society of Nuclear Medicine; 1997.<a href=\" http://www.ncbi.nlm.nih.gov/pubmed/8295004\"> http://www.ncbi.nlm.nih.gov/pubmed/8295004</a>)\n</ul>\n<li><b>Cross-Dose S Values</b>\n<ul>\n<li>The cross-dose S values are calculated using the methods described in S.M. Goddu, D.V. Rao, R.W. Howell.  Multicellular dosimetry for micrometastases:  dependence of self-dose versus cross-dose to cell nuclei on type and energy of radiation and subcellular distribution of radionuclides, J Nucl Med 35, 521-530 (1994).<a href=\" http://www.ncbi.nlm.nih.gov/pubmed/8113908\"> http://www.ncbi.nlm.nih.gov/pubmed/8113908</a>\n</ul>\n</ul>\n</ul>\n\n</html>    \n</p>\r\n  </body>\r</font>\n</html>\r\n");
+        jTextPane1.setText("<html>\r<font face=\"tahoma\" size=\"2\">\n  <head>\r\n  </head>\r\n  <body>\r\n    <p style=\"margin-top: 0\" >\r\n      \r<html>\n<ul>\n<li><b>Hardware Recommendations</b>\n<ul>\n<li>It is recommended that a PC or Mac with the following specifications be used:  Intel i7-2600 CPU @3.4 GHz, 8GB RAM. Lower performance processors may result in very slow responses which may make the user think that the system is hung.  This can be avoided by selecting options that required less CPU horsepower.\n</ul>\n<li><b>Radionuclide Radiation Data</b>\n<ul>\n<li><b>? Full energy spectrum</b>\n<ul>\n<li>The radiation data were taken from MIRD: Radionuclide Data and Decay Schemes. 1st edition. Society of Nuclear Medicine; 1989. The full logarithmically binned beta spectra were used for all beta particles.  Use of the continuous beta spectrum is essential for some applications of cellular dosimetry. Some of the spectra contained in excess of one thousand different radiations for a given radionuclide, many of which are insignificant for internal dosimetry.  Accordingly, only those radiations which contributed greater than 0.1% to the total delta for that particular radiation type were retained. The different radiation types considered separately in this manner were alpha particles, beta particles, and conversion electrons.  No cutoff was implemented for beta particles or Auger electrons.\n</ul>\n<li><b>? Average radiation spectrum</b>\n<ul>\n<li>Eckerman KF, Endo A. MIRD: Radionuclide Data and Decay Schemes. 2nd edition. Society of Nuclear Medicine; 2008.<a href=\"http://interactive.snm.org/index.cfm?PageID=7581\"> (http://interactive.snm.org/index.cfm?PageID=7581)</a>.  Data were taken from the files in the accompanying CD.\n</ul>\n</ul>\n<li><b>Cellular S Values</b>\n<ul>\n<li>Not included in the S values are contributions from gamma rays, X rays, neutrons, and recoil energy.\n<li>Liquid water is used as the medium for all source and target regions, and the intervening medium.\n<li><b>Self-Dose S Values</b>\n<ul>\n<li>The self-dose S values are calculated using the methods described in Goddu SM, Howell RW, Bouchet LG, Bolch WE, Rao DV. MIRD Cellular S values: self-absorbed dose per unit cumulated activity for selected radionuclides and monoenergetic electron and alpha particle emitters incorporated into different cell compartments. Reston , VA : Society of Nuclear Medicine; 1997.<a href=\" http://www.ncbi.nlm.nih.gov/pubmed/8295004\"> http://www.ncbi.nlm.nih.gov/pubmed/8295004</a>)\n</ul>\n<li><b>Cross-Dose S Values</b>\n<ul>\n<li>The cross-dose S values are calculated using the methods described in S.M. Goddu, D.V. Rao, R.W. Howell.  Multicellular dosimetry for micrometastases:  dependence of self-dose versus cross-dose to cell nuclei on type and energy of radiation and subcellular distribution of radionuclides, J Nucl Med 35, 521-530 (1994).<a href=\" http://www.ncbi.nlm.nih.gov/pubmed/8113908\"> http://www.ncbi.nlm.nih.gov/pubmed/8113908</a>\n</ul>\n</ul>\n</ul>\n\n</html>    \n</p>\r\n  </body>\r</font>\n</html>\r\n");
         jTextPane1.addHyperlinkListener(new javax.swing.event.HyperlinkListener() {
             public void hyperlinkUpdate(javax.swing.event.HyperlinkEvent evt) {
                 jTextPane1HyperlinkUpdate(evt);
@@ -4623,8 +4622,8 @@ public class Home1 extends JApplet implements ActionListener {
 							{"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
 					},
 					new String[]{
-							"ICODE", "Radiation", "<html> <p>α - self</p> <p>(C←C)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(C←C)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(C←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(C←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - cross</p> <p>(C<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - cross</p> <p>(C<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>"
-					}
+                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;NCS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        }
 			) {
 				Class[] types = new Class[]{
 						java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
@@ -4653,8 +4652,8 @@ public class Home1 extends JApplet implements ActionListener {
 							{"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
 					},
 					new String[]{
-							"ICODE", "Radiation", "<html> <p>α - self</p> <p>(N←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - cross</p> <p>(N<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - cross</p> <p>(N<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>"
-					}
+                                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        }
 			) {
 				Class[] types = new Class[]{
 						java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
@@ -4683,8 +4682,8 @@ public class Home1 extends JApplet implements ActionListener {
 							{"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
 					},
 					new String[]{
-							"ICODE", "Radiation", "<html> <p>α - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - cross</p> <p>(Cy<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - cross</p> <p>(Cy<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>"
-					}
+                                                "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        }
 			) {
 				Class[] types = new Class[]{
 						java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
@@ -4717,8 +4716,8 @@ public class Home1 extends JApplet implements ActionListener {
 							{"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
 					},
 					new String[]{
-							"ICODE", "Radiation", "<html> <p>α - self</p> <p>(N←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - cross</p> <p>(N<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - cross</p> <p>(N<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - cross</p> <p>(Cy<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - cross</p> <p>(Cy<sub>i</sub>←C<sub>j</sub>)</p> <p>(Gy<sup>-2</sup>)</p>"
-					}
+                                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        }
 			) {
 				Class[] types = new Class[]{
 						java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
@@ -5947,7 +5946,7 @@ public class Home1 extends JApplet implements ActionListener {
 		if ("Sphere".equals(shape)) {                   
                     jLabel42.setVisible(false);
                     jTextField27.setVisible(false);
-                    jLabel17.setText("Radius (μm):");
+                    jLabel17.setText("Radius (um):");
                     jTextField25.setText("");
                     jTextField25.setEditable(false);
                     //jianchao 5/4/20 radial histogram input: # cell...
@@ -5961,13 +5960,13 @@ public class Home1 extends JApplet implements ActionListener {
                     shapeModel = model;
 		} else if ("Cone".equals(shape)) {
                         jLabel42.setVisible(true);
-                        jLabel42.setText("Height (μm):");
+                        jLabel42.setText("Height (um):");
                         jTextField27.setVisible(true);
                         if (labeling == 7){
                             jComboBox5.setSelectedIndex(0);
                             JOptionPane.showMessageDialog(null, "You can't select that labeling for Cone", "ERROR",JOptionPane.ERROR_MESSAGE);
                         } else {
-                            jLabel17.setText("Radius (μm):");
+                            jLabel17.setText("Radius (um):");
                             jTextField25.setText("");
                             jTextField25.setEditable(false);
                             jTextField18.setVisible(true);
@@ -5983,13 +5982,13 @@ public class Home1 extends JApplet implements ActionListener {
 			
 		} else if ("Rod".equals(shape)) {
                         jLabel42.setVisible(true);
-                        jLabel42.setText("Height (μm):");
+                        jLabel42.setText("Height (um):");
                         jTextField27.setVisible(true);
                         if (labeling == 7 ){
                             jComboBox5.setSelectedIndex(0);
                             JOptionPane.showMessageDialog(null, "You can't select that labeling for Rod", "ERROR",JOptionPane.ERROR_MESSAGE);
                         } else {
-                            jLabel17.setText("Radius (μm):");
+                            jLabel17.setText("Radius (um):");
                             jTextField25.setText("");
                             jTextField25.setEditable(false);
                             ////jianchao 5/4/20 radial histogram input: # cell...
@@ -6005,9 +6004,9 @@ public class Home1 extends JApplet implements ActionListener {
 			
 		} else if ("Ellipsoid".equals(shape)) {
                         jLabel42.setVisible(true);
-                        jLabel42.setText("Long Axis (μm):");
+                        jLabel42.setText("Long Axis (um):");
                         jTextField27.setVisible(true);
-                        jLabel17.setText("Short Axis (μm):");
+                        jLabel17.setText("Short Axis (um):");
                         if (labeling == 3 || labeling == 4 || labeling == 5 || labeling == 6 || labeling == 7){
                             jComboBox5.setSelectedIndex(0);
                             JOptionPane.showMessageDialog(null, "You can't select that labeling for Ellipsoid", "ERROR",JOptionPane.ERROR_MESSAGE);
@@ -6388,7 +6387,7 @@ public class Home1 extends JApplet implements ActionListener {
 				}
 			}
 
-			jLabel22.setText("   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
+			jLabel22.setText("   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
 			jLabel26.setText("Distance   S(C<--C)   S(C<--CS)    S(N<--N)    S(N<--Cy)    S(N<--CS)    S(Cy<--N)    S(Cy<--CS)    S(Cy<--Cy)");
 			jTextArea1.setText("");
 
@@ -7173,22 +7172,22 @@ public class Home1 extends JApplet implements ActionListener {
 			tempsource += "Complex Linear Quadratic Parameters" + "\n";
 			TableModel m = jTable1.getModel();
 			if (jList3.getSelectedIndex() == 0) {
-				// Target Region: Cell
-				tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\n";
-				tempsource += "     \t(C←C)\t(C←C)\t(C←CS)\t(C←CS)\t(Ci←Cj)\t(Ci←Cj)\n";
-			} else if (jList3.getSelectedIndex() == 1) {
-				// Target Region: Nucleus
-				tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\n";
-				tempsource += "     \t(N←N)\t(N←N)\t(N←Cy)\t(N←Cy)\t(N←CS)\t(N←CS)\t(Ni←Cj)\t(Ni←Cj)\n";
-			} else if (jList3.getSelectedIndex() == 2) {
-				// Target Region: Cytoplasm
-				tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\n";
-				tempsource += "     \t(CS←N)\t(CS←N)\t(CS←Cy)\t(CS←Cy)\t(CS←CS)\t(CS←CS)\t(Cyi←Cj)\t(Cyi←Cj)\n";
-			} else if (jList3.getSelectedIndex() == 3) {
-				// Target Region: Nucleus & Cytoplasm
-				tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\tα-cross\tβ-cross\n";
-				tempsource += "     \t(N←N)\t(N←N)\t(N←Cy)\t(N←Cy)\t(N←CS)\t(N←CS)\t(CS←N)\t(CS←N)\t(CS←Cy)\t(CS←Cy)\t(CS←CS)\t(CS←CS)\t(Ni←Cj)\t(Ni←Cj)\t(Cyi←Cj)\t(Cyi←Cj)\n";
-			}
+                            // Target Region: Cell
+                            tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\n";
+                            tempsource += "     \t(C<--C)\t(C<--C)\t(C<--CS)\t(C<--CS)\t(Ci<--Cj)\t(Ci<--Cj)\n";
+                        } else if (jList3.getSelectedIndex() == 1) {
+                            // Target Region: Nucleus
+                            tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\n";
+                            tempsource += "     \t(N<--N)\t(N<--N)\t(N<--Cy)\t(N<--Cy)\t(N<--CS)\t(N<--CS)\t(Ni<--Cj)\t(Ni<--Cj)\n";
+                        } else if (jList3.getSelectedIndex() == 2) {
+                            // Target Region: Cytoplasm
+                            tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\n";
+                            tempsource += "     \t(CS<--N)\t(CS<--N)\t(CS<--Cy)\t(CS<--Cy)\t(CS<--CS)\t(CS<--CS)\t(Cyi<--Cj)\t(Cyi<--Cj)\n";
+                        } else if (jList3.getSelectedIndex() == 3) {
+                            // Target Region: Nucleus & Cytoplasm
+                            tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\talpha-cross\tbeta-cross\n";
+                            tempsource += "     \t(N<--N)\t(N<--N)\t(N<--Cy)\t(N<--Cy)\t(N<--CS)\t(N<--CS)\t(CS<--N)\t(CS<--N)\t(CS<--Cy)\t(CS<--Cy)\t(CS<--CS)\t(CS<--CS)\t(Ni<--Cj)\t(Ni<--Cj)\t(Cyi<--Cj)\t(Cyi<--Cj)\n";
+                        }
 
 			for (int i = 0; i < m.getRowCount(); i++) {
 				for (int j = 0; j < m.getColumnCount(); j++) {
@@ -7208,9 +7207,9 @@ public class Home1 extends JApplet implements ActionListener {
 		}
 
 		if (jRadioButton12.isSelected()) {
-			tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   β Average Energy Spectrum" + "\n\n" + tempsource;
+			tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   Beta Average Energy Spectrum" + "\n\n" + tempsource;
 		} else if (jRadioButton13.isSelected()) {
-			tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   β Full Energy Spectrum" + "\n\n" + tempsource;
+			tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   Beta Full Energy Spectrum" + "\n\n" + tempsource;
 		} else if (jRadioButton1.isSelected()) {
 			tempsource = "Monoenergetic particle emitter =   Alpha Particle" + "\n" + "Energy of monoenergetic particle (MeV) =    " + jTextField10.getText() + "\n" + "Yield of monoenergetic particle =    " + jTextField11.getText() + "\n" + tempsource;
 		} else if (jRadioButton2.isSelected()) {
@@ -7367,7 +7366,7 @@ public class Home1 extends JApplet implements ActionListener {
 
 		//Update the output textarea
 		jTextArea3.append( "Distance   S(C<--C)  S(C<--CS)   S(N<--N)   S(N<--Cy)   S(N<--CS)   S(Cy<--N)   S(Cy<--CS)   S(Cy<--Cy)\n" );
-		jTextArea3.append( "   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s\n" );
+		jTextArea3.append( "   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s\n" );
 		jTextArea3.append(jTextArea1.getText());
 
 		long TE = System.currentTimeMillis();
@@ -7573,11 +7572,12 @@ public class Home1 extends JApplet implements ActionListener {
 
 		// output the sctivity as a function of radius from center of mass. it should be noted that this is not necessarily distance from edge
 		jTextArea5.append("Activity | Dose as a function of radius (from the center of mass):\n");
-		jTextArea5.append("Radial position (um)\tActivity (Bq/labeled cell)\tAvg Dose(Gy/labeled cell)\tAvg Self-Dose(Gy/labeled cell)Avg Cross-Dose(Gy/labeled cell)Avg Cross-Dose(Gy/unlabeled cell)\n");
+		jTextArea5.append("Radial position (um)\tActivity (Bq)\t\tAvg Dose(Gy)\t\tAvg Self-Dose(Gy)\tAvg Cross-Dose(Gy)\tAvg Cross-Dose(Gy)\n");
+                jTextArea5.append("\t\t(labeled cell)\t\t(labeled cell)\t\t(labeled cell)\t\t(labeled cell)\t\t(unlabeled cell)\n");
 
 		DecimalFormat f = new DecimalFormat("0.000E0");
 
-		for (int i = 0; i < avgActivity.length; i++) {			
+		for (int i = 0; i < Radius+1; i++) {			
                     jTextArea5.append("" + i + "\t\t" + f.format(avgActivity[i]) + "\t\t   " + f.format(avgDose[i]) + "\t\t   "+ f.format(avgSelfDose[i]) + "\t\t   "+ f.format(avgCrossDose[i]) + "\t\t   "+ f.format(ulAvgCrossDose[i]) +"\n");			
 		}
 
@@ -8092,7 +8092,7 @@ public class Home1 extends JApplet implements ActionListener {
 				jTextField10.setBackground(Color.white);
 			}
 		}
-		jLabel22.setText("   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
+		jLabel22.setText("   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
 		jLabel26.setText("Distance   S(C<--C)   S(C<--CS)    S(N<--N)    S(N<--Cy)    S(N<--CS)    S(Cy<--N)    S(Cy<--CS)    S(Cy<--Cy)");
 		jTextArea1.setText("");
 
@@ -8320,7 +8320,7 @@ public class Home1 extends JApplet implements ActionListener {
 
 		//Update the output textarea: s-value
 		jTextArea3.append( "Distance   S(C<--C)  S(C<--CS)   S(N<--N)   S(N<--Cy)   S(N<--CS)   S(Cy<--N)   S(Cy<--CS)   S(Cy<--Cy)\n" );
-		jTextArea3.append( "   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s\n" );
+		jTextArea3.append( "   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s\n" );
 		jTextArea3.append(jTextArea1.getText());
                 
                 //update the output
@@ -8338,9 +8338,9 @@ public class Home1 extends JApplet implements ActionListener {
                 + "    Nucleus     : " + jTextField15.getText() + "%\n\n";
 
                 if (jRadioButton12.isSelected()) {
-                tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   β Average Energy Spectrum" + "\n" + tempsource;
+                tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   Beta Average Energy Spectrum" + "\n" + tempsource;
                 } else if (jRadioButton13.isSelected()) {
-                    tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   β Full Energy Spectrum" + "\n" + tempsource;
+                    tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   Beta Full Energy Spectrum" + "\n" + tempsource;
                 } else if (jRadioButton1.isSelected()) {
                     tempsource = "Monoenergetic particle emitter =   Alpha Particle" + "\n" + "Energy of monoenergetic particle (MeV) =    " + jTextField10.getText() + "\n" + "Yield of monoenergetic particle =    " + jTextField11.getText() + "\n" + tempsource;
                 } else if (jRadioButton2.isSelected()) {
@@ -9033,21 +9033,21 @@ public class Home1 extends JApplet implements ActionListener {
         if ("Circle".equals(shape)) {
             jLabel77.setVisible(false);
             jTextField42.setVisible(false);
-            jLabel40.setText("Radius (μm):");
+            jLabel40.setText("Radius (um):");
             jTextField43.setText("");
             jTextField43.setEditable(false);
 
         } else if ("Ellipse".equals(shape)) {
             jLabel77.setVisible(true);
-            jLabel77.setText("Long Axis (μm):");
-            jLabel40.setText("Short Axis (μm):");
+            jLabel77.setText("Long Axis (um):");
+            jLabel40.setText("Short Axis (um):");
             jTextField42.setVisible(true);
             jTextField43.setText("");
             jTextField43.setEditable(false);
         } else if ("Rectangle".equals(shape)) {
             jLabel77.setVisible(true);
-            jLabel77.setText("Height (μm):");
-            jLabel40.setText("Width (μm):");
+            jLabel77.setText("Height (um):");
+            jLabel40.setText("Width (um):");
             jTextField42.setVisible(true);
             jTextField43.setText("");
             jTextField43.setEditable(false);
@@ -9317,7 +9317,7 @@ public class Home1 extends JApplet implements ActionListener {
                 }
             }
 
-            jLabel22.setText("   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
+            jLabel22.setText("   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
             jLabel26.setText("Distance   S(C<--C)   S(C<--CS)    S(N<--N)    S(N<--Cy)    S(N<--CS)    S(Cy<--N)    S(Cy<--CS)    S(Cy<--Cy)");
             jTextArea1.setText("");
 
@@ -9836,20 +9836,20 @@ public class Home1 extends JApplet implements ActionListener {
             TableModel m = jTable1.getModel();
             if (jList3.getSelectedIndex() == 0) {
                 // Target Region: Cell
-                tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\n";
-                tempsource += "     \t(C←C)\t(C←C)\t(C←CS)\t(C←CS)\t(Ci←Cj)\t(Ci←Cj)\n";
+                tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\n";
+                tempsource += "     \t(C<--C)\t(C<--C)\t(C<--CS)\t(C<--CS)\t(Ci<--Cj)\t(Ci<--Cj)\n";
             } else if (jList3.getSelectedIndex() == 1) {
                 // Target Region: Nucleus
-                tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\n";
-                tempsource += "     \t(N←N)\t(N←N)\t(N←Cy)\t(N←Cy)\t(N←CS)\t(N←CS)\t(Ni←Cj)\t(Ni←Cj)\n";
+                tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\n";
+                tempsource += "     \t(N<--N)\t(N<--N)\t(N<--Cy)\t(N<--Cy)\t(N<--CS)\t(N<--CS)\t(Ni<--Cj)\t(Ni<--Cj)\n";
             } else if (jList3.getSelectedIndex() == 2) {
                 // Target Region: Cytoplasm
-                tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\n";
-                tempsource += "     \t(CS←N)\t(CS←N)\t(CS←Cy)\t(CS←Cy)\t(CS←CS)\t(CS←CS)\t(Cyi←Cj)\t(Cyi←Cj)\n";
+                tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\n";
+                tempsource += "     \t(CS<--N)\t(CS<--N)\t(CS<--Cy)\t(CS<--Cy)\t(CS<--CS)\t(CS<--CS)\t(Cyi<--Cj)\t(Cyi<--Cj)\n";
             } else if (jList3.getSelectedIndex() == 3) {
                 // Target Region: Nucleus & Cytoplasm
-                tempsource += "ICODE\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-self\tβ-self\tα-cross\tβ-cross\tα-cross\tβ-cross\n";
-                tempsource += "     \t(N←N)\t(N←N)\t(N←Cy)\t(N←Cy)\t(N←CS)\t(N←CS)\t(CS←N)\t(CS←N)\t(CS←Cy)\t(CS←Cy)\t(CS←CS)\t(CS←CS)\t(Ni←Cj)\t(Ni←Cj)\t(Cyi←Cj)\t(Cyi←Cj)\n";
+                tempsource += "ICODE\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-self\tbeta-self\talpha-cross\tbeta-cross\talpha-cross\tbeta-cross\n";
+                tempsource += "     \t(N<--N)\t(N<--N)\t(N<--Cy)\t(N<--Cy)\t(N<--CS)\t(N<--CS)\t(CS<--N)\t(CS<--N)\t(CS<--Cy)\t(CS<--Cy)\t(CS<--CS)\t(CS<--CS)\t(Ni<--Cj)\t(Ni<--Cj)\t(Cyi<--Cj)\t(Cyi<--Cj)\n";
             }
 
             for (int i = 0; i < m.getRowCount(); i++) {
@@ -9870,9 +9870,9 @@ public class Home1 extends JApplet implements ActionListener {
         }
 
         if (jRadioButton12.isSelected()) {
-            tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   β Average Energy Spectrum" + "\n" + tempsource;
+            tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   Beta Average Energy Spectrum" + "\n" + tempsource;
         } else if (jRadioButton13.isSelected()) {
-            tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   β Full Energy Spectrum" + "\n" + tempsource;
+            tempsource = "Radionuclide =   " + iso + "\n" + "Spectrum type =   Beta Full Energy Spectrum" + "\n" + tempsource;
         } else if (jRadioButton1.isSelected()) {
             tempsource = "Monoenergetic particle emitter =   Alpha Particle" + "\n" + "Energy of monoenergetic particle (MeV) =    " + jTextField10.getText() + "\n" + "Yield of monoenergetic particle =    " + jTextField11.getText() + "\n" + tempsource;
         } else if (jRadioButton2.isSelected()) {
@@ -9997,7 +9997,7 @@ public class Home1 extends JApplet implements ActionListener {
 
         //Update the output textarea
         jTextArea3.append( "Distance   S(C<--C)  S(C<--CS)   S(N<--N)   S(N<--Cy)   S(N<--CS)   S(Cy<--N)   S(Cy<--CS)   S(Cy<--Cy)\n" );
-        jTextArea3.append( "   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s\n" );
+        jTextArea3.append( "   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s\n" );
         jTextArea3.append(jTextArea1.getText());
 
         // get the avg activity per radius
@@ -10059,7 +10059,7 @@ public class Home1 extends JApplet implements ActionListener {
             // generate the chart
             JFreeChart radial = ChartFactory.createXYBarChart(
                 "",                             // Title
-                "r (μm)",                       // x-axis Label
+                "r (um)",                       // x-axis Label
                 false,                          // time label shown?
                 Ylab,   // y-axis Label
                 RadialSet,                      // Dataset
@@ -10224,7 +10224,7 @@ public class Home1 extends JApplet implements ActionListener {
             return;
         }       
                
-        jLabel22.setText("   μm          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
+        jLabel22.setText("   um          Gy/Bq-s       Gy/Bq-s        Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s       Gy/Bq-s");
         jLabel26.setText("Distance   S(C<--C)   S(C<--CS)    S(N<--N)    S(N<--Cy)    S(N<--CS)    S(Cy<--N)    S(Cy<--CS)    S(Cy<--Cy)");
         
         if (drugList != null){
@@ -11283,6 +11283,8 @@ public class Home1 extends JApplet implements ActionListener {
 
         int comboSize = cocktail.size();
         ArrayList<Double> actiList = new ArrayList<>();
+        double[] upperLimits = new double[comboSize];
+        double[] lowerLimits = new double[comboSize];
         //java.util.List drugs = cocktail.stream().map(i -> drugIndexNameMap.get(i)).collect(Collectors.toList());
         
         Vector2VectorFunc constraintFunction = (double[] x1, double... arg) -> {
@@ -11290,6 +11292,8 @@ public class Home1 extends JApplet implements ActionListener {
             double[] probs = new double[numcells];
             Arrays.fill(probs, 1.0);
             IntStream.range(0, x1.length).forEach(i -> {
+                upperLimits[i] = inputCheck.getNum(drugPanels[cocktail.get(i)].tf_saUpperLimit);
+                lowerLimits[i] = inputCheck.getNum(drugPanels[cocktail.get(i)].tf_saLowerLimit);
                 IntStream.range(0, numcells).parallel().forEach(j -> {
                     probs[j] *= getSurvProb(cocktail.get(i), j, x1[i], selfSList);
                 });
@@ -11305,7 +11309,8 @@ public class Home1 extends JApplet implements ActionListener {
         
         double[] q = new double[comboSize];
         final Slsqp slsqp = new Slsqp.SlsqpBuilder()
-            .withLowerBounds(q)
+            .withLowerBounds(lowerLimits)
+            .withUpperBounds(upperLimits)
             .withObjectiveFunction(new VectorObjectiveFunction())
             .addVectorConstraint(constraint)
             .build();

@@ -20,7 +20,7 @@ public class ActivityUniform {
 		final double cosT = Math.cos( Math.atan2( Radius, Height ) );
 		final double COM = 3.0 * Height / 4.0;
                 
-                int labeledCell = 0;
+                int labeledCell = labelcellnum;
 		if(NECROTIC) {
 			for(int i = 0; i < labelcellnum && AccuActivity > 0; i++) {
 				j = randomgen.nextInt( cellnumber );
@@ -32,7 +32,7 @@ public class ActivityUniform {
 						i--;
 						TMC++;
 						if(TMC == cellnumber * 2) {
-							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the living zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
+							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
                                                         labeledCell = i;
 							break;
 						}
@@ -45,7 +45,7 @@ public class ActivityUniform {
 						i--;
 						TMC++;
 						if(TMC == cellnumber * 2) {
-							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the living zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
+							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
 							labeledCell = i;
                                                         break;
 						}
@@ -60,7 +60,7 @@ public class ActivityUniform {
 						i--;
 						TMC++;
 						if(TMC == cellnumber * 2) {
-							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the living zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
+							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
 							labeledCell = i;
                                                         break;
 						}
@@ -76,7 +76,7 @@ public class ActivityUniform {
 						i--;
 						TMC++;
 						if(TMC == cellnumber * 2) {
-							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the living zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i++ / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
+							JOptionPane.showMessageDialog( null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i++ / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE );
 							labeledCell = i;
                                                         break;
 						}

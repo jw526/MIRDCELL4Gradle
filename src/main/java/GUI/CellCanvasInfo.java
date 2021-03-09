@@ -120,11 +120,11 @@ public class CellCanvasInfo extends JPanel {
 			g.fillOval(targetX + remainder, targetY + remainder, targetRN + 1, targetRN + 1);
 		} /**
 		 * **************
-		 * 07/27/10 add Cytoplasm←Nucleus, Cytoplasm←Cell Surface,
-		 * Cytoplasm←Cytoplasm
+		 * 07/27/10 add Cytoplasm<-Nucleus, Cytoplasm<-Cell Surface,
+		 * Cytoplasm<-Cytoplasm
 		 ***************
 		 */
-		else if (pro == 5) //Cytoplasm←Nucleus
+		else if (pro == 5) //Cytoplasm<-Nucleus
 		{
 			super.paint(g);
 
@@ -137,7 +137,7 @@ public class CellCanvasInfo extends JPanel {
 			g.fillOval(targetX, targetY, targetRC + 1, targetRC + 1);
 			g.setColor(white);
 			g.fillOval(targetX + remainder, targetY + remainder, targetRN + 1, targetRN + 1);
-		} else if (pro == 6) //Cytoplasm←Cell Surface
+		} else if (pro == 6) //Cytoplasm<-Cell Surface
 		{
 			super.paint(g);
 

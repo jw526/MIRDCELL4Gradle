@@ -140,9 +140,9 @@ public class DrugPanel extends javax.swing.JPanel {
             case 0:
                 String r = ((predefRadPanel1.radList.getSelectedValue()==null)? "Please select a radionuclide.": predefRadPanel1.radList.getSelectedValue().toString() ) ;
                 if(predefRadPanel1.RB_BetaFull.isSelected()){
-                    radInfo1.setText("  β Full Energy Spectrum: " + r);
+                    radInfo1.setText("  Beta Full Energy Spectrum: " + r);
                 } else if(predefRadPanel1.RB_BetaAvg.isSelected()){
-                    radInfo1.setText("  β Avg Energy Spectrum: " + r);
+                    radInfo1.setText("  Beta Avg Energy Spectrum: " + r);
                 }
                 break;
             case 1: 
@@ -731,6 +731,10 @@ public class DrugPanel extends javax.swing.JPanel {
         TF_SA = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        chk_saLimits = new javax.swing.JCheckBox();
+        tf_saUpperLimit = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        tf_saLowerLimit = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(400, 530));
 
@@ -922,7 +926,7 @@ public class DrugPanel extends javax.swing.JPanel {
 
         jPanel1.add(TgtSrc);
 
-        Labeling.setPreferredSize(new java.awt.Dimension(380, 200));
+        Labeling.setPreferredSize(new java.awt.Dimension(380, 250));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Administered Amount (relative): ");
@@ -987,6 +991,23 @@ public class DrugPanel extends javax.swing.JPanel {
         jTextField1.setEditable(false);
         jTextField1.setText("10");
 
+        chk_saLimits.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        chk_saLimits.setText("Upper:");
+        chk_saLimits.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_saLimitsActionPerformed(evt);
+            }
+        });
+
+        tf_saUpperLimit.setEditable(false);
+        tf_saUpperLimit.setText("1.00E13");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel14.setText("Lower:");
+
+        tf_saLowerLimit.setEditable(false);
+        tf_saLowerLimit.setText("0.00E00");
+
         javax.swing.GroupLayout LabelingLayout = new javax.swing.GroupLayout(Labeling);
         Labeling.setLayout(LabelingLayout);
         LabelingLayout.setHorizontalGroup(
@@ -1022,7 +1043,15 @@ public class DrugPanel extends javax.swing.JPanel {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jLabel8)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(LabelingLayout.createSequentialGroup()
+                        .addComponent(chk_saLimits)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_saUpperLimit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_saLowerLimit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         LabelingLayout.setVerticalGroup(
@@ -1054,7 +1083,13 @@ public class DrugPanel extends javax.swing.JPanel {
                 .addGroup(LabelingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(TF_SA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(LabelingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_saLimits)
+                    .addComponent(tf_saUpperLimit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
+                    .addComponent(tf_saLowerLimit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanel1.add(Labeling);
@@ -1195,7 +1230,7 @@ public class DrugPanel extends javax.swing.JPanel {
         if (jComboBox2.getSelectedIndex() == 0) {
                 radbio.jTable1.setModel(new javax.swing.table.DefaultTableModel(
                         new Object[][]{
-                                        {"1, 2, 3", "γ-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
+                                        {"1, 2, 3", "gamma-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
                                         {"4, 5, 6", "Beta particles, internal conversion electrons", new Double(0.25), new Double(0.0), new Double(0.25), new Double(0.0)},
                                         {"7", "Auger electrons", new Double(0.25), new Double(0.0), new Double(0.25), new Double(0.0)},
                                         {"8", "Alpha particles", new Double(1.0), new Double(0.0), new Double(1.0), new Double(0.0)},
@@ -1204,7 +1239,7 @@ public class DrugPanel extends javax.swing.JPanel {
                                         {"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
                         },
                         new String[]{
-                                        "ICODE", "Radiation", "<html> <p>α - self</p> <p>(C←C)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(C←C)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(C←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(C←CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;NCS)</p> <p>(Gy<sup>-2</sup>)</p>"
                         }
                 ) {
                         Class[] types = new Class[]{
@@ -1225,7 +1260,7 @@ public class DrugPanel extends javax.swing.JPanel {
         } else if (jComboBox2.getSelectedIndex() == 1) {
                 radbio.jTable1.setModel(new javax.swing.table.DefaultTableModel(
                         new Object[][]{
-                                        {"1, 2, 3", "γ-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
+                                        {"1, 2, 3", "gamma-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
                                         {"4, 5, 6", "Beta particles, internal conversion electrons", new Double(0.83), new Double(0.0), new Double(0.25), new Double(0.0), new Double(0.25), new Double(0.0)},
                                         {"7", "Auger electrons", new Double(2.3), new Double(0.0), new Double(0.25), new Double(0.0), new Double(0.25), new Double(0.0)},
                                         {"8", "Alpha particles", new Double(1.4), new Double(0.0), new Double(1.4), new Double(0.0), new Double(1.4), new Double(0.0)},
@@ -1234,7 +1269,7 @@ public class DrugPanel extends javax.swing.JPanel {
                                         {"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
                         },
                         new String[]{
-                                        "ICODE", "Radiation", "<html> <p>α - self</p> <p>(N←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>"
                         }
                 ) {
                         Class[] types = new Class[]{
@@ -1255,7 +1290,7 @@ public class DrugPanel extends javax.swing.JPanel {
         } else if (jComboBox2.getSelectedIndex() == 2) {
                 radbio.jTable1.setModel(new javax.swing.table.DefaultTableModel(
                         new Object[][]{
-                                        {"1, 2, 3", "γ-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
+                                        {"1, 2, 3", "gamma-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
                                         {"4, 5, 6", "Beta particles, internal conversion electrons", new Double(0.025), new Double(0.0), new Double(0.025), new Double(0.0), new Double(0.025), new Double(0.0)},
                                         {"7", "Auger electrons", new Double(0.025), new Double(0.0), new Double(0.083), new Double(0.0), new Double(0.025), new Double(0.0)},
                                         {"8", "Alpha particles", new Double(0.14), new Double(0.0), new Double(0.14), new Double(0.0), new Double(0.14), new Double(0.0)},
@@ -1264,7 +1299,7 @@ public class DrugPanel extends javax.swing.JPanel {
                                         {"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
                         },
                         new String[]{
-                                        "ICODE", "Radiation", "<html> <p>α - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>"
                         }
                 ) {
                         Class[] types = new Class[]{
@@ -1286,7 +1321,7 @@ public class DrugPanel extends javax.swing.JPanel {
 
                 radbio.jTable1.setModel(new javax.swing.table.DefaultTableModel(
                         new Object[][]{
-                                        {"1, 2, 3", "γ-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
+                                        {"1, 2, 3", "gamma-rays, x-rays", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)},
                                         {"4, 5, 6", "Beta particles, internal conversion electrons", new Double(0.83), new Double(0.0), new Double(0.25), new Double(0.0), new Double(0.25), new Double(0.0), new Double(0.083), new Double(0.0), new Double(0.025), new Double(0.0), new Double(0.025), new Double(0.0)},
                                         {"7", "Auger electrons", new Double(2.3), new Double(0.0), new Double(0.25), new Double(0.0), new Double(0.25), new Double(0.0), new Double(0.230), new Double(0.0), new Double(0.025), new Double(0.0), new Double(0.025), new Double(0.0)},
                                         {"8", "Alpha particles", new Double(1.4), new Double(0.0), new Double(1.4), new Double(0.0), new Double(1.4), new Double(0.0), new Double(0.14), new Double(0.0), new Double(0.14), new Double(0.0), new Double(0.14), new Double(0.0)},
@@ -1295,7 +1330,7 @@ public class DrugPanel extends javax.swing.JPanel {
                                         {"11", "Neutrons", new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0), new Double(0.0)}
                         },
                         new String[]{
-                                        "ICODE", "Radiation", "<html> <p>α - self</p> <p>(N←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(N←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(N←CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>α - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>β - self</p> <p>(Cy←CS)</p> <p>(Gy<sup>-2</sup>)</p>"
+                                        "ICODE", "Radiation", "<html> <p>&alpha - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(N&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;N)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;Cy)</p> <p>(Gy<sup>-2</sup>)</p>", "<html> <p>&alpha - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-1</sup>)</p> ", "<html> <p>&beta - self</p> <p>(Cy&larr;CS)</p> <p>(Gy<sup>-2</sup>)</p>"
                         }
                 ) {
                         Class[] types = new Class[]{
@@ -1316,6 +1351,19 @@ public class DrugPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jComboBox2ItemStateChanged
 
+    private void chk_saLimitsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_saLimitsActionPerformed
+        // TODO add your handling code here:
+        if(chk_saLimits.isSelected()){
+            tf_saUpperLimit.setEditable(true);
+            tf_saLowerLimit.setEditable(true);
+        } else {
+            tf_saUpperLimit.setEditable(false);
+            tf_saLowerLimit.setEditable(false);
+            tf_saUpperLimit.setText("1.00E13");
+            tf_saUpperLimit.setText("0.00E00");
+        }
+    }//GEN-LAST:event_chk_saLimitsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DrugName;
@@ -1331,6 +1379,7 @@ public class DrugPanel extends javax.swing.JPanel {
     public javax.swing.JTextField TF_TimeIntegratedAct;
     public javax.swing.JTextField TF_sfCutOff;
     private javax.swing.JPanel TgtSrc;
+    private javax.swing.JCheckBox chk_saLimits;
     private javax.swing.JButton jButton1;
     public javax.swing.JComboBox<String> jComboBox1;
     public javax.swing.JComboBox<String> jComboBox2;
@@ -1339,6 +1388,7 @@ public class DrugPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1357,6 +1407,8 @@ public class DrugPanel extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField1;
     public javax.swing.JTextField lb_drugName;
     public GUI.PredefRadPanel predefRadPanel1;
+    public javax.swing.JTextField tf_saLowerLimit;
+    public javax.swing.JTextField tf_saUpperLimit;
     // End of variables declaration//GEN-END:variables
     public MonoParticlePanel monoPanel;
     public UserCreatedRadPanel userPanel;

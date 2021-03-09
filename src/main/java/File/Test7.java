@@ -121,13 +121,13 @@ public class Test7 implements ActionListener
         //mainPane.add(btnCancel);
 
         dialog.getContentPane().add(mainPane);
-        dialog.setUndecorated(true); // 除去title
+        dialog.setUndecorated(true); 
         dialog.setResizable(true);
         dialog.setSize(390, 100);
-        dialog.setLocationRelativeTo(parent); //设置此窗口相对于指定组件的位置
+        dialog.setLocationRelativeTo(parent); 
 
 
-        dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE); // 不允许关闭
+        dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE); 
 
 
 
@@ -148,8 +148,8 @@ public class Test7 implements ActionListener
             {
                 try
                 {
-                    thread.start(); // 处理耗时任务
-                    // 等待事务处理线程结束
+                    thread.start(); 
+                    
                     thread.join();
                 }
                 catch(InterruptedException e)
@@ -158,7 +158,7 @@ public class Test7 implements ActionListener
                 }
                 finally
                 {
-                    // 关闭进度提示框
+                    
                     dialog.dispose();
 
                     if(resultInfo != null && !resultInfo.trim().equals(""))
