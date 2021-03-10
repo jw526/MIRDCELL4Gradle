@@ -10107,7 +10107,7 @@ public class Home1 extends JApplet implements ActionListener {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        EquationsImage e = new EquationsImage("./ComplexEquations.PNG");
+        EquationsImage e = new EquationsImage("./ComplexEquations.png");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed

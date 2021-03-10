@@ -16,7 +16,7 @@ public class EquationsImage extends JPanel {
 
     public EquationsImage(String s) {
         try {
-            this.image = ImageIO.read(new File(s));
+            this.image = ImageIO.read(getClass().getResourceAsStream(s));
         }catch(IOException ex) {
             Logger.getLogger(EquationsImage.class.getName()).log(Level.SEVERE, null, ex);
         }
