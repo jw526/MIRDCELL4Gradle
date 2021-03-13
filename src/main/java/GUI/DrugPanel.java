@@ -1000,7 +1000,7 @@ public class DrugPanel extends javax.swing.JPanel {
         });
 
         tf_saUpperLimit.setEditable(false);
-        tf_saUpperLimit.setText("1.00E13");
+        tf_saUpperLimit.setText("1.00E18");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel14.setText("Lower:");
@@ -1359,8 +1359,8 @@ public class DrugPanel extends javax.swing.JPanel {
         } else {
             tf_saUpperLimit.setEditable(false);
             tf_saLowerLimit.setEditable(false);
-            tf_saUpperLimit.setText("1.00E13");
-            tf_saUpperLimit.setText("0.00E00");
+            tf_saUpperLimit.setText("1.00E18");
+            tf_saLowerLimit.setText("0.00E00");
         }
     }//GEN-LAST:event_chk_saLimitsActionPerformed
 

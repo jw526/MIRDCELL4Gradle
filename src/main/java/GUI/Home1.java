@@ -7577,7 +7577,8 @@ public class Home1 extends JApplet implements ActionListener {
 
 		DecimalFormat f = new DecimalFormat("0.000E0");
 
-		for (int i = 0; i < Radius+1; i++) {			
+		for (int i = 0; i < Radius+1; i++) {
+                    if(numCellsAt[i] != 0 || ulNumCellsAt[i] != 0)
                     jTextArea5.append("" + i + "\t\t" + f.format(avgActivity[i]) + "\t\t   " + f.format(avgDose[i]) + "\t\t   "+ f.format(avgSelfDose[i]) + "\t\t   "+ f.format(avgCrossDose[i]) + "\t\t   "+ f.format(ulAvgCrossDose[i]) +"\n");			
 		}
 
@@ -8543,7 +8544,7 @@ public class Home1 extends JApplet implements ActionListener {
 	}//GEN-LAST:event_jTextField5KeyTyped
 
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-		EquationsImage e = new EquationsImage("./Equations.PNG");
+		EquationsImage e = new EquationsImage("/Equations.PNG");
 	}//GEN-LAST:event_jButton1ActionPerformed
 
 	private void jCheckBox2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox2StateChanged
@@ -10107,7 +10108,7 @@ public class Home1 extends JApplet implements ActionListener {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        EquationsImage e = new EquationsImage("./ComplexEquations.png");
+        EquationsImage e = new EquationsImage("/ComplexEquations.png");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
