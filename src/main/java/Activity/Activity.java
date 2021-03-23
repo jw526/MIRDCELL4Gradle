@@ -7,6 +7,8 @@ package Activity;
 
 import java.util.Random;
 import javax.swing.JOptionPane;
+import org.apache.commons.math3.distribution.LogNormalDistribution;
+import org.apache.commons.math3.distribution.NormalDistribution;
 
 /**
  *
@@ -148,6 +150,85 @@ public class Activity {
                     }
                 }
     }
+    
+     public static double[][] generateNormalActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
+            int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
+            String Shape,
+            double MeanActivity, double ShapeFactor, double Tau,
+            double[][] cell) {
+        
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            double sum1 = 0.0;
+            NormalDistribution a = new NormalDistribution(0, ShapeFactor);
+            double[] NormalD = new double[cellnumber];
+            for(int i = 0; i < cellnumber; i++){
+                if(cell[i][4] == 1){
+                    NormalD[i] = a.sample();
+                    if ((NormalD[i] + MeanActivity) < 0) {
+                        JOptionPane.showMessageDialog( null, "Negative activity value, please decrease value of standard deviation", "error", JOptionPane.WARNING_MESSAGE );
+                        break;
+                    } else {
+                        cell[i][5] = MeanActivity + NormalD[i];// this is the activity assigned to the cell
+                    }    
+                    sum1 += cell[i][5];
+                }       
+            }
+		
+            for(int i = 0; i < cellnumber; i++){
+                    cell[i][5] = cell[i][5] * MeanActivity * labelcellnum / sum1 * Tau;
+            }
+
+            return cell;        
+    }
+     
+     public static double[][] generateLogNormalActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
+            int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
+            String Shape,
+            double MeanActivity, double ShapeFactor, double Tau,
+            double[][] cell) {
+        
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            double sum1 = 0.0;
+            double sclaeFactor = Math.log( MeanActivity ) - Math.pow( ShapeFactor, 2 ) / 2;
+            LogNormalDistribution a = new LogNormalDistribution( sclaeFactor, ShapeFactor );
+            double[] lognormal = new double[cellnumber];
+            for(int i = 0; i < cellnumber; i++){
+                if(cell[i][4] == 1){
+                    lognormal[i] = a.sample();
+                    cell[i][5] = lognormal[i]; // this is the activity assigned to the cell   
+                    sum1 += cell[i][5];
+                }       
+            }
+		
+            for(int i = 0; i < cellnumber; i++){
+                    cell[i][5] = cell[i][5] * MeanActivity * labelcellnum / sum1 * Tau;
+            }
+
+            return cell;        
+    }
+     
+    public static double[][] generateUniformActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
+            int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
+            String Shape,
+            double MeanActivity, double Tau,
+            double[][] cell) {
+        
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            double sum1 = 0.0;
+            
+            for(int i = 0; i < cellnumber; i++){
+                if(cell[i][4] == 1){       
+                        cell[i][5] = 1;
+                        sum1 += cell[i][5];
+                    }       
+                }
+		
+            for(int i = 0; i < cellnumber; i++){
+                    cell[i][5] = cell[i][5] * MeanActivity * labelcellnum / sum1 * Tau;
+            }
+
+            return cell;        
+    } 
     
     public static double[][] generateLinearActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
             int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
@@ -325,7 +406,7 @@ public class Activity {
 		
 		return cell;        
     }
-    
+        
     public static double[][] generateExponentialActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
 	                                          int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
 	                                          String Shape,

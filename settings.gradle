@@ -1,1 +1,3 @@
 rootProject.name = 'MIRDCell'
+//include ":slsqp4j"
+//project(":slsqp4j").projectDir = new File("../slsqp4j")

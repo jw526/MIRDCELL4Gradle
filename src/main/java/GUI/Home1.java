@@ -6625,11 +6625,11 @@ public class Home1 extends JApplet implements ActionListener {
 				//shellWidth = Radius - tempShellWidth;
 			}
 
-			cell = ActivityNormal.generateActivity(
+			cell = Activity.generateNormalActivity(
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					AccuActivity, MeanActivity, ShapeFactor, Tau,
+					MeanActivity, ShapeFactor, Tau,
 					cell
 			);
 // calculating self-dose
@@ -6664,7 +6664,7 @@ public class Home1 extends JApplet implements ActionListener {
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
 			jTextField28.setText(String.format("%.3g%n", labelcellp));
-			AveCellActivity = sum1 / labelcellnum;
+			//AveCellActivity = sum1 / labelcellnum;
 		} else if (jComboBox5.getSelectedIndex() == 1) {
 			// log-normal distribution
 			ShapeFactor = Mu;
@@ -6674,11 +6674,11 @@ public class Home1 extends JApplet implements ActionListener {
 				shellWidth = Double.parseDouble(jTextField5.getText());
 			}
 
-			cell = ActivityLogNormal.generateActivity(
+			cell = Activity.generateLogNormalActivity(
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					AccuActivity, MeanActivity, ShapeFactor, Tau,
+					MeanActivity, ShapeFactor, Tau,
 					cell
 			);
 
@@ -6713,7 +6713,7 @@ public class Home1 extends JApplet implements ActionListener {
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
 			jTextField28.setText(String.format("%.3g%n", labelcellp));
-			AveCellActivity = sum1 / labelcellnum;
+			//AveCellActivity = sum1 / labelcellnum;
 		} else if (jComboBox5.getSelectedIndex() == 2) {
 			// uniform distribution
 
@@ -6722,11 +6722,11 @@ public class Home1 extends JApplet implements ActionListener {
 				shellWidth = Double.parseDouble(jTextField5.getText());
 			}
 
-			cell = ActivityUniform.generateActivity(
+			cell = Activity.generateUniformActivity(
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					AccuActivity,
+					MeanActivity, Tau,
 					cell
 			);
 
@@ -6763,7 +6763,7 @@ public class Home1 extends JApplet implements ActionListener {
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
 			jTextField28.setText(String.format("%.3g%n", labelcellp));
-			AveCellActivity = AccuActivity;
+			//AveCellActivity = AccuActivity;
 		} else if (jComboBox5.getSelectedIndex() == 3) {
 			// linear Distribution
 			double constantProvided = Double.parseDouble(jTextField33.getText()) / 100.0;
@@ -9153,6 +9153,7 @@ public class Home1 extends JApplet implements ActionListener {
     }//GEN-LAST:event_jTextField44KeyReleased
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        //Multicellular Tab: 2D compute
         long TS = System.currentTimeMillis();
         if (TS - justRan < 500) {
             // yes this is a stupid hacky fix but it works
@@ -11279,7 +11280,7 @@ public class Home1 extends JApplet implements ActionListener {
         
         return ActiList;
     }
-    
+    // optimized drug acti with slsqp method
     public java.util.List getComboActivity3(java.util.List<Integer> cocktail, double presetSF, java.util.List<Double> LList, int numcells, java.util.List selfSList){
 
         int comboSize = cocktail.size();
