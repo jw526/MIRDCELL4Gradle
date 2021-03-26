@@ -177,6 +177,8 @@ public class Home1 extends JApplet implements ActionListener {
 		SurvCalcComplex = new SurvivalCalculationComplex();                  
 		// check for new version
 		Update.VersionChecker.checkVersion();
+                //temperarily disable DrugPlanning Tab 
+                jTabbedPane1.setEnabledAt(4, false);
 	}
 
 	/**
@@ -1725,7 +1727,7 @@ public class Home1 extends JApplet implements ActionListener {
         jLabel16.setVisible(true);
 
         try{
-            jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/equation.gif"))); // NOI18N
+            jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/equation.gif")));
         } catch (Exception e){
             jLabel10.setText("<html><h2>P = e <sup>-&alpha;<sub>self</sub>D<sub>self</sub>-&beta;<sub>self</sub>D<sup>2</sup><sub>self</sub></sup> &times; e <sup>-&alpha;<sub>cross</sub>D<sub>cross</sub>-&beta;<sub>cross</sub>D<sup>2</sup><sub>cross</sub></sup></h2></html>");
         }
@@ -8544,7 +8546,7 @@ public class Home1 extends JApplet implements ActionListener {
 	}//GEN-LAST:event_jTextField5KeyTyped
 
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-		EquationsImage e = new EquationsImage("/Equations.PNG");
+		EquationsImage e = new EquationsImage("/res/Equations.PNG");
 	}//GEN-LAST:event_jButton1ActionPerformed
 
 	private void jCheckBox2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox2StateChanged
@@ -10109,7 +10111,7 @@ public class Home1 extends JApplet implements ActionListener {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        EquationsImage e = new EquationsImage("/ComplexEquations.png");
+        EquationsImage e = new EquationsImage("/res/ComplexEquations.png");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed

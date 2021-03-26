@@ -10,13 +10,16 @@ import javax.swing.JApplet;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import GUI.Home1;
+import java.io.IOException;
+import java.net.URL;
+import javax.swing.ImageIcon;
 
 
 /**
  * Created Jianchao
  */
 public class StartApp {
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 		/*
 		 * The whole reason for this is so that Dr howell can test it easier because his netbeans cant run cellApplet for some reas
 		 */
@@ -27,7 +30,10 @@ public class StartApp {
 		frame.addWindowListener( new WindowListener() {
 			@Override
 			public void windowOpened(WindowEvent e) {
-
+                            URL iconURL = getClass().getResource("/res/icon.png");
+                            // iconURL is null when not found
+                            ImageIcon icon = new ImageIcon(iconURL);
+                            frame.setIconImage(icon.getImage());
 			}
 
 			@Override
@@ -63,6 +69,8 @@ public class StartApp {
 
 			}
 		} );
+                //ImageIcon icon = new ImageIcon("/resources/MIRDcell.png");
+                //frame.setIconImage(ImageIO.read(new File("../resources/MIRDcell.png")));
 		frame.setVisible( true );
 		program.init();
 		program.start();

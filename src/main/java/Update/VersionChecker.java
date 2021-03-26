@@ -30,10 +30,13 @@ public class VersionChecker {
 			publishedVersion = br.readLine();
 			System.out.println("Published version: " + publishedVersion);
 			System.out.println("This version: " + thisVersion);
-                        
-                        if(Double.parseDouble(thisVersion) < Double.parseDouble(publishedVersion)){
+                        try{
+                            if(Double.parseDouble(thisVersion) < Double.parseDouble(publishedVersion)){
 				needsUpdate = true;
-			}
+                            }
+                        }catch (Exception e){
+                        }
+                        
 
 		} catch (Exception e){
 			e.printStackTrace();
