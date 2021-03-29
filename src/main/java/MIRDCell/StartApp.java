@@ -32,8 +32,11 @@ public class StartApp {
 			public void windowOpened(WindowEvent e) {
                             URL iconURL = getClass().getResource("/res/icon.png");
                             // iconURL is null when not found
-                            ImageIcon icon = new ImageIcon(iconURL);
-                            frame.setIconImage(icon.getImage());
+                            if(iconURL != null){
+                                ImageIcon icon = new ImageIcon(iconURL);
+                                frame.setIconImage(icon.getImage());
+                            }
+                            
 			}
 
 			@Override
