@@ -24,7 +24,7 @@ public class StartApp {
 		 * The whole reason for this is so that Dr howell can test it easier because his netbeans cant run cellApplet for some reas
 		 */
 		JFrame frame = new JFrame(  );
-		frame.setSize( 1450, 900 );
+		frame.setSize( 1500, 900 );
 		final JApplet program = new Home1();
 		frame.getContentPane().add(program);
 		frame.addWindowListener( new WindowListener() {
