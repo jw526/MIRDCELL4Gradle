@@ -140,8 +140,7 @@ public class SurvivalCalculationComplex {
                                                         //jianchao 3/24/20
 //                                                        selfDose[ICODE + 1][1] += selfSValues[ICODE + 1][1] * activityFractions[3] * cell[i][5];
                                                         selfRad += selfSValues[ICODE + 1][1] * activityFractions[3] * cell[i][5];
-                                                        labelRadSelf += selfSValues[ICODE + 1][1] * activityFractions[3] * cell[i][5];
-                                                        
+                                                        labelRadSelf += selfSValues[ICODE + 1][1] * activityFractions[3] * cell[i][5];                                                        
 						}
 					}
 				}

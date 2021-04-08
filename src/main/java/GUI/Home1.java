@@ -1647,7 +1647,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(label_2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, 491, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel110)
                 .addContainerGap(282, Short.MAX_VALUE))
@@ -4501,6 +4501,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
         jPanel71.add(jLabel130);
+        jLabel130.setVisible(false);
 
         jLabel131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/MIRDfit.png")));
         jLabel131.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -4510,6 +4511,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
         jPanel71.add(jLabel131);
+        jLabel131.setVisible(false);
 
         getContentPane().add(jPanel71);
     }// </editor-fold>//GEN-END:initComponents
@@ -7315,11 +7317,11 @@ public class Home1 extends JApplet implements ActionListener {
                                                 + (jComboBox5.getSelectedItem().toString().equals("Polynomial (Radial)")? poly + "\n" : "")
 						+ "Maximum mean activity per cell (Bq) =   " + jTextField29.getText() + "\n"
 						+ "Time integrated activity coefficient (hr) =   " + jTextField31.getText() + "\n" + "\n"
-						+ "MAC = mean activity per cell" + "\n"
-						+ "MDC = mean absorbed dose to target region(s) of cells" + "\n"
-						+ "MALC =mean activity per labeled cell" + "\n"
-						+ "MDLC = mean absorbed dose to labeled cells" + "\n"
-						+ "MDUC = mean absorbed dose to unlabeled cells" + "\n" + "\n"
+						+ "MAC = mean activity per cell (Bq)" + "\n"
+						+ "MDC = mean absorbed dose to target region(s) of cells (Gy)" + "\n"
+						+ "MALC =mean activity per labeled cell (Bq)" + "\n"
+						+ "MDLC = mean absorbed dose to labeled cells (Gy)" + "\n"
+						+ "MDUC = mean absorbed dose to unlabeled cells (Gy)" + "\n" + "\n"
 		);
 		/*"Mean activity per cell (Bq) =   "+ formatter.format(activitytotal/(cellnumber*Tau)) +"\n"+
 		 "Mean absorbed dose to all cells (Gy) =   "+formatter.format( MeanABD) +"\n"+
@@ -9968,11 +9970,11 @@ public class Home1 extends JApplet implements ActionListener {
             + jLabel87.getText() + "=    " + jTextField48.getText() + "\n"
             + "Maximum mean activity per cell (Bq) =   " + jTextField46.getText() + "\n"
             + "Time integrated activity coefficient (hr) =   " + jTextField47.getText() + "\n" + "\n"
-            + "MAC = mean activity per cell" + "\n"
-            + "MDC = mean absorbed dose to target region(s) of cells" + "\n"
-            + "MALC =mean activity per labeled cell" + "\n"
-            + "MDLC = mean absorbed dose to labeled cells" + "\n"
-            + "MDUC = mean absorbed dose to unlabeled cells" + "\n" + "\n"
+            + "MAC = mean activity per cell (Bq)" + "\n"
+            + "MDC = mean absorbed dose to target region(s) of cells (Gy)" + "\n"
+            + "MALC =mean activity per labeled cell (Bq)" + "\n"
+            + "MDLC = mean absorbed dose to labeled cells (Gy)" + "\n"
+            + "MDUC = mean absorbed dose to unlabeled cells (Gy)" + "\n" + "\n"
             
         );
         /*"Mean activity per cell (Bq) =   "+ formatter.format(activitytotal/(cellnumber*Tau)) +"\n"+

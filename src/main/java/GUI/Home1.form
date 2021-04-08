@@ -1428,7 +1428,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="label_2" min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jPanel26" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jPanel42" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanel42" alignment="0" pref="491" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel110" min="-2" max="-2" attributes="0"/>
@@ -6800,6 +6800,9 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel130MouseClicked"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jLabel130.setVisible(false);"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel131">
           <Properties>
@@ -6813,6 +6816,9 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel131MouseClicked"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jLabel131.setVisible(false);"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

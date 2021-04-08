@@ -39,7 +39,7 @@ public class VersionChecker {
                         
 
 		} catch (Exception e){
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Cannot connect  to the server. Some features will be limited.", "alert", JOptionPane.ERROR_MESSAGE);
 			System.err.println("trouble reading url i/o");
 		}
 
