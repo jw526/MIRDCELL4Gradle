@@ -78,6 +78,14 @@ public class RadialHistogram {
                         }
                         Ylab = " Mean Cross Dose To Unlabeled Cells (Gy)";
                         break;
+                    case(6):
+                        for (int i = 0; i < longestaxis + 1; i++) {
+                            if (avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i] != 0) {
+                                seriesR.add(i, avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i]);
+                            }
+                        }
+                        Ylab = " Mean Dose To Cells (Gy)";
+                        break;    
                     
                     }
                     
@@ -131,6 +139,14 @@ public class RadialHistogram {
                             }
                         }
                         Ylab = "Mean Cross Dose To Unlabeled Cells (Gy)";
+                        break;
+                    case(6):
+                        for (int i = 0; i < Radius; i++) {
+                            if (avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i] != 0) {
+                                seriesR.add(i, avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i]);
+                            }
+                        }
+                        Ylab = "Mean Dose To Cells (Gy)";
                         break;
                     }
                 }

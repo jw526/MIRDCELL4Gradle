@@ -49,6 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
+        final String version = "V3.03";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -727,13 +728,13 @@ public class Home1 extends JApplet implements ActionListener {
         );
 
         setBackground(new java.awt.Color(238, 238, 238));
-        setPreferredSize(new java.awt.Dimension(1400, 900));
+        setPreferredSize(new java.awt.Dimension(1600, 900));
         getContentPane().setLayout(new java.awt.FlowLayout());
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPane1.setName("Source Radiation"); // NOI18N
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1200, 850));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1400, 850));
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
@@ -1272,6 +1273,7 @@ public class Home1 extends JApplet implements ActionListener {
         label_2.setText("    Target ?  Source");
 
         jPanel26.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel26.setPreferredSize(new java.awt.Dimension(500, 520));
 
         jPanel27.setBackground(new java.awt.Color(102, 102, 255));
 
@@ -1434,7 +1436,7 @@ public class Home1 extends JApplet implements ActionListener {
                     .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(button8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jPanel34.setBackground(new java.awt.Color(204, 204, 255));
@@ -1478,7 +1480,7 @@ public class Home1 extends JApplet implements ActionListener {
         );
 
         jPanel42.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel42.setPreferredSize(new java.awt.Dimension(450, 500));
+        jPanel42.setPreferredSize(new java.awt.Dimension(450, 520));
 
         jPanel45.setBackground(new java.awt.Color(102, 102, 255));
 
@@ -1628,7 +1630,7 @@ public class Home1 extends JApplet implements ActionListener {
                         .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2742, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2559, Short.MAX_VALUE)
                         .addComponent(label_2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(667, 667, 667)
@@ -1647,10 +1649,10 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(label_2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, 491, Short.MAX_VALUE))
+                    .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel110)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(120, 120, 120)
@@ -1790,7 +1792,7 @@ public class Home1 extends JApplet implements ActionListener {
                                         .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 3441, Short.MAX_VALUE)))
+                                .addGap(0, 932, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         panel1Layout.setVerticalGroup(
@@ -2006,7 +2008,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1375, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
@@ -2438,12 +2440,12 @@ public class Home1 extends JApplet implements ActionListener {
                     .addComponent(jLabel83)
                     .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel100, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addComponent(jLabel100, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jPanel35.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel35.setPreferredSize(new java.awt.Dimension(425, 150));
+        jPanel35.setPreferredSize(new java.awt.Dimension(500, 350));
 
         jLabel76.setBackground(new java.awt.Color(102, 102, 255));
         jLabel76.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -2536,7 +2538,7 @@ public class Home1 extends JApplet implements ActionListener {
                         .addComponent(jLabel78)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2560,7 +2562,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel78)
                     .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jTabbedPane4.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
@@ -2633,7 +2635,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 825, Short.MAX_VALUE)
+            .addGap(0, 862, Short.MAX_VALUE)
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2646,7 +2648,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel52.setLayout(jPanel52Layout);
         jPanel52Layout.setHorizontalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 825, Short.MAX_VALUE)
+            .addGap(0, 862, Short.MAX_VALUE)
         );
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2784,11 +2786,11 @@ public class Home1 extends JApplet implements ActionListener {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(3, 3, 3))
-                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
-                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 830, Short.MAX_VALUE)
+                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 867, Short.MAX_VALUE)
                 .addGap(23, 23, 23))
         );
         jPanel4Layout.setVerticalGroup(
@@ -2798,9 +2800,9 @@ public class Home1 extends JApplet implements ActionListener {
                     .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
+                        .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2856,7 +2858,7 @@ public class Home1 extends JApplet implements ActionListener {
         );
 
         jPanel16.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel16.setPreferredSize(new java.awt.Dimension(425, 150));
+        jPanel16.setPreferredSize(new java.awt.Dimension(500, 255));
 
         jLabel54.setBackground(new java.awt.Color(102, 102, 255));
         jLabel54.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -2978,7 +2980,7 @@ public class Home1 extends JApplet implements ActionListener {
                         .addComponent(jCheckBox1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jCheckBox3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(66, 155, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3017,7 +3019,7 @@ public class Home1 extends JApplet implements ActionListener {
         jCheckBox3.setVisible(false);
 
         jPanel17.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel17.setPreferredSize(new java.awt.Dimension(425, 250));
+        jPanel17.setPreferredSize(new java.awt.Dimension(500, 300));
 
         jLabel55.setBackground(new java.awt.Color(102, 102, 255));
         jLabel55.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -3196,7 +3198,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel104)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -3301,7 +3303,7 @@ public class Home1 extends JApplet implements ActionListener {
             .addGap(0, 683, Short.MAX_VALUE)
         );
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mean Activity per Labeled Cell", "Mean Dose to Labeled Cells", "Mean Self Dose to Labeled Cells", "Mean Cross Dose to Labeled Cells", "Mean Decays per Labeled Cell", "Mean Cross Dose to Unlabeled Cells" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mean Activity per Labeled Cell", "Mean Dose to Labeled Cells", "Mean Self Dose to Labeled Cells", "Mean Cross Dose to Labeled Cells", "Mean Decays per Labeled Cell", "Mean Cross Dose to Unlabeled Cells", "Mean Dose To Cells" }));
         jComboBox3.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox3ItemStateChanged(evt);
@@ -3697,12 +3699,12 @@ public class Home1 extends JApplet implements ActionListener {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE))
+                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3710,12 +3712,12 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGap(13, 13, 13)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                        .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jTabbedPane3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3910,8 +3912,8 @@ public class Home1 extends JApplet implements ActionListener {
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel64, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
-                    .addComponent(jPanel63, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)))
+                    .addComponent(jPanel64, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
+                    .addComponent(jPanel63, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3934,11 +3936,11 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel58Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 3879, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel58Layout.createSequentialGroup()
-                    .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
+                    .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, 1380, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel58Layout.setVerticalGroup(
@@ -3962,7 +3964,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel66.setLayout(jPanel66Layout);
         jPanel66Layout.setHorizontalGroup(
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3894, Short.MAX_VALUE)
+            .addGap(0, 1385, Short.MAX_VALUE)
         );
         jPanel66Layout.setVerticalGroup(
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3986,7 +3988,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel67.setLayout(jPanel67Layout);
         jPanel67Layout.setHorizontalGroup(
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3894, Short.MAX_VALUE)
+            .addGap(0, 1385, Short.MAX_VALUE)
         );
         jPanel67Layout.setVerticalGroup(
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3999,7 +4001,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel68.setLayout(jPanel68Layout);
         jPanel68Layout.setHorizontalGroup(
             jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3894, Short.MAX_VALUE)
+            .addGap(0, 1385, Short.MAX_VALUE)
         );
         jPanel68Layout.setVerticalGroup(
             jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4131,9 +4133,9 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel70.setLayout(jPanel70Layout);
         jPanel70Layout.setHorizontalGroup(
             jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3899, Short.MAX_VALUE)
+            .addGap(0, 1390, Short.MAX_VALUE)
             .addGroup(jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jTabbedPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 3899, Short.MAX_VALUE))
+                .addComponent(jTabbedPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 1390, Short.MAX_VALUE))
         );
         jPanel70Layout.setVerticalGroup(
             jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4295,7 +4297,7 @@ public class Home1 extends JApplet implements ActionListener {
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("MIRDcell Version 3.02");
+        jLabel11.setText("MIRDcell Version " + version);
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
@@ -4443,7 +4445,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel71.setPreferredSize(new java.awt.Dimension(180, 850));
 
         jLabel126.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel126.setText("V3.02");
+        jLabel126.setText(version);
         jPanel71.add(jLabel126);
 
         jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/MIRDcell.png")));
@@ -6149,90 +6151,90 @@ public class Home1 extends JApplet implements ActionListener {
 
 	private void jTextField26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField26KeyReleased
 		// Behrooz June 26
-		jTextField26.setBackground(Color.WHITE); //radius in 3D
-		jTextArea1.setText("");
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		jTextField25.setText("");
-		try {
-			int TempVal = Integer.parseInt(Cellcount);
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		jTextField26.setBackground(Color.WHITE); //radius in 3D
+//		jTextArea1.setText("");
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		jTextField25.setText("");
+//		try {
+//			int TempVal = Integer.parseInt(Cellcount);
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField26KeyReleased
 
 	private void jTextField27KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField27KeyReleased
 		// Behrooz June 26
-		jTextField27.setBackground(Color.WHITE); //height in 3D
-		jTextArea1.setText("");
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		jTextField25.setText("");
-		try {
-			int TempVal = Integer.parseInt(Cellcount);
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		jTextField27.setBackground(Color.WHITE); //height in 3D
+//		jTextArea1.setText("");
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		jTextField25.setText("");
+//		try {
+//			int TempVal = Integer.parseInt(Cellcount);
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField27KeyReleased
 
 	private void jTextField30KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField30KeyReleased
 		// Behrooz June 26
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		jTextField28.setText("");
-		try {
-			int TempVal = Integer.parseInt(Cellcount);
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		jTextField28.setText("");
+//		try {
+//			int TempVal = Integer.parseInt(Cellcount);
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField30KeyReleased
 
 	private void jTextField28KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField28KeyReleased
 		// Behrooz June 26
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		jTextField30.setText("");
-		try {
-			double TempVal = Double.parseDouble(Cellcount);
-			if (TempVal > 100) {
-				jTextField45.setText("100");
-			}
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		jTextField30.setText("");
+//		try {
+//			double TempVal = Double.parseDouble(Cellcount);
+//			if (TempVal > 100) {
+//				jTextField45.setText("100");
+//			}
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField28KeyReleased
 
 	private void jTextField29KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField29KeyReleased
 		// Behrooz June 26
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		try {
-			double TempVal = Double.parseDouble("0" + Cellcount);
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		try {
+//			double TempVal = Double.parseDouble("0" + Cellcount);
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField29KeyReleased
 
 	private void jTextField31KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField31KeyReleased
 		// Behrooz June 26
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		try {
-			double TempVal = Double.parseDouble("0" + Cellcount);
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		try {
+//			double TempVal = Double.parseDouble("0" + Cellcount);
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField31KeyReleased
 
 	private void jTextField33KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField33KeyReleased
 		// Behrooz June 26
-		JTextField text = (JTextField) evt.getSource();
-		String Cellcount = text.getText();
-		try {
-			double TempVal = Double.parseDouble("0" + Cellcount);
-		} catch (NumberFormatException nfe) {
-			text.setText("");
-		}
+//		JTextField text = (JTextField) evt.getSource();
+//		String Cellcount = text.getText();
+//		try {
+//			double TempVal = Double.parseDouble("0" + Cellcount);
+//		} catch (NumberFormatException nfe) {
+//			text.setText("");
+//		}
 	}//GEN-LAST:event_jTextField33KeyReleased
 
 	private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
