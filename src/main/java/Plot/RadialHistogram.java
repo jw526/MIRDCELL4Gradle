@@ -25,7 +25,7 @@ import org.jfree.data.xy.XYSeriesCollection;
  */
 public class RadialHistogram {
     public void generateHistogram(String Shape, double[] avgActivity, double[] avgDose, double[] avgSelfDose, double[] avgCrossDose, double[] ulAvgCrossDose,
-        double Tau, int longestaxis, int Radius, JPanel panel, JComboBox cb){
+        int[] numCellsAt, int[] ulNumCellsAt, double Tau, int longestaxis, int Radius, JPanel panel, JComboBox cb){
                 String Ylab = "";
 		XYSeries seriesR = new XYSeries("Radial Dataset");
                 if(Shape.equals("Sphere")){
@@ -44,7 +44,7 @@ public class RadialHistogram {
                                         seriesR.add(i, avgDose[i]);
                                 }
                         }
-                        Ylab = "Mean Dose To Labeled Cells (Gy)";
+                        Ylab = "Mean Absorbed Dose To Labeled Cells (Gy)";
                         break;
                     case(2): 
                         for (int i = 0; i < longestaxis + 1; i++) {
@@ -52,7 +52,7 @@ public class RadialHistogram {
                                         seriesR.add(i, avgSelfDose[i]);
                                 }
                         }
-                        Ylab = "Mean Self Dose To Labeled Cells (Gy)";
+                        Ylab = "Mean Self Absorbed Dose To Labeled Cells (Gy)";
                         break;
                     case(3):
                         for (int i = 0; i < longestaxis + 1; i++) {
@@ -60,7 +60,7 @@ public class RadialHistogram {
                                         seriesR.add(i, avgCrossDose[i]);
                                 }
                         }
-                        Ylab = "Mean Cross Dose To Labeled Cells (Gy)";
+                        Ylab = "Mean Cross Absorbed Dose To Labeled Cells (Gy)";
                         break;
                     case(4):
                         for (int i = 0; i < longestaxis + 1; i++) {
@@ -76,15 +76,17 @@ public class RadialHistogram {
                                 seriesR.add(i, ulAvgCrossDose[i]);
                             }
                         }
-                        Ylab = " Mean Cross Dose To Unlabeled Cells (Gy)";
+                        Ylab = " Mean Cross Absorbed Dose To Unlabeled Cells (Gy)";
                         break;
                     case(6):
                         for (int i = 0; i < longestaxis + 1; i++) {
-                            if (avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i] != 0) {
-                                seriesR.add(i, avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i]);
+                            if (avgDose[i] + ulAvgCrossDose[i] != 0) {
+                                if (numCellsAt[i] + ulNumCellsAt[i] > 0){
+                                    seriesR.add(i, avgDose[i] * numCellsAt[i]/(numCellsAt[i] + ulNumCellsAt[i]) + ulAvgCrossDose[i]* ulNumCellsAt[i]/(numCellsAt[i] + ulNumCellsAt[i]));
+                                }
                             }
                         }
-                        Ylab = " Mean Dose To Cells (Gy)";
+                        Ylab = " Mean Absorbed Dose To Cells (Gy)";
                         break;    
                     
                     }
@@ -106,7 +108,7 @@ public class RadialHistogram {
                                         seriesR.add(i, avgDose[i]);
                                 }
                         }
-                        Ylab = "Mean Dose To Labeled Cells (Gy)";
+                        Ylab = "Mean Absorbed Dose To Labeled Cells (Gy)";
                         break;
                     case(2): 
                         for (int i = 0; i < Radius; i++) {
@@ -114,7 +116,7 @@ public class RadialHistogram {
                                         seriesR.add(i, avgSelfDose[i]);
                                 }
                         }
-                        Ylab = "Mean Self Dose To Labeled Cells (Gy)";
+                        Ylab = "Mean Self Absorbed Dose To Labeled Cells (Gy)";
                         break;
                     case(3):
                         for (int i = 0; i < Radius; i++) {
@@ -122,7 +124,7 @@ public class RadialHistogram {
                                         seriesR.add(i, avgCrossDose[i]);
                                 }
                         }
-                        Ylab = "Mean Cross Dose To Labeled Cells (Gy)";
+                        Ylab = "Mean Cross Absorbed Dose To Labeled Cells (Gy)";
                         break;
                     case(4):
                         for (int i = 0; i < Radius; i++) {
@@ -138,15 +140,17 @@ public class RadialHistogram {
                                 seriesR.add(i, ulAvgCrossDose[i]);
                             }
                         }
-                        Ylab = "Mean Cross Dose To Unlabeled Cells (Gy)";
+                        Ylab = "Mean Cross Absorbed Dose To Unlabeled Cells (Gy)";
                         break;
                     case(6):
                         for (int i = 0; i < Radius; i++) {
-                            if (avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i] != 0) {
-                                seriesR.add(i, avgSelfDose[i] + avgCrossDose[i] + ulAvgCrossDose[i]);
+                            if (avgDose[i] + ulAvgCrossDose[i] != 0) {
+                                if (numCellsAt[i] + ulNumCellsAt[i] > 0){
+                                    seriesR.add(i, avgDose[i] * numCellsAt[i]/(numCellsAt[i] + ulNumCellsAt[i]) + ulAvgCrossDose[i]* ulNumCellsAt[i]/(numCellsAt[i] + ulNumCellsAt[i]));
+                                }
                             }
                         }
-                        Ylab = "Mean Dose To Cells (Gy)";
+                        Ylab = "Mean Absorbed Dose To Cells (Gy)";
                         break;
                     }
                 }

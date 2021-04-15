@@ -49,7 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
-        final String version = "V3.03";
+        final String version = "V3.04";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -83,6 +83,7 @@ public class Home1 extends JApplet implements ActionListener {
 	double[][] selfSVals;
         
         double[] avgActivity, avgDose, avgSelfDose, avgCrossDose, ulAvgCrossDose;
+        int[] numCellsAt, ulNumCellsAt;
 
 	// Alex Rosen 6/1/2017
 	// for the seperation of alpha and beta doses via table on the complex radiobiological parameters tab and equations from roger
@@ -1704,9 +1705,9 @@ public class Home1 extends JApplet implements ActionListener {
                 .addContainerGap())
         );
 
-        jLabel58.setText("Self  Dose : ");
+        jLabel58.setText("Self Absorbed Dose : ");
 
-        jLabel59.setText("Cross Dose : ");
+        jLabel59.setText("Cross Absorbed Dose : ");
 
         jLabel60.setText("<html> <p class=MsoNormal><span lang=EN-US>&alpha;<sub>self</sub> = </span></p> </html>");
         jLabel60.setEnabled(true);
@@ -3303,7 +3304,7 @@ public class Home1 extends JApplet implements ActionListener {
             .addGap(0, 683, Short.MAX_VALUE)
         );
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mean Activity per Labeled Cell", "Mean Dose to Labeled Cells", "Mean Self Dose to Labeled Cells", "Mean Cross Dose to Labeled Cells", "Mean Decays per Labeled Cell", "Mean Cross Dose to Unlabeled Cells", "Mean Dose To Cells" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mean Activity per Labeled Cell", "Mean Absorbed Dose to Labeled Cells", "Mean Self Absorbed Dose to Labeled Cells", "Mean Cross Absorbed Dose to Labeled Cells", "Mean Decays per Labeled Cell", "Mean Cross Absorbed Dose to Unlabeled Cells", "Mean Absorbed Dose To Cells" }));
         jComboBox3.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox3ItemStateChanged(evt);
@@ -5437,22 +5438,22 @@ public class Home1 extends JApplet implements ActionListener {
 			if (d < maxRow + 1) {
 				selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
 				crossDose = list.get(d - 1).toString().trim().split("\\s+")[pro + 1];
-				cc2.setSelfDose("Self-Dose to Source Cell : " + selfDose + " Gy/Bq-s");
-				cc2.setCrossDose("Cross-Dose to Neighbor Cell : " + crossDose + " Gy/Bq-s");
+				cc2.setSelfDose("Self Absorbed Dose to Source Cell : " + selfDose + " Gy/Bq-s");
+				cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : " + crossDose + " Gy/Bq-s");
 				cc2.repaint();
 
 				//add value to textField
 			} else {
 				//modified 08/05/09
 				selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
-				cc2.setSelfDose("Self-Dose to Source Cell : " + selfDose + " Gy/Bq-s");
-				cc2.setCrossDose("Cross-Dose to Neighbor Cell : 0.00E00 Gy/Bq-s/ Exceeds range of particle(s)");
+				cc2.setSelfDose("Self Absorbed Dose to Source Cell : " + selfDose + " Gy/Bq-s");
+				cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : 0.00E00 Gy/Bq-s/ Exceeds range of particle(s)");
 				cc2.repaint();
 
 			}
 		} catch (Exception e) {
-			cc2.setSelfDose("Self-Dose to Source Cell : Check Input");
-			cc2.setCrossDose("Cross-Dose to Neighbor Cell : Check Input");
+			cc2.setSelfDose("Self Absorbed Dose to Source Cell : Check Input");
+			cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : Check Input");
 			cc2.repaint();
 		}
 	}//GEN-LAST:event_button6ActionPerformed
@@ -5493,21 +5494,21 @@ public class Home1 extends JApplet implements ActionListener {
 				if (d < maxRow + 1) {
 					selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
 					crossDose = list.get(d - 1).toString().trim().split("\\s+")[pro + 1];
-					cc2.setSelfDose("Self-Dose to Source Cell : " + selfDose + " Gy/Bq-s");
-					cc2.setCrossDose("Cross-Dose to Neighbor Cell : " + crossDose + " Gy/Bq-s");
+					cc2.setSelfDose("Self Absorbed Dose to Source Cell : " + selfDose + " Gy/Bq-s");
+					cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : " + crossDose + " Gy/Bq-s");
 					cc2.repaint();
 
 				} else {
 					//modified 08/05/09
 					selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
-					cc2.setSelfDose("Self-Dose to Source Cell : " + selfDose + " Gy/Bq-s");
-					cc2.setCrossDose("Cross-Dose to Neighbor Cell : 0.00E00 Gy/Bq-s/ Exceeds range of particle(s)");
+					cc2.setSelfDose("Self Absorbed Dose to Source Cell : " + selfDose + " Gy/Bq-s");
+					cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : 0.00E00 Gy/Bq-s/ Exceeds range of particle(s)");
 					cc2.repaint();
 
 				}
 			} catch (Exception e) {
-				cc2.setSelfDose("Self-Dose to Source Cell : Check Input");
-				cc2.setCrossDose("Cross-Dose to Neighbor Cell : Check Input");
+				cc2.setSelfDose("Self Absorbed Dose to Source Cell : Check Input");
+				cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : Check Input");
 				cc2.repaint();
 			}
 		}
@@ -5671,22 +5672,22 @@ public class Home1 extends JApplet implements ActionListener {
 			if (d < maxRow + 1) {
 				selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
 				crossDose = list.get(d - 1).toString().trim().split("\\s+")[pro + 1];
-				cc2.setSelfDose("Self-Dose to Source Cell : " + selfDose + " Gy/Bq-s");
-				cc2.setCrossDose("Cross-Dose to Neighbor Cell : " + crossDose + " Gy/Bq-s");
+				cc2.setSelfDose("Self Absorbed Dose to Source Cell : " + selfDose + " Gy/Bq-s");
+				cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : " + crossDose + " Gy/Bq-s");
 				cc2.repaint();
 
 				//add value to textField
 			} else {
 				//modified 08/05/09
 				selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
-				cc2.setSelfDose("Self-Dose to Source Cell : " + selfDose + " Gy/Bq-s");
-				cc2.setCrossDose("Cross-Dose to Neighbor Cell : 0.00E00 Gy/Bq-s/ Exceeds range of particle(s)");
+				cc2.setSelfDose("Self AbsorbedDose to Source Cell : " + selfDose + " Gy/Bq-s");
+				cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : 0.00E00 Gy/Bq-s/ Exceeds range of particle(s)");
 				cc2.repaint();
 
 			}
 		} catch (Exception e) {
-			cc2.setSelfDose("Self-Dose to Source Cell : Check Input");
-			cc2.setCrossDose("Cross-Dose to Neighbor Cell : Check Input");
+			cc2.setSelfDose("Self Absorbed Dose to Source Cell : Check Input");
+			cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : Check Input");
 			cc2.repaint();
 		}
 	}//GEN-LAST:event_button4ActionPerformed
@@ -7463,10 +7464,10 @@ public class Home1 extends JApplet implements ActionListener {
 		avgDose = new double[2 * longestaxis + 1];
                 avgSelfDose = new double[2 * longestaxis + 1];
                 avgCrossDose = new double[2 * longestaxis + 1];
-		int[] numCellsAt = new int[2 * longestaxis + 1];
+		numCellsAt = new int[2 * longestaxis + 1];
 
                 ulAvgCrossDose = new double[2 * longestaxis + 1];  //unlabeled avg cross-dose
-		int ulNumCellsAt[] = new int[2 * longestaxis + 1]; //unlabeled # of cell at r
+		ulNumCellsAt = new int[2 * longestaxis + 1]; //unlabeled # of cell at r
 
 		int rToCell;
                 if(Shape.equals("Sphere")){
@@ -7653,20 +7654,20 @@ public class Home1 extends JApplet implements ActionListener {
                 }
 
 		// output the sctivity as a function of radius from center of mass. it should be noted that this is not necessarily distance from edge
-		jTextArea5.append("Activity | Dose as a function of radius (from the center of mass):\n");
-		jTextArea5.append("Radial position (um)\tActivity (Bq)\t\tAvg Dose(Gy)\t\tAvg Self-Dose(Gy)\tAvg Cross-Dose(Gy)\tAvg Cross-Dose(Gy)\n");
-                jTextArea5.append("\t\t(labeled cell)\t\t(labeled cell)\t\t(labeled cell)\t\t(labeled cell)\t\t(unlabeled cell)\n");
+		jTextArea5.append("Activity | Absorbed Dose as a function of radius (from the center of mass):\n");
+		jTextArea5.append("Radial position (um)\tActivity (Bq)\tAvg Absorbed Dose(Gy)\tAvg Self Absorbed Dose(Gy)\tAvg Cross Absorbed Dose(Gy)\tAvg Cross Absorbed Dose(Gy)\t Avg Absorbed Dose(Gy)\n");
+                jTextArea5.append("\t\t(labeled cell)\t\t(labeled cell)\t\t(labeled cell)\t\t(labeled cell)\t\t(unlabeled cell)\t\t(all cells)\n");
 
 		DecimalFormat f = new DecimalFormat("0.000E0");
 
 		for (int i = 0; i < Radius+1; i++) {
                     if(numCellsAt[i] != 0 || ulNumCellsAt[i] != 0)
-                    jTextArea5.append("" + i + "\t\t" + f.format(avgActivity[i]) + "\t\t   " + f.format(avgDose[i]) + "\t\t   "+ f.format(avgSelfDose[i]) + "\t\t   "+ f.format(avgCrossDose[i]) + "\t\t   "+ f.format(ulAvgCrossDose[i]) +"\n");			
+                    jTextArea5.append("" + i + "\t\t" + f.format(avgActivity[i]) + "\t\t   " + f.format(avgDose[i]) + "\t\t   "+ f.format(avgSelfDose[i]) + "\t\t   "+ f.format(avgCrossDose[i]) + "\t\t   "+ f.format(ulAvgCrossDose[i]) + "\t\t   " + f.format(avgDose[i] * numCellsAt[i]/(numCellsAt[i] + ulNumCellsAt[i]) + ulAvgCrossDose[i]* ulNumCellsAt[i]/(numCellsAt[i] + ulNumCellsAt[i])) +"\n");			
 		}
 
 		// generate the data set
                 RadialHistogram radialHistogram = new RadialHistogram();
-                radialHistogram.generateHistogram(Shape, avgActivity, avgDose, avgSelfDose, avgCrossDose, ulAvgCrossDose, Tau, longestaxis, Radius, jPanel56, jComboBox3);
+                radialHistogram.generateHistogram(Shape, avgActivity, avgDose, avgSelfDose, avgCrossDose, ulAvgCrossDose, numCellsAt, ulNumCellsAt, Tau, longestaxis, Radius, jPanel56, jComboBox3);
 		//</editor-fold>
 
 		jTextArea3.setCaretPosition(0);
@@ -8349,25 +8350,25 @@ public class Home1 extends JApplet implements ActionListener {
 				selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
 				crossDose = list.get(d - 1).toString().trim().split("\\s+")[pro + 1];
                                 if(pro == 3){
-                                    cc2.setSelfDose("Self-Dose to Nucleus = " + nf.format(selfDNu) + " Gy/Bq-s. Self-Dose to Cytoplasm = " + nf.format(selfDCy) + " Gy/Bq-s");
-                                    cc2.setCrossDose("Cross-Dose to Neighbor Nucleus = " + nf.format(crossDNu) + " Gy/Bq-s. Cross-Dose to Neighbor Cytoplasm = " + nf.format(crossDCy) + " Gy/Bq-s");
-                                    doseInfo += "Self-Dose to Nucleus = " + nf.format(selfDNu) + " Gy/Bq-s. Self-Dose to Cytoplasm = " + nf.format(selfDCy) + " Gy/Bq-s\n";
-                                    doseInfo += "Cross-Dose to Neighbor Nucleus = " + nf.format(crossDNu) + " Gy/Bq-s. Cross-Dose to Neighbor Cytoplasm = " + nf.format(crossDCy) + " Gy/Bq-s\n";
+                                    cc2.setSelfDose("Self Absorbed Dose to Nucleus = " + nf.format(selfDNu) + " Gy/Bq-s. Self Absorbed Dose to Cytoplasm = " + nf.format(selfDCy) + " Gy/Bq-s");
+                                    cc2.setCrossDose("Cross Absorbed Dose to Neighbor Nucleus = " + nf.format(crossDNu) + " Gy/Bq-s. Cross Absorbed Dose to Neighbor Cytoplasm = " + nf.format(crossDCy) + " Gy/Bq-s");
+                                    doseInfo += "Self Absorbed Dose to Nucleus = " + nf.format(selfDNu) + " Gy/Bq-s. Self Absorbed Dose to Cytoplasm = " + nf.format(selfDCy) + " Gy/Bq-s\n";
+                                    doseInfo += "Cross Absorbed Dose to Neighbor Nucleus = " + nf.format(crossDNu) + " Gy/Bq-s. Cross Absorbed Dose to Neighbor Cytoplasm = " + nf.format(crossDCy) + " Gy/Bq-s\n";
                                 } else if(pro == 2){
-                                    cc2.setSelfDose("Self-Dose to Cytoplasm = " + nf.format(selfD) + " Gy/Bq-s");
-                                    cc2.setCrossDose("Cross-Dose to Neighbor Cytoplasm = " + nf.format(crossD) + " Gy/Bq-s");
-                                    doseInfo += "Self-Dose to Cytoplasm = " + nf.format(selfD) + " Gy/Bq-s\n";
-                                    doseInfo += "Cross-Dose to Neighbor Cytoplasm = " + nf.format(crossD) + " Gy/Bq-s\n";
+                                    cc2.setSelfDose("Self Absorbed Dose to Cytoplasm = " + nf.format(selfD) + " Gy/Bq-s");
+                                    cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cytoplasm = " + nf.format(crossD) + " Gy/Bq-s");
+                                    doseInfo += "Self Absorbed Dose to Cytoplasm = " + nf.format(selfD) + " Gy/Bq-s\n";
+                                    doseInfo += "Cross Absorbed Dose to Neighbor Cytoplasm = " + nf.format(crossD) + " Gy/Bq-s\n";
                                 } else if(pro == 1){
-                                    cc2.setSelfDose("Self-Dose to Nucleus = " + nf.format(selfD) + " Gy/Bq-s");
-                                    cc2.setCrossDose("Cross-Dose to Neighbor Nucleus = " + nf.format(crossD) + " Gy/Bq-s");
-                                    doseInfo += "Self-Dose to Nucleus = " + nf.format(selfD) + " Gy/Bq-s\n";
-                                    doseInfo += "Cross-Dose to Neighbor Nucleus = " + nf.format(crossD) + " Gy/Bq-s\n";
+                                    cc2.setSelfDose("Self Absorbed Dose to Nucleus = " + nf.format(selfD) + " Gy/Bq-s");
+                                    cc2.setCrossDose("Cross Absorbed Dose to Neighbor Nucleus = " + nf.format(crossD) + " Gy/Bq-s");
+                                    doseInfo += "Self Absorbed Dose to Nucleus = " + nf.format(selfD) + " Gy/Bq-s\n";
+                                    doseInfo += "Cross Absorbed Dose to Neighbor Nucleus = " + nf.format(crossD) + " Gy/Bq-s\n";
                                 } else if(pro == 0){
-                                    cc2.setSelfDose("Self-Dose to Cell = " + nf.format(selfD) + " Gy/Bq-s");
-                                    cc2.setCrossDose("Cross-Dose to Neighbor Cell = " + nf.format(crossD) + " Gy/Bq-s");
-                                    doseInfo += "Self-Dose to Cell = " + nf.format(selfD) + " Gy/Bq-s\n";
-                                    doseInfo += "Cross-Dose to Neighbor Cell = " + nf.format(crossD) + " Gy/Bq-s\n";
+                                    cc2.setSelfDose("Self Absorbed Dose to Cell = " + nf.format(selfD) + " Gy/Bq-s");
+                                    cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell = " + nf.format(crossD) + " Gy/Bq-s");
+                                    doseInfo += "Self Absorbed Dose to Cell = " + nf.format(selfD) + " Gy/Bq-s\n";
+                                    doseInfo += "Cross Absorbed Dose to Neighbor Cell = " + nf.format(crossD) + " Gy/Bq-s\n";
                                 }
 				
 				cc2.isotope = iso;
@@ -8377,14 +8378,14 @@ public class Home1 extends JApplet implements ActionListener {
 			} else {
 				//modified 08/05/09
 				selfDose = list.get(0).toString().trim().split("\\s+")[pro + 1];
-				cc2.setSelfDose("Self-Dose to Cell : " + selfDose + " Gy/Bq-s");
-				cc2.setCrossDose("Cross-Dose to Neighbor Cell : Exceeds range of particle(s)");
+				cc2.setSelfDose("Self Absorbed Dose to Cell : " + selfDose + " Gy/Bq-s");
+				cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : Exceeds range of particle(s)");
 				cc2.isotope = iso;
 				cc2.repaint();
 			}
 		} catch (Exception e) {
-			cc2.setSelfDose("Self-Dose to Cell : Check Input");
-			cc2.setCrossDose("Cross-Dose to Neighbor Cell : Check Input");
+			cc2.setSelfDose("Self Absorbed Dose to Cell : Check Input");
+			cc2.setCrossDose("Cross Absorbed Dose to Neighbor Cell : Check Input");
 			cc2.isotope = iso;
 			cc2.repaint();
 		}
@@ -8815,7 +8816,7 @@ public class Home1 extends JApplet implements ActionListener {
                 String Shape = jComboBox2.getSelectedItem().toString();
                 try{
                     double Tau = Double.parseDouble(jTextField31.getText()) * 3600.0;
-                    radialHistogram.generateHistogram(Shape, avgActivity, avgDose, avgSelfDose, avgCrossDose, ulAvgCrossDose, Tau, longestaxis, Radius, jPanel56, jComboBox3);
+                    radialHistogram.generateHistogram(Shape, avgActivity, avgDose, avgSelfDose, avgCrossDose, ulAvgCrossDose, numCellsAt, ulNumCellsAt, Tau, longestaxis, Radius, jPanel56, jComboBox3);
                 } catch (Exception e){
                     
                 }
@@ -10111,7 +10112,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
 
             // output the sctivity as a function of radius from center of mass. it should be noted that this is not necessarily distance from edge
-            jTextArea5.append("Activity | Dose as a function of radius (from the center of mass):\n");
+            jTextArea5.append("Activity | Absorbed Dose as a function of radius (from the center of mass):\n");
             for (int i = 0; i < avgActivity.length; i++) {
                 if (avgActivity[i] != 0) {
                     jTextArea5.append("" + i + "\t" + formatter.format(avgActivity[i]) + "    |    " + formatter.format(avgDose[i]) + "\n");
@@ -10134,7 +10135,7 @@ public class Home1 extends JApplet implements ActionListener {
                         seriesR.add(i, avgDose[i]);
                     }
                 }
-                Ylab = "Mean Dose To Cells (Gy)";
+                Ylab = "Mean Absorbed Dose To Cells (Gy)";
             }
             seriesR.add(0.0, Double.MIN_NORMAL);
             XYSeriesCollection RadialSet = new XYSeriesCollection();

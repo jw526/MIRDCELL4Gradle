@@ -249,9 +249,9 @@ public class SurvivalCalculationComplex {
 				}
 			}
                         
-                        String output_self = "Self Doses to cell (from decays anywhere within the same cell)\n";
+                        String output_self = "Self Absorbed Doses to cell (from decays anywhere within the same cell)\n";
 			output_self += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_cross = "Cross Doses to cell (from decays anywhere within neighboring cells)\n";
+                        String output_cross = "Cross Absorbed Doses to cell (from decays anywhere within neighboring cells)\n";
 			output_cross += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
 
 			for (double k = 0; k <= step; k++) {
@@ -602,9 +602,9 @@ public class SurvivalCalculationComplex {
 				}
 			}
                         
-                        String output_self = "Self Doses to nucleus(from decays anywhere within the same cell)\n";
+                        String output_self = "Self Absorbed Doses to nucleus(from decays anywhere within the same cell)\n";
 			output_self += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_cross = "Cross Doses to nucleus (from decays anywhere within neighboring cells)\n";
+                        String output_cross = "Cross Absorbed Doses to nucleus (from decays anywhere within neighboring cells)\n";
 			output_cross += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
 
 			for (double k = 0; k <= step; k++) {
@@ -964,9 +964,9 @@ public class SurvivalCalculationComplex {
 				}
 			}
                         
-                        String output_self = "Self Doses to cytoplasm (from decays anywhere within the same cell)\n";
+                        String output_self = "Self Absorbed Doses to cytoplasm (from decays anywhere within the same cell)\n";
 			output_self += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_cross = "Cross Doses to cytoplasm (from decays anywhere within neighboring cells)\n";
+                        String output_cross = "Cross Absorbed Doses to cytoplasm (from decays anywhere within neighboring cells)\n";
 			output_cross += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
 
 			for (double k = 0; k <= step; k++) {
@@ -1416,18 +1416,18 @@ public class SurvivalCalculationComplex {
 				}
 			}
 
-			output = "Doses to the nucleus and cytoplasm are shown seperately when using both as the target region.\n";
-			output += "Doses to nucleus\n";
+			output = "Absorbed Doses to the nucleus and cytoplasm are shown seperately when using both as the target region.\n";
+			output += "Absorbed Doses to nucleus\n";
 			output += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-			String output2 = "Doses to cytoplasm\n";
+			String output2 = "Absorbed Doses to cytoplasm\n";
 			output2 += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_self = "Self Doses to nucleus (from decays anywhere within the same cell)\n";
+                        String output_self = "Self Absorbed Doses to nucleus (from decays anywhere within the same cell)\n";
 			output_self += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_cross = "Cross Doses to nucleus (from decays anywhere within neighboring cells)\n";
+                        String output_cross = "Cross Absorbed Doses to nucleus (from decays anywhere within neighboring cells)\n";
 			output_cross += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_self2 = "Self Doses to cytoplasm (from decays anywhere within the same cell)\n";
+                        String output_self2 = "Self Absorbed Doses to cytoplasm (from decays anywhere within the same cell)\n";
 			output_self2 += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
-                        String output_cross2 = "Cross Doses to cytoplasm (from decays anywhere within neighboring cells)\n";
+                        String output_cross2 = "Cross Absorbed Doses to cytoplasm (from decays anywhere within neighboring cells)\n";
 			output_cross2 += "MAC(Bq)\tMDC(all)\tMDC(γ)\tMDC(X)\tMDC(AQ)\tMDC(β+)\tMDC(β-)\tMDC(IE)\tMDC(Auger)\tMDC(α)\tMDC(αR)\tMDC(FF)\tMDC(N)\tMALC(Bq)\tMDLC(all)\tMDLC(γ)\tMDLC(X)\tMDLC(AQ)\tMDLC(β+)\tMDLC(β-)\tMDLC(IE)\tMDLC(Auger)\tMDLC(α)\tMDLC(αR)\tMDLC(FF)\tMDLC(N)\t MDUC(all)\tMDUC(γ)\tMDUC(X)\tMDUC(AQ)\tMDUC(β+)\tMDUC(β-)\tMDUC(IE)\tMDUC(Auger)\tMDUC(α)\tMDUC(αR)\tMDUC(FF)\tMDUC(N)\tSF(labeled)\tSF(unlabeled)\tSF(all cells)" + "\n";
 
 			for (double k = 0; k <= step; k++) {
