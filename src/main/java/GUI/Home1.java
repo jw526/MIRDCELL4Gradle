@@ -49,7 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
-        final String version = "V3.04";
+        final String version = "V3.05";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -6304,7 +6304,7 @@ public class Home1 extends JApplet implements ActionListener {
 
 		cc2.Dist = text3;
 		cc2.repaint();
-		final int Dist = Integer.parseInt(jTextField3.getText());
+		int Dist = Integer.parseInt(jTextField3.getText());
 		// Reads in the shape from GUI
 		String Shape = jComboBox2.getSelectedItem().toString();
 		// Initialize some of the parameters
@@ -6457,7 +6457,7 @@ public class Home1 extends JApplet implements ActionListener {
 			jTextField27.setBackground(Color.WHITE);
 		}
 
-		if (jTextArea1.getText().isEmpty()) {
+//		if (jTextArea1.getText().isEmpty()) {
 
 			jPanel6.revalidate();
 
@@ -6581,7 +6581,7 @@ public class Home1 extends JApplet implements ActionListener {
 			System.out.println("selected iso file name: " + iso);
 			pro = jList3.getSelectedIndex();
 
-		}
+//		}
 
 		String text = jTextArea1.getText();
 		String[] lines = text.split("\\r?\\n");
@@ -6594,7 +6594,7 @@ public class Home1 extends JApplet implements ActionListener {
 		ZoomResetSlice = C3DS.Zoom;
                 
 		int labelcellnum = 0;
-		double labelcellp;
+		double labelcellp = 100;
 		if (!jTextField28.getText().equals("")) {  // JTF 28 = % of labeled cells
 			// JTF 30 = # of labeled cells
 			labelcellp = Double.parseDouble(jTextField28.getText());
@@ -6605,18 +6605,18 @@ public class Home1 extends JApplet implements ActionListener {
 				labelcellp = 100;
 				labelcellnum = cellnumber;
 				jTextField30.setText(Integer.toString(labelcellnum));
-				jTextField28.setText(String.format("%.3g%n", labelcellp));
+				jTextField28.setText(String.format("%.4g%n", labelcellp));
 			}
 		} else if (!jTextField30.getText().equals("")) {
 			labelcellnum = Integer.parseInt(jTextField30.getText());
 			if (labelcellnum <= cellnumber) {
 				labelcellp = (100.0 * labelcellnum / cellnumber);
-				jTextField28.setText(String.format("%.3g%n", labelcellp));
+				jTextField28.setText(String.format("%.4g%n", labelcellp));
 			} else {
 				labelcellp = 100;
 				labelcellnum = cellnumber;
 				jTextField30.setText(Integer.toString(labelcellnum));
-				jTextField28.setText(String.format("%.3g%n", labelcellp));
+				jTextField28.setText(String.format("%.4g%n", labelcellp));
 			}
 		}
 
@@ -6712,7 +6712,7 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					MeanActivity, ShapeFactor, Tau,
+					MeanActivity, ShapeFactor, Tau, coldcellnumber,
 					cell
 			);
 // calculating self-dose
@@ -6746,7 +6746,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 			//AveCellActivity = sum1 / labelcellnum;
 		} else if (jComboBox5.getSelectedIndex() == 1) {
 			// log-normal distribution
@@ -6761,7 +6761,7 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					MeanActivity, ShapeFactor, Tau,
+					MeanActivity, ShapeFactor, Tau, coldcellnumber,
 					cell
 			);
 
@@ -6795,7 +6795,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 			//AveCellActivity = sum1 / labelcellnum;
 		} else if (jComboBox5.getSelectedIndex() == 2) {
 			// uniform distribution
@@ -6809,7 +6809,7 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					MeanActivity, Tau,
+					MeanActivity, Tau, coldcellnumber,
 					cell
 			);
 
@@ -6845,7 +6845,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 			//AveCellActivity = AccuActivity;
 		} else if (jComboBox5.getSelectedIndex() == 3) {
 			// linear Distribution
@@ -6866,7 +6866,7 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape, text1,
-					AccuActivity, constantProvided, MeanActivity, Tau,
+					AccuActivity, constantProvided, MeanActivity, Tau, coldcellnumber,
 					cell
 			);
 
@@ -6898,7 +6898,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 		} else if (jComboBox5.getSelectedIndex() == 4) {
 			// exponential Distribution
 			double constantProvided = 0.0;
@@ -6919,7 +6919,7 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					AccuActivity, b, constantProvided, MeanActivity, Tau,
+					AccuActivity, b, constantProvided, MeanActivity, Tau, coldcellnumber,
 					cell
 			);
 
@@ -6951,7 +6951,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 		} else if (jComboBox5.getSelectedIndex() == 5) {
 			// polynomial distribution
 			// currently for sphere only, but including extra code for the future
@@ -6972,7 +6972,7 @@ public class Home1 extends JApplet implements ActionListener {
 					cellnumber, Radius, Height, labelcellnum, degree,
 					coefficients, shellWidth, AccuActivity,
 					Shape,
-					MeanActivity, Tau,
+					MeanActivity, Tau, coldcellnumber,
 					cell
 			);
 
@@ -7004,7 +7004,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 		} else if (jComboBox5.getSelectedIndex() == 6) {
 			// 4 Var Log Distrubution
 			double a = 0, b = 0, a0 = 0, x0 = 0;
@@ -7054,7 +7054,7 @@ public class Home1 extends JApplet implements ActionListener {
 					a, b, x0, a0,
 					cellnumber, Radius, labelcellnum, Height,
 					Shape, shellWidth,text3,
-					AccuActivity, constantProvided, MeanActivity, Tau,
+					AccuActivity, constantProvided, MeanActivity, Tau, coldcellnumber,
 					cell
 			);
 			int counter = 0;
@@ -7086,7 +7086,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
 		} else if (jComboBox5.getSelectedIndex() == 7) {
 			// import CSV - user defined 
                         //Jianchao 4/10/2020 
@@ -7134,7 +7134,7 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
         } else if (jComboBox5.getSelectedIndex() == 8) {
 			// user upload(r, decay/sec) 030121
                         double shellWidth = 0.0;
@@ -7179,14 +7179,14 @@ public class Home1 extends JApplet implements ActionListener {
 			}
                         jTextField30.setText(Integer.toString(labeledCellNum));
                         labelcellp = (100.0 * labeledCellNum / cellnumber);
-			jTextField28.setText(String.format("%.3g%n", labelcellp));
+			jTextField28.setText(nf.format(labelcellp));
         }
 		//</editor-fold>
 
 		System.err.println("temp 3 -->" + temp3 + "Start");
 		final long start = System.currentTimeMillis();
 
-		double rCell = Double.parseDouble(jTextField1.getText()); //jianchao wang 9/12/18
+		rCell = Double.parseDouble(jTextField1.getText()); //jianchao wang 9/12/18
                 //cross-dose calculation
 		SurvCalc = new SurvivalCalculation();
                 
@@ -8113,7 +8113,7 @@ public class Home1 extends JApplet implements ActionListener {
 				}
 
 				//070610
-				jTextArea1.setText("1"); //clear text area
+				jTextArea1.setText(""); //clear text area
 				if (jRadioButton1.isSelected()) {
 					jTextArea2.setText("Absorbed Source used: Water");
 				}
@@ -9284,7 +9284,7 @@ public class Home1 extends JApplet implements ActionListener {
         cc2.repaint();
 
         // BEHROOZ 06/15/2012
-        final int Dist = Integer.parseInt(jTextField3.getText());
+        int Dist = Integer.parseInt(jTextField3.getText());
         // Reads in the shape from GUI
         String Shape = jComboBox7.getSelectedItem().toString();
         // Initialize some of the parameters

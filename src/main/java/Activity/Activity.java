@@ -6,6 +6,7 @@
 package Activity;
 
 import java.util.Random;
+import java.util.stream.IntStream;
 import javax.swing.JOptionPane;
 import org.apache.commons.math3.distribution.LogNormalDistribution;
 import org.apache.commons.math3.distribution.NormalDistribution;
@@ -18,7 +19,7 @@ import org.apache.commons.math3.distribution.NormalDistribution;
 public class Activity {
     private static void labelCells(boolean NECROTIC, boolean DEAD_NECROTIC,
 			int cellnumber, int Height, int labelcellnum, int Radius, double shellWidth,
-			String Shape,
+			String Shape, int coldcellnumber,
 			//double AccuActivity,
 			double[][] cell) {
 		int TMC = 0, j;
@@ -42,12 +43,23 @@ public class Activity {
 				// is the cell labelable?
 				if(Shape.toLowerCase().equals("sphere")){
 					rToCell = Math.sqrt(Math.pow(cell[j][1], 2) + Math.pow(cell[j][2], 2) + Math.pow(cell[j][3], 2));
+                                        //cell is already labeled or in the cold zone
 					if(cell[j][4] != 0 || rToCell <= (Radius - shellWidth)){
 						i--;
 						TMC++;
-						if(TMC == cellnumber * 2){
+						if(TMC == cellnumber * 3){
 							JOptionPane.showMessageDialog(null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i++ / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE);
-							break;
+							//label everything in the hot shell
+//                                                        IntStream.range(0, cellnumber).parallel().forEach(n -> {
+//                                                            double r2c = Math.sqrt(Math.pow(cell[n][1], 2) + Math.pow(cell[n][2], 2) + Math.pow(cell[n][3], 2));
+//                                                            if (r2c <= Radius - shellWidth) {
+//                                                               cell[n][4] = 0;
+//                                                            }
+//                                                            else {
+//                                                               cell[n][4] = 1;
+//                                                            }
+//                                                        });
+                                                        break;
 						}
 						continue;
 					}
@@ -58,9 +70,20 @@ public class Activity {
 					if(cell[j][4] != 0 || (rToCell <= (Radius - shellWidth) && -cell[j][2] <= (Height - shellWidth) && -cell[j][2] >= shellWidth)){						
 						i--;
 						TMC++;
-						if(TMC == cellnumber * 2){
+						if(TMC == cellnumber * 3){
 							JOptionPane.showMessageDialog(null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i++ / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE);
-							break;
+							//label everything in the hot shell
+//                                                        IntStream.range(0, cellnumber).parallel().forEach(n -> {
+//                                                            double r2c = Math.sqrt(Math.pow(cell[n][1], 2) + Math.pow(cell[n][3], 2));
+//                                                            //double r2Top = Math.min(-cell[n][2], Height + cell[n][2]);
+//                                                            if ((r2c <= (Radius - shellWidth) && -cell[n][2] <= (Height - shellWidth) && -cell[n][2] >= shellWidth)) {
+//                                                               cell[n][4] = 0;
+//                                                            }
+//                                                            else {
+//                                                               cell[n][4] = 1;
+//                                                            }
+//                                                        });
+                                                        break;
 						}
 						continue;
 					}
@@ -70,7 +93,7 @@ public class Activity {
 					if(cell[j][4] != 0 || rToCell < 1){
 						i--;
 						TMC++;
-						if(TMC == cellnumber * 2){
+						if(TMC == cellnumber * 3){
 							JOptionPane.showMessageDialog(null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i++ / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE);
 							break;
 						}
@@ -85,7 +108,7 @@ public class Activity {
 					if(cell[j][4] != 0 || (de >= shellWidth && h <= (Height - shellWidth) && h >= shellWidth)){
 						i--;
 						TMC++;
-						if(TMC == cellnumber * 2){
+						if(TMC == cellnumber * 3){
 							JOptionPane.showMessageDialog(null, "You are trying to label more cells than are in the labeled zone.\nLabeled cells: " + i + "        % of cells labeled: " + ((double) i++ / (double) cellnumber * 100.0) + "\nwhen running future simulation with the same dimensions use these numbers", "Too many cells to label", JOptionPane.WARNING_MESSAGE);
 							break;
 						}
@@ -154,10 +177,10 @@ public class Activity {
      public static double[][] generateNormalActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
             int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
             String Shape,
-            double MeanActivity, double ShapeFactor, double Tau,
+            double MeanActivity, double ShapeFactor, double Tau, int coldcellnumber,
             double[][] cell) {
         
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber,cell );           
             double sum1 = 0.0;
             NormalDistribution a = new NormalDistribution(0, ShapeFactor);
             double[] NormalD = new double[cellnumber];
@@ -184,10 +207,10 @@ public class Activity {
      public static double[][] generateLogNormalActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
             int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
             String Shape,
-            double MeanActivity, double ShapeFactor, double Tau,
+            double MeanActivity, double ShapeFactor, double Tau, int coldcellnumber,
             double[][] cell) {
         
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, cell );           
             double sum1 = 0.0;
             double sclaeFactor = Math.log( MeanActivity ) - Math.pow( ShapeFactor, 2 ) / 2;
             LogNormalDistribution a = new LogNormalDistribution( sclaeFactor, ShapeFactor );
@@ -210,10 +233,10 @@ public class Activity {
     public static double[][] generateUniformActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
             int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
             String Shape,
-            double MeanActivity, double Tau,
+            double MeanActivity, double Tau, int coldcellnumber,
             double[][] cell) {
         
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, cell );           
             double sum1 = 0.0;
             
             for(int i = 0; i < cellnumber; i++){
@@ -233,10 +256,10 @@ public class Activity {
     public static double[][] generateLinearActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
             int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
             String Shape, int rCell,
-            double AccuActivity, double constantProvided, double MeanActivity, double Tau,
+            double AccuActivity, double constantProvided, double MeanActivity, double Tau, int coldcellnumber,
             double[][] cell) {
         
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber,cell );           
             double rToCell, sum1 = 0.0, coldRadius = Radius - shellWidth, edgeActivity = 0;
             
             //assign edge activity
@@ -410,9 +433,9 @@ public class Activity {
     public static double[][] generateExponentialActivity(boolean NECROTIC, boolean DEAD_NECROTIC,
 	                                          int cellnumber, int Height, int labelcellnum, int longestaxis, int Radius, double shellWidth,
 	                                          String Shape,
-	                                          double AccuActivity, double b, double constantProvided, double MeanActivity, double Tau,
+	                                          double AccuActivity, double b, double constantProvided, double MeanActivity, double Tau, int coldcellnumber,
 	                                          double[][] cell){
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, cell );           
             double rToCell, sum1 = 0.0, coldRadius = Radius - shellWidth, edgeActivity = 0, A1, A2;
             
             //assign edge activity
@@ -585,10 +608,10 @@ public class Activity {
                 int cellnumber, int Radius, int Height, int labelcellnum, int degree,
                 double[] coefficients, double shellWidth, double AccuActivity,
                 String Shape,
-                double MeanActivity, double Tau,
+                double MeanActivity, double Tau, int coldcellnumber,
                 double[][] cell
 	){
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );           
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, cell );           
             double rToCell, sum1 = 0.0, coldRadius = Radius - shellWidth, edgeActivity, rho;
             if (Shape.equalsIgnoreCase("rod")){
                     if(Radius > Height/2){ //flat rod
@@ -842,10 +865,10 @@ public class Activity {
                 double a, double b, double x0, double y0,
 	        int cellnumber, int Radius, int labelcellnum, int Height,
 	        String Shape, double shellWidth, int dBwtnCells,
-	        double AccuActivity, double constantProvided, double MeanActivity, double Tau,
+	        double AccuActivity, double constantProvided, double MeanActivity, double Tau, int coldcellnumber,
 	        double[][] cell
 	){
-        labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, cell );
+        labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, cell );
         double rToCell, sum1 = 0.0, coldRadius = Radius - shellWidth, edgeActivity, rho;
             if (Shape.equalsIgnoreCase("rod")){
                     if(Radius > Height/2){ //flat rod

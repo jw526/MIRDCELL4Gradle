@@ -3084,12 +3084,12 @@
                                   <Component id="jPanel37" max="32767" attributes="0"/>
                                   <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jPanel35" pref="480" max="32767" attributes="0"/>
-                              <Component id="jPanel36" alignment="0" pref="480" max="32767" attributes="0"/>
+                              <Component id="jPanel35" pref="481" max="32767" attributes="0"/>
+                              <Component id="jPanel36" alignment="0" pref="481" max="32767" attributes="0"/>
                               <Component id="jButton18" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jTabbedPane4" pref="867" max="32767" attributes="0"/>
+                          <Component id="jTabbedPane4" pref="866" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -3469,7 +3469,7 @@
                                       <Component id="jTextField43" min="-2" pref="64" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="198" max="32767" attributes="0"/>
+                              <EmptySpace pref="199" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3730,7 +3730,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="862" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="861" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -3752,7 +3752,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="862" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="861" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
