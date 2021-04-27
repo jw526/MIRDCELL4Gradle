@@ -2539,7 +2539,7 @@ public class Home1 extends JApplet implements ActionListener {
                         .addComponent(jLabel78)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2636,7 +2636,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 862, Short.MAX_VALUE)
+            .addGap(0, 861, Short.MAX_VALUE)
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2649,7 +2649,7 @@ public class Home1 extends JApplet implements ActionListener {
         jPanel52.setLayout(jPanel52Layout);
         jPanel52Layout.setHorizontalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 862, Short.MAX_VALUE)
+            .addGap(0, 861, Short.MAX_VALUE)
         );
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2787,11 +2787,11 @@ public class Home1 extends JApplet implements ActionListener {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(3, 3, 3))
-                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
-                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 867, Short.MAX_VALUE)
+                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE)
                 .addGap(23, 23, 23))
         );
         jPanel4Layout.setVerticalGroup(
@@ -4520,7 +4520,8 @@ public class Home1 extends JApplet implements ActionListener {
     }// </editor-fold>//GEN-END:initComponents
 
 	private void jList2ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList2ValueChanged
-		//updated 07/29/09
+		//JW 042721
+                if(jList2.getSelectedIndex()==-1) return;
 		jLabel18.setText("OUTPUT");
 		jLabel22.setText("                                                                                                                                       ");
 		//jButton6.setText("                      "); //delete 0702
@@ -4603,10 +4604,12 @@ public class Home1 extends JApplet implements ActionListener {
 		} else if (getSelectedIsoName.compareTo("new_Electron.dat") == 0) {
 			frw.readFile(monoNewFileName, jTextArea2);
 		}
-
+                
 		try {
 			jTextArea2.setCaretPosition(jTextArea2.getLineStartOffset(1));
 		} catch (BadLocationException ex) {
+                        JOptionPane.showMessageDialog(null, "Beta spectrum not available", "ERROR",JOptionPane.ERROR_MESSAGE);
+                        //jRadioButton12.setSelected(true);
 			Logger.getLogger(Home1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
@@ -11964,7 +11967,7 @@ public class Home1 extends JApplet implements ActionListener {
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton12;
+    public javax.swing.JRadioButton jRadioButton12;
     private javax.swing.JRadioButton jRadioButton13;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;

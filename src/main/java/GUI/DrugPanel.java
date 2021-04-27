@@ -410,6 +410,7 @@ public class DrugPanel extends javax.swing.JPanel {
             try {
                 jTextArea1.setCaretPosition(jTextArea1.getLineStartOffset(1));
             } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Beta spectrum not available", "ERROR",JOptionPane.ERROR_MESSAGE);
                 Logger.getLogger(DrugPanel.class.getName()).log(Level.SEVERE, null, ex);
             }
 

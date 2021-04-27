@@ -5,6 +5,7 @@
 
 package File;
 
+import GUI.Home1;
 import java.io.*;
 import javax.swing.JTextArea;
 import java.net.*;
@@ -107,7 +108,8 @@ public class FileReadWrite {
             //System.out.println("textarea2  "+ jTextArea1);
         } catch (MalformedURLException mue) {}
         catch(IOException ioe){
-            JOptionPane.showMessageDialog(null, "No Input Data. Please select another radionulcide.", "ERROR",JOptionPane.ERROR_MESSAGE);
+            
+
         }
 
     }
