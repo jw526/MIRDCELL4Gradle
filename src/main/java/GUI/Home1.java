@@ -49,7 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
-        final String version = "V3.05";
+        final String version = "V3.06";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -6693,6 +6693,8 @@ public class Home1 extends JApplet implements ActionListener {
 			//offset = 0.0;
 		}
                 //calculating doses based on different distribution
+                boolean[] resetFlag = new boolean[]{false};
+                int[] resetLabelCellNum = new int[]{0};
 		if (jComboBox5.getSelectedIndex() == 0 ) {
 			// normal distribution
 			ShapeFactor = Mu;
@@ -6715,13 +6717,21 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					MeanActivity, ShapeFactor, Tau, coldcellnumber,
+					MeanActivity, ShapeFactor, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
 // calculating self-dose
 			int n = 0;
                         int labeledCellNum = 0;
 			double sum1 = 0.0;
+                        
 			for (int i = 0; i < cellnumber; i++) { //jianchao wang 1/15/19
 				if (cell[i][4] != 0) {
 					if (radiationtarget == 0) {
@@ -6764,9 +6774,17 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					MeanActivity, ShapeFactor, Tau, coldcellnumber,
+					MeanActivity, ShapeFactor, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
 
 			int n = 0;
                         int labeledCellNum = 0;
@@ -6812,9 +6830,18 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					MeanActivity, Tau, coldcellnumber,
+					MeanActivity, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
+                        
 
 			int n = 0;
                         int labeledCellNum = 0;
@@ -6869,9 +6896,17 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape, text1,
-					AccuActivity, constantProvided, MeanActivity, Tau, coldcellnumber,
+					AccuActivity, constantProvided, MeanActivity, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
 
 			int n = 0;
                         int labeledCellNum = 0;
@@ -6922,9 +6957,17 @@ public class Home1 extends JApplet implements ActionListener {
 					jCheckBox1.isSelected(), jCheckBox3.isSelected(),
 					cellnumber, Height, labelcellnum, longestaxis, Radius, shellWidth,
 					Shape,
-					AccuActivity, b, constantProvided, MeanActivity, Tau, coldcellnumber,
+					AccuActivity, b, constantProvided, MeanActivity, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
 
 			int n = 0;
                         int labeledCellNum = 0;
@@ -6975,9 +7018,17 @@ public class Home1 extends JApplet implements ActionListener {
 					cellnumber, Radius, Height, labelcellnum, degree,
 					coefficients, shellWidth, AccuActivity,
 					Shape,
-					MeanActivity, Tau, coldcellnumber,
+					MeanActivity, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
 
 			int n = 0;
                         int labeledCellNum = 0;
@@ -7057,9 +7108,18 @@ public class Home1 extends JApplet implements ActionListener {
 					a, b, x0, a0,
 					cellnumber, Radius, labelcellnum, Height,
 					Shape, shellWidth,text3,
-					AccuActivity, constantProvided, MeanActivity, Tau, coldcellnumber,
+					AccuActivity, constantProvided, MeanActivity, Tau, coldcellnumber, resetFlag, resetLabelCellNum,
 					cell
 			);
+                        
+                        if(resetFlag[0] == true){
+                            jTextField30.setText(Integer.toString(resetLabelCellNum[0]));
+                            labelcellp = (100.0 * resetLabelCellNum[0] / cellnumber);
+                            jTextField28.setText(nf.format(labelcellp));
+                            jPanel14.getGraphics().clearRect(0, 0, jPanel14.getWidth(), jPanel14.getHeight());
+                            return;
+                        }
+                        
 			int counter = 0;
                         int labeledCellNum = 0;
 			for (int i = 0; i < cellnumber; i++) {
@@ -8564,8 +8624,13 @@ public class Home1 extends JApplet implements ActionListener {
                 double Tau = Double.parseDouble(jTextField31.getText()) * 3600.0;
                 if(cellnumber > 0) miny = 1/cellnumber; 
 
-                try {
-                    survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, PlotOutput3D, Tau);
+                try {                     
+                    if(useComplexRadiobiologicalParams){
+                       survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, SurvCalcComplex.PlotOutput, Tau);
+                    } else{
+                        survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, SurvCalc.PlotOutput, Tau);
+                    }
+//                    survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, PlotOutput3D, Tau);
                 } catch (Exception e) {
 
                 }                
