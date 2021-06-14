@@ -7294,8 +7294,8 @@ public class Home1 extends JApplet implements ActionListener {
 
 		//<editor-fold desc="Output significant data">
 		NumberFormat formatter = new DecimalFormat("0.00E0");
-		String tempsource = "", temp1 = "";
-		temp1 = jList3.getSelectedValue().toString();
+		String tempsource = "";
+//		temp1 = jList3.getSelectedValue().toString();
 		tempsource = ""
 				+ "Radius of cell (um) =   " + jTextField1.getText() + "\n"
 				+ "Radius of cell nucleus (um) =    " + jTextField2.getText() + "\n"
@@ -7310,9 +7310,9 @@ public class Home1 extends JApplet implements ActionListener {
                 tempsource += "\n";
 		tempsource += "Target Region: " + jList3.getSelectedValue().toString() + "\n";
 		tempsource += "Source Regions:\n"
-				+ "    Cell Surface: " + jTextField17.getText() + "%\n"
-				+ "    Cytoplasm   : " + jTextField16.getText() + "%\n"
-				+ "    Nucleus     : " + jTextField15.getText() + "%\n\n";
+				+ jLabel108.getText() + ": " + jTextField17.getText() + "%\n"
+				+ jLabel107.getText() + ": " + jTextField16.getText() + "%\n"
+				+ jLabel106.getText() + ": " + jTextField15.getText() + "%\n\n";
 
 		if (useComplexRadiobiologicalParams) {
 			tempsource += "Complex Linear Quadratic Parameters" + "\n";
@@ -7368,8 +7368,7 @@ public class Home1 extends JApplet implements ActionListener {
                                                         poly += ("a" + i + "=" + coefficients[i] +" ");
                                                     }
                                                 }
-		jTextArea5.append(
-				tempsource + "\n"
+		jTextArea5.append( version.concat("\n").concat(tempsource).concat("\n")
 						+ "Number of Cells =   " + cellnumber + "\n"
 						+ "Distance between centers of neighboring cells (um) =    " + jTextField35.getText() + "\n"
 						+ jLabel56.getText() + "\n"
