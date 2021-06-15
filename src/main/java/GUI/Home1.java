@@ -49,7 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
-        final String version = "V3.06";
+        public static final String version = "V3.06";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -2001,7 +2001,7 @@ public class Home1 extends JApplet implements ActionListener {
                 .addContainerGap())
         );
 
-        jTabbedPane5.addTab("Complex Radiobiological Parameters (WIP)", jPanel53);
+        jTabbedPane5.addTab("Complex Radiobiological Parameters", jPanel53);
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);

@@ -6,13 +6,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URLConnection;
 import java.net.URL;
+import GUI.Home1;
 
 /**
  * Created by Alex on 7/6/2017.
  */
 public class VersionChecker {
 
-	private static final String thisVersion = "3.01";
+	static String thisVersion = Home1.version;
 
 	public static boolean checkVersion() {
 

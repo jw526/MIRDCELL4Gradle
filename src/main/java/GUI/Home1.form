@@ -2355,8 +2355,8 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                      <JTabbedPaneConstraints tabName="Complex Radiobiological Parameters (WIP)">
-                        <Property name="tabTitle" type="java.lang.String" value="Complex Radiobiological Parameters (WIP)"/>
+                      <JTabbedPaneConstraints tabName="Complex Radiobiological Parameters">
+                        <Property name="tabTitle" type="java.lang.String" value="Complex Radiobiological Parameters"/>
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
