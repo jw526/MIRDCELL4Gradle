@@ -13,7 +13,7 @@ import GUI.Home1;
  */
 public class VersionChecker {
 
-	static String thisVersion = Home1.version;
+	static String thisVersion = Home1.version.substring(1);
 
 	public static boolean checkVersion() {
 
