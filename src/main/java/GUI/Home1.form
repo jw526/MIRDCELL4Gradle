@@ -3380,8 +3380,8 @@
                             <StringItem index="0" value="Normal Distribution"/>
                             <StringItem index="1" value="Log-Normal Distribution"/>
                             <StringItem index="2" value="Uniform Distribution"/>
-                            <StringItem index="3" value="Linear (RFT)"/>
-                            <StringItem index="4" value="Exponential (WIP)"/>
+                            <StringItem index="3" value="Linear (Radial)"/>
+                            <StringItem index="4" value="Exponential (Radial)"/>
                           </StringArray>
                         </Property>
                         <Property name="selectedIndex" type="int" value="2"/>

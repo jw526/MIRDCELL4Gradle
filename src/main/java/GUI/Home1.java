@@ -2347,7 +2347,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal Distribution", "Log-Normal Distribution", "Uniform Distribution", "Linear (RFT)", "Exponential (WIP)" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal Distribution", "Log-Normal Distribution", "Uniform Distribution", "Linear (Radial)", "Exponential (Radial)" }));
         jComboBox8.setSelectedIndex(2);
         jComboBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
