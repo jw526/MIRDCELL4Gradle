@@ -3376,12 +3376,10 @@
                     <Component class="javax.swing.JComboBox" name="jComboBox8">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="Normal Distribution"/>
-                            <StringItem index="1" value="Log-Normal Distribution"/>
-                            <StringItem index="2" value="Uniform Distribution"/>
-                            <StringItem index="3" value="Linear (Radial)"/>
-                            <StringItem index="4" value="Exponential (Radial)"/>
+                          <StringArray count="3">
+                            <StringItem index="0" value="Normal Distribution (Random)"/>
+                            <StringItem index="1" value="Log-Normal Distribution (Random)"/>
+                            <StringItem index="2" value="Uniform Distribution (Random)"/>
                           </StringArray>
                         </Property>
                         <Property name="selectedIndex" type="int" value="2"/>
@@ -3726,28 +3724,6 @@
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                           <JTabbedPaneConstraints tabName="Activity Histogram">
                             <Property name="tabTitle" type="java.lang.String" value="Activity Histogram"/>
-                          </JTabbedPaneConstraints>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="861" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="755" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                    </Container>
-                    <Container class="javax.swing.JPanel" name="jPanel52">
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                          <JTabbedPaneConstraints tabName="Radial Histogram">
-                            <Property name="tabTitle" type="java.lang.String" value="Radial Histogram"/>
                           </JTabbedPaneConstraints>
                         </Constraint>
                       </Constraints>
@@ -6606,8 +6582,8 @@
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                      <Component id="jPanel43" min="-2" pref="551" max="-2" attributes="0"/>
-                      <EmptySpace pref="214" max="32767" attributes="0"/>
+                      <Component id="jPanel43" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -6618,6 +6594,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="cc" red="cc" type="rgb"/>
                 </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[719, 750]"/>
+                </Property>
               </Properties>
 
               <Layout>
@@ -6626,7 +6605,7 @@
                       <Component id="jPanel44" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel5" min="-2" pref="675" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" pref="700" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -6635,9 +6614,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jPanel44" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel5" min="-2" pref="482" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="81" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6655,7 +6634,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel6" pref="699" max="32767" attributes="0"/>
+                              <Component id="jLabel6" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -6687,7 +6666,13 @@
                 </Container>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;Jianchao Wang&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Version 3, 3D Slice, cold region, user-defined activity distribution, improvements and bug fixes&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Alex Rosen&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Version 3, complex subcellular activity distribution, complex radiobiology, radially dependent activity distributions, improvements to algorithm speed and efficiency&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Behrooz Vaziri &lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 2, 1D, 2D and 3D models&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Elizabeth Paul&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 2, 1 D model&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Han Wu&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 1, 1 D model&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Darshan Trivedi&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 0, 1 D model&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;S Murty Goddu&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Algorithms for calculating S values, compilation of beta full radiation spectra&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Chris Haydock, Kandula Sastry, and Dandamudi Rao&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Algorithms for calculating S values, conceptual design&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Atam Dhawan&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Advisory role for software development&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Roger W Howell&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Responsible for overall content&lt;/p&gt;&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;Jianchao Wang&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Version 3, 3D Slice, cold region, user-defined activity distribution, improvements and bug fixes&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Sumudu Katugampola&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Version 3, 3D activity distribution, bio-effect modeling&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Alex Rosen&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Version 3, complex radiobiology, radially dependent activity distributions, improvements and bug fixes&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Behrooz Vaziri &lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 2, 1D, 2D and 3D models&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Elizabeth Paul&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 2, 1 D model&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Han Wu&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 1, 1 D model&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Darshan Trivedi&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;GUI for Version 0, 1 D model&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;S Murty Goddu&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Algorithms for calculating S values, compilation of beta full radiation spectra&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Chris Haydock, Kandula Sastry, and Dandamudi Rao&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Algorithms for calculating S values, conceptual design&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Atam Dhawan&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Advisory role for software development&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Roger W Howell&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;Responsible for overall content&lt;/p&gt;&lt;/html&gt;"/>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[67, 100]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[805, 600]"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>

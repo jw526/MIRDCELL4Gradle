@@ -49,7 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
-        public static final String version = "V3.06";
+        public static final String version = "V3.07";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -398,7 +398,6 @@ public class Home1 extends JApplet implements ActionListener {
         jLabel72 = new javax.swing.JLabel();
         jComboBox10 = new javax.swing.JComboBox();
         jPanel48 = new javax.swing.JPanel();
-        jPanel52 = new javax.swing.JPanel();
         jPanel33 = new javax.swing.JPanel();
         jButton15 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
@@ -2347,7 +2346,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal Distribution", "Log-Normal Distribution", "Uniform Distribution", "Linear (Radial)", "Exponential (Radial)" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal Distribution (Random)", "Log-Normal Distribution (Random)", "Uniform Distribution (Random)" }));
         jComboBox8.setSelectedIndex(2);
         jComboBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2644,19 +2643,6 @@ public class Home1 extends JApplet implements ActionListener {
         );
 
         jTabbedPane4.addTab("Activity Histogram", jPanel48);
-
-        javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
-        jPanel52.setLayout(jPanel52Layout);
-        jPanel52Layout.setHorizontalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 861, Short.MAX_VALUE)
-        );
-        jPanel52Layout.setVerticalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 755, Short.MAX_VALUE)
-        );
-
-        jTabbedPane4.addTab("Radial Histogram", jPanel52);
 
         jPanel33.setBackground(new java.awt.Color(255, 255, 255));
         jPanel33.setPreferredSize(new java.awt.Dimension(5, 5));
@@ -4367,6 +4353,7 @@ public class Home1 extends JApplet implements ActionListener {
         jTabbedPane1.addTab("Information", jPanel29);
 
         jPanel43.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel43.setPreferredSize(new java.awt.Dimension(719, 750));
 
         jPanel44.setBackground(new java.awt.Color(102, 102, 255));
 
@@ -4381,7 +4368,7 @@ public class Home1 extends JApplet implements ActionListener {
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel44Layout.setVerticalGroup(
@@ -4392,7 +4379,9 @@ public class Home1 extends JApplet implements ActionListener {
                 .addContainerGap())
         );
 
-        jLabel5.setText("<html><p>Jianchao Wang</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Version 3, 3D Slice, cold region, user-defined activity distribution, improvements and bug fixes</p><p></p><p>Alex Rosen</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Version 3, complex subcellular activity distribution, complex radiobiology, radially dependent activity distributions, improvements to algorithm speed and efficiency</p><p></p><p>Behrooz Vaziri </p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 2, 1D, 2D and 3D models</p><p></p><p>Elizabeth Paul</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 2, 1 D model</p><p></p><p>Han Wu</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 1, 1 D model</p><p></p><p>Darshan Trivedi</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 0, 1 D model</p><p></p><p>S Murty Goddu</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Algorithms for calculating S values, compilation of beta full radiation spectra</p><p></p><p>Chris Haydock, Kandula Sastry, and Dandamudi Rao</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Algorithms for calculating S values, conceptual design</p><p></p><p>Atam Dhawan</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Advisory role for software development</p><p></p><p>Roger W Howell</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Responsible for overall content</p></html>");
+        jLabel5.setText("<html><p>Jianchao Wang</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Version 3, 3D Slice, cold region, user-defined activity distribution, improvements and bug fixes</p><p></p><p>Sumudu Katugampola</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Version 3, 3D activity distribution, bio-effect modeling</p><p></p><p>Alex Rosen</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Version 3, complex radiobiology, radially dependent activity distributions, improvements and bug fixes</p><p></p><p>Behrooz Vaziri </p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 2, 1D, 2D and 3D models</p><p></p><p>Elizabeth Paul</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 2, 1 D model</p><p></p><p>Han Wu</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 1, 1 D model</p><p></p><p>Darshan Trivedi</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;GUI for Version 0, 1 D model</p><p></p><p>S Murty Goddu</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Algorithms for calculating S values, compilation of beta full radiation spectra</p><p></p><p>Chris Haydock, Kandula Sastry, and Dandamudi Rao</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Algorithms for calculating S values, conceptual design</p><p></p><p>Atam Dhawan</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Advisory role for software development</p><p></p><p>Roger W Howell</p><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Responsible for overall content</p></html>");
+        jLabel5.setMinimumSize(new java.awt.Dimension(67, 100));
+        jLabel5.setPreferredSize(new java.awt.Dimension(805, 600));
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
@@ -4401,16 +4390,16 @@ public class Home1 extends JApplet implements ActionListener {
             .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
@@ -4432,8 +4421,8 @@ public class Home1 extends JApplet implements ActionListener {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel13)
                 .addGap(39, 39, 39)
-                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Credits", jPanel18);
@@ -8494,7 +8483,8 @@ public class Home1 extends JApplet implements ActionListener {
                 }
                 
                 jTextArea5.append(
-                    "1-D Cell Pair\n\n" 
+                    version.concat("\n")
+                    + "1-D Cell Pair\n\n" 
                     + tempsource
                     + doseInfo
                 );
@@ -10031,7 +10021,8 @@ public class Home1 extends JApplet implements ActionListener {
             tempsource = "Monoenergetic particle emitter =   Electron" + "\n" + "Energy of monoenergetic particle (MeV) =    " + jTextField10.getText() + "\n" + "Yield of monoenergetic particle =    " + jTextField11.getText() + "\n" + tempsource;
         }
         jTextArea5.append(
-            tempsource + "\n"
+            version.concat("\n")
+            +  tempsource + "\n"
             + "Number of Cells =   " + cellnumber + "\n"
             + "Distance between centers of neighboring cells (um) =    " + jTextField36.getText() + "\n"
             + "Number of cells that are labeled =   " + jTextField44.getText() + "\n"
@@ -10236,10 +10227,10 @@ public class Home1 extends JApplet implements ActionListener {
             XYBarRenderer xybarrendererR = (XYBarRenderer) xyplotR.getRenderer();
             xybarrendererR.setShadowVisible(false);
             ChartPanel CPHR = new ChartPanel(radial);
-            jPanel52.removeAll();
-            jPanel52.setLayout(new java.awt.BorderLayout());
-            jPanel52.add(CPHR, BorderLayout.CENTER);
-            jPanel52.validate();
+//            jPanel52.removeAll();
+//            jPanel52.setLayout(new java.awt.BorderLayout());
+//            jPanel52.add(CPHR, BorderLayout.CENTER);
+//            jPanel52.validate();
 
             Graphics progress = jPanel38.getGraphics();
             int Progwidth = jPanel38.getWidth();
@@ -12003,7 +11994,6 @@ public class Home1 extends JApplet implements ActionListener {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
     private javax.swing.JPanel jPanel53;
     private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;

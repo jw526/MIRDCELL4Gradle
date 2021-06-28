@@ -28,8 +28,8 @@ public static final class VectorConstraintFunction implements Vector2VectorFunc
         public double[] apply(double[] x, double... arg)
         {   
             //x is specific acti. for each drug.
-            double tgtSF = arg[0];
-            int numcells = (int)arg[1];
+            double tgtSF = 0.01; //arg[0];
+            int numcells = 1000; //(int)arg[1];
             double[] doses = new double[numcells];
             double[] probs = new double[numcells];
             double prob_value = Arrays.stream(probs).average().getAsDouble();
