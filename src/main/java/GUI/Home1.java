@@ -9641,13 +9641,13 @@ public class Home1 extends JApplet implements ActionListener {
             ShapeFactor = Mu;
             NormalDistribution a = new NormalDistribution(0, ShapeFactor);
             double[] NormalD = new double[labelcellnum];
-//            for (int i = 0; i < labelcellnum; i++) {
-//                NormalD[i] = a.sample();
-//                if ((MeanActivity + NormalD[i]) < 0) {
-//                    i--;
-//                    jLabel100.setVisible(true);
-//                }
-//            }
+            for (int i = 0; i < labelcellnum; i++) {
+                NormalD[i] = a.sample();
+                if ((MeanActivity + NormalD[i]) < 0) {                    
+                    jLabel100.setVisible(true);
+                    return;
+                }
+            }
             
             for(int i = 0; i < labelcellnum; i++) {
                 NormalD[i] = a.sample();
