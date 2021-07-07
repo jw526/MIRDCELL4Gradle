@@ -187,8 +187,8 @@ public class Activity {
             String Shape,
             double MeanActivity, double ShapeFactor, double Tau, int coldcellnumber, boolean[] resetFlag, int[] resetLabelCellNum,
             double[][] cell) {
-        
-            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, resetFlag, resetLabelCellNum, cell);           
+
+            labelCells(NECROTIC, DEAD_NECROTIC, cellnumber, Height, labelcellnum, Radius, shellWidth, Shape, coldcellnumber, resetFlag, resetLabelCellNum, cell);                        
             double sum1 = 0.0;
             NormalDistribution a = new NormalDistribution(0, ShapeFactor);
             double[] NormalD = new double[cellnumber];

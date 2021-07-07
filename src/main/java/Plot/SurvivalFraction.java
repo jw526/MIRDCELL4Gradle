@@ -25,7 +25,7 @@ import org.jfree.data.xy.XYSeriesCollection;
  */
 public class SurvivalFraction {
     
-    public void generateSurvivalCurve(JPanel panel, JComboBox xLabelComboBox, JComboBox yLabelComboBox, double miny, double[][] PlotOutput, double Tau){
+    public void generateSurvivalCurve(JPanel panel, JComboBox xLabelComboBox, JComboBox yLabelComboBox, double miny, double[][] PlotOutput, double Tau, double cellnumber){
         XYSeries series = new XYSeries("XYGraph");
         String xLabel = xLabelComboBox.getSelectedItem().toString();
         String yLabel = yLabelComboBox.getSelectedItem().toString();
@@ -37,19 +37,19 @@ public class SurvivalFraction {
                 if (PlotOutput[7][i] > 0) {
                         
                         if(xLabelComboBox.getSelectedIndex()==5){ //mean decays per cell
-                            series.add(PlotOutput[0][i] * Tau, 1-PlotOutput[7][i]);
+                            series.add(PlotOutput[0][i] * Tau, Math.pow(1-PlotOutput[7][i], cellnumber));
                         } else if(xLabelComboBox.getSelectedIndex()==6){ //mean decays per labeled cell
-                            series.add(PlotOutput[2][i] * Tau, 1-PlotOutput[7][i]);
+                            series.add(PlotOutput[2][i] * Tau, Math.pow(1-PlotOutput[7][i], cellnumber));
                           }
                         else {
-                            series.add(PlotOutput[xLabelComboBox.getSelectedIndex()][i], 1-PlotOutput[7][i]);
+                            series.add(PlotOutput[xLabelComboBox.getSelectedIndex()][i], Math.pow(1-PlotOutput[7][i], cellnumber));
                         }
                 } else {
                         
                         if(xLabelComboBox.getSelectedIndex()==5){ //mean decays
                             series.add(PlotOutput[0][i] * Tau, 1);
                         }else if(xLabelComboBox.getSelectedIndex()==6){ //mean decays per labeled cell
-                            series.add(PlotOutput[2][i] * Tau, 1-PlotOutput[7][i]);
+                            series.add(PlotOutput[2][i] * Tau, Math.pow(1-PlotOutput[7][i], cellnumber));
                           }                        
                         else{
                             series.add(PlotOutput[xLabelComboBox.getSelectedIndex()][i], 1);
@@ -92,7 +92,11 @@ public class SurvivalFraction {
 		//plot.setRenderer(new XYSplineRenderer());
 
 		NumberAxis domainAxis = new NumberAxis(xLabel);
-		NumberAxis rangeAxis = new LogarithmicAxis(yLabel);
+                NumberAxis rangeAxis = new LogarithmicAxis(yLabel);
+                if (yLabelComboBox.getSelectedIndex()==3){
+                    rangeAxis = new NumberAxis(yLabel);
+                } 
+		
 		rangeAxis.setStandardTickUnits(NumberAxis.createStandardTickUnits());
 		//if (miny < .00001) {
 		//   miny = .00001;
