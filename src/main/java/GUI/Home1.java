@@ -49,7 +49,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class Home1 extends JApplet implements ActionListener {
-        public static final String version = "V3.07";
+        public static final String version = "V3.08";
 
 	CellCanvasDist cc2;
 	CellCanvasInfo cc3;
@@ -176,8 +176,8 @@ public class Home1 extends JApplet implements ActionListener {
 		C3DS.setLocation(0, 0);
 		jPanel59.add(C3DS);
                 
-                PlotOutput2D = new double[8][];
-                PlotOutput3D = new double[8][];
+                PlotOutput2D = new double[9][];
+                PlotOutput3D = new double[9][];
 		SurvCalcComplex = new SurvivalCalculationComplex();                  
 		// check for new version
 		Update.VersionChecker.checkVersion();
@@ -2571,7 +2571,7 @@ public class Home1 extends JApplet implements ActionListener {
 
         jLabel69.setText("Select the Vertical Axis:");
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Surviving Fraction of Labeled cells", "Surviving Fraction of Unlabeled cells", "Surviving Fraction of mixed population of cells", "Tumor Control Probability" }));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Surviving Fraction of Labeled cells", "Surviving Fraction of Unlabeled cells", "Surviving Fraction of mixed population of cells", "Tumor Control Probability 1", "Tumor Control Probability 2" }));
         jComboBox9.setSelectedIndex(2);
         jComboBox9.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -3222,7 +3222,7 @@ public class Home1 extends JApplet implements ActionListener {
             }
         });
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Surviving Fraction of Labeled cells", "Surviving Fraction of Unlabeled cells", "Surviving Fraction of mixed population of cells", "Tumor Control Probability" }));
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Surviving Fraction of Labeled cells", "Surviving Fraction of Unlabeled cells", "Surviving Fraction of mixed population of cells", "Tumor Control Probability 1", "Tumor Control Probability 2" }));
         jComboBox12.setSelectedIndex(2);
         jComboBox12.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -8146,9 +8146,6 @@ public class Home1 extends JApplet implements ActionListener {
 				jTextField2.setText(Integer.toString(1));
 				jTextField3.setText(Integer.toString(4));
 			} else {
-				jTextField3.setText(Integer.toString(2 * text1));
-				jTextField35.setText(Integer.toString(2 * text1));
-				jTextField36.setText(Integer.toString(2 * text1));
 
 				cc2.Dist = 2 * text1;
 				cc2.source.setRC(text1 * cc2.factor);
@@ -8638,7 +8635,12 @@ public class Home1 extends JApplet implements ActionListener {
                 double Tau = Double.parseDouble(jTextField31.getText()) * 3600.0;
                 if(cellnumber > 0) miny = 1/cellnumber; 
                 try {
-                    survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, PlotOutput3D, Tau, cellnumber);
+                    if(useComplexRadiobiologicalParams){
+                       survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, SurvCalcComplex.PlotOutput, Tau, cellnumber);
+                    } else{
+                        survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, SurvCalc.PlotOutput, Tau, cellnumber);
+                    }
+//                    survivalFraction.generateSurvivalCurve(jPanel11, jComboBox11, jComboBox12, miny, PlotOutput3D, Tau, cellnumber);
                 } catch (Exception e) {
 
                 }                    
@@ -9925,7 +9927,7 @@ public class Home1 extends JApplet implements ActionListener {
                 jTextArea5, jPanel38.getGraphics()
             );
             //copy array PlotOutput
-            for(int i = 0; i < 8; i++){
+            for(int i = 0; i < PlotOutput2D.length; i++){
                   double[] aMatrix = SurvCalcComplex.PlotOutput[i];
                   PlotOutput2D[i] = new double[101];
                   System.arraycopy(aMatrix, 0, PlotOutput2D[i], 0, 101);
@@ -9938,7 +9940,7 @@ public class Home1 extends JApplet implements ActionListener {
                 jPanel38.getGraphics()
             );
             //copy array PlotOutput
-            for(int i = 0; i < 8; i++){
+            for(int i = 0; i < PlotOutput2D.length; i++){
                   double[] aMatrix = SurvCalc.PlotOutput[i];
                   PlotOutput2D[i] = new double[101];
                   System.arraycopy(aMatrix, 0, PlotOutput2D[i], 0, 101);

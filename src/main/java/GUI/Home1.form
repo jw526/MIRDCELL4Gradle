@@ -3666,11 +3666,12 @@
                         <Component class="javax.swing.JComboBox" name="jComboBox9">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
+                              <StringArray count="5">
                                 <StringItem index="0" value="Surviving Fraction of Labeled cells"/>
                                 <StringItem index="1" value="Surviving Fraction of Unlabeled cells"/>
                                 <StringItem index="2" value="Surviving Fraction of mixed population of cells"/>
-                                <StringItem index="3" value="Tumor Control Probability"/>
+                                <StringItem index="3" value="Tumor Control Probability 1"/>
+                                <StringItem index="4" value="Tumor Control Probability 2"/>
                               </StringArray>
                             </Property>
                             <Property name="selectedIndex" type="int" value="2"/>
@@ -4759,11 +4760,12 @@
                         <Component class="javax.swing.JComboBox" name="jComboBox12">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
+                              <StringArray count="5">
                                 <StringItem index="0" value="Surviving Fraction of Labeled cells"/>
                                 <StringItem index="1" value="Surviving Fraction of Unlabeled cells"/>
                                 <StringItem index="2" value="Surviving Fraction of mixed population of cells"/>
-                                <StringItem index="3" value="Tumor Control Probability"/>
+                                <StringItem index="3" value="Tumor Control Probability 1"/>
+                                <StringItem index="4" value="Tumor Control Probability 2"/>
                               </StringArray>
                             </Property>
                             <Property name="selectedIndex" type="int" value="2"/>

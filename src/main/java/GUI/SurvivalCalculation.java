@@ -14,6 +14,7 @@ public class SurvivalCalculation {
         public double[][] selfDose;
         public boolean[] alive;
 	double SurvFrac;
+        double TCP = 1.0;
         Random randomgen;
 	private final double step = 100D; // change this number to make the surviving fraction curve more accurate / have a more fine step ratio
 
@@ -165,6 +166,7 @@ public class SurvivalCalculation {
 
 
 		for(double k = 0; k <= step; k++) {
+                        TCP = 1.0;
 			alllive = 0;
 			labellive = 0;
 			unlabellive = 0;
@@ -172,6 +174,7 @@ public class SurvivalCalculation {
 			for(int i = 0; i < cellnumber; i++) {
 				Survival = Math.exp( -1.0 * cell[i][7] * ratio * CrossAlpha - (cell[i][7] * ratio) * (cell[i][7] * ratio) * CrossBeta ) * Math.exp( -1.0 * cell[i][6] * ratio * SelfAlpha - (cell[i][6] * ratio) * (cell[i][6] * ratio) * SelfBeta );
 				rand = randomgen.nextDouble();
+                                TCP *= 1 - Survival;
 				if(rand < Survival && !coldLiving[i]) {
 					//alllive++;
 					if(cell[i][4] == 0){
@@ -200,6 +203,7 @@ public class SurvivalCalculation {
 			PlotOutput[5][PlotPoints] = (tempsurvlabel);                        //SF of Labeled
 			PlotOutput[6][PlotPoints] = (tempsurvunlabel);                      //SF of unlabeled
 			PlotOutput[7][PlotPoints] = (tempsurvall);                          //SF of all
+                        PlotOutput[8][PlotPoints] = TCP;                                    //Tumor Control Prob. = prod(1 - SPi)
 
 			//System.err.println(PlotOutput[1][PlotPoints]);
                         PlotPoints++;

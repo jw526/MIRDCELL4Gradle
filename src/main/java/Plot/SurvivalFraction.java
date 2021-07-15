@@ -55,7 +55,21 @@ public class SurvivalFraction {
                             series.add(PlotOutput[xLabelComboBox.getSelectedIndex()][i], 1);
                         }
                 }
-            }else{ // SF of labeled, unlabeled, and mixed
+            } 
+            // TCP 2nd algo: prod(1-SPi)
+            else if(yLabelComboBox.getSelectedIndex()==4){
+                                       
+                if(xLabelComboBox.getSelectedIndex()==5){ //mean decays per cell
+                    series.add(PlotOutput[0][i] * Tau, PlotOutput[8][i]);
+                } else if(xLabelComboBox.getSelectedIndex()==6){ //mean decays per labeled cell
+                    series.add(PlotOutput[2][i] * Tau, PlotOutput[8][i]);
+                  }
+                else {
+                    series.add(PlotOutput[xLabelComboBox.getSelectedIndex()][i], PlotOutput[8][i]);
+                }
+                
+            }
+            else{ // SF of labeled, unlabeled, and mixed
                 if (PlotOutput[yLabelComboBox.getSelectedIndex() + 5][i] > 0) {
                        
                         if(xLabelComboBox.getSelectedIndex()==5){ //mean decays

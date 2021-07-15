@@ -17,13 +17,14 @@ public class SurvivalCalculationComplex {
 	double SurvFrac;
 	private final double step = 100D; // change this number to make the surviving fraction curve more accurate / have a more fine step ratio
 	public String output;
+        double TCP;
 
 	public SurvivalCalculationComplex() {
 		activitytotal = 0;
 		tempsurvall = 0;
 		tempsurvlabel = 0;
 		tempsurvunlabel = 0;
-		PlotOutput = new double[8][(int) step + 1];
+		PlotOutput = new double[9][(int) step + 1];
 		SurvFrac = 0;
 
 		//PlotOutput[7][0] = 1;
@@ -260,6 +261,7 @@ public class SurvivalCalculationComplex {
 				labeledLive = 0;
 				unlabeledLive = 0;
 				ratio = k / step;
+                                TCP = 1;
 
 				for (int i = 0; i < cellnumber; i++) {
 					for (int ICODE = 0; ICODE < 11; ICODE++) {
@@ -273,7 +275,7 @@ public class SurvivalCalculationComplex {
 						if (complexRadiobiologicalParams[ICODE][4] != 0 || complexRadiobiologicalParams[ICODE][5] != 0)
 							Survival[i] *= Math.exp(-1D * complexRadiobiologicalParams[ICODE][4] * ratio * crossDoses[i][ICODE] - complexRadiobiologicalParams[ICODE][5] * ratio * ratio * crossDoses[i][ICODE] * crossDoses[i][ICODE]);
 					}
-
+                                        TCP *= 1 - Survival[i];
 					rand = random.nextDouble();
 					if (rand < Survival[i] && !coldLiving[i]) {
 						//allLive++;
@@ -302,7 +304,7 @@ public class SurvivalCalculationComplex {
 				PlotOutput[5][PlotPoints] = (tempsurvlabel);                        //SF of Labeled
 				PlotOutput[6][PlotPoints] = (tempsurvunlabel);                      //SF of unlabeled
 				PlotOutput[7][PlotPoints] = (tempsurvall);                          //SF of all
-                                
+                                PlotOutput[8][PlotPoints] = TCP;                                    //Tumor Control Prob. = prod(1 - SPi)
                                 //System.err.println(tempsurvall + " " + PlotOutput[7][PlotPoints]);
 
 				PlotPoints++;
@@ -613,6 +615,7 @@ public class SurvivalCalculationComplex {
 				labeledLive = 0;
 				unlabeledLive = 0;
 				ratio = k / step;
+                                TCP = 1;
 
 				for (int i = 0; i < cellnumber; i++) {
 					for (int ICODE = 0; ICODE < 11; ICODE++) {
@@ -629,7 +632,7 @@ public class SurvivalCalculationComplex {
 						if (complexRadiobiologicalParams[ICODE][6] != 0 || complexRadiobiologicalParams[ICODE][7] != 0)
 							Survival[i] *= Math.exp(-1D * complexRadiobiologicalParams[ICODE][6] * ratio * crossDoses[i][ICODE] - complexRadiobiologicalParams[ICODE][7] * ratio * crossDoses[i][ICODE] * ratio * crossDoses[i][ICODE]);
 					}
-
+                                        TCP *= 1 - Survival[i];
 					rand = random.nextDouble();
 					if (rand < Survival[i] && !coldLiving[i]) {
 						//allLive++;
@@ -789,6 +792,7 @@ public class SurvivalCalculationComplex {
 				PlotOutput[5][PlotPoints] = (tempsurvlabel);                        //SF of Labeled
 				PlotOutput[6][PlotPoints] = (tempsurvunlabel);                      //SF of unlabeled
 				PlotOutput[7][PlotPoints] = (tempsurvall);                          //SF of all
+                                PlotOutput[8][PlotPoints] = TCP; 
 
 				PlotPoints++;
 			}
@@ -975,6 +979,7 @@ public class SurvivalCalculationComplex {
 				labeledLive = 0;
 				unlabeledLive = 0;
 				ratio = k / step;
+                                TCP = 1;
 
 				for (int i = 0; i < cellnumber; i++) {
 					for (int ICODE = 0; ICODE < 11; ICODE++) {
@@ -991,7 +996,7 @@ public class SurvivalCalculationComplex {
 						if (complexRadiobiologicalParams[ICODE][6] != 0 || complexRadiobiologicalParams[ICODE][7] != 0)
 							Survival[i] *= Math.exp(-1D * crossDoses[i][ICODE] * ratio * complexRadiobiologicalParams[ICODE][6] - complexRadiobiologicalParams[ICODE][7] * crossDoses[i][ICODE] * ratio * crossDoses[i][ICODE] * ratio);
 					}
-
+                                        TCP *= 1 - Survival[i];
 					rand = random.nextDouble();
 					if (rand < Survival[i] && !coldLiving[i]) {
 						//allLive++;
@@ -1151,6 +1156,7 @@ public class SurvivalCalculationComplex {
 				PlotOutput[5][PlotPoints] = tempsurvlabel;                          //SF of Labeled
 				PlotOutput[6][PlotPoints] = tempsurvunlabel;                        //SF of unlabeled
 				PlotOutput[7][PlotPoints] = tempsurvall;                            //SF of all
+                                PlotOutput[8][PlotPoints] = TCP; 
 
 				PlotPoints++;
 			}
@@ -1296,7 +1302,7 @@ public class SurvivalCalculationComplex {
 				tempdose += crossDoses[i][ICODE] + crossDoses2[i][ICODE];
 				}
                                 cell[i][7] = tempdose;
-
+                                
 				rand = random.nextDouble();
 				if (rand >= Survival[i] || coldLiving[i]) {
 					cell[i][0] = 0;
@@ -1436,6 +1442,7 @@ public class SurvivalCalculationComplex {
 				labeledLive = 0;
 				unlabeledLive = 0;
 				ratio = k / step;
+                                TCP = 1;
 
 				for (int i = 0; i < cellnumber; i++) {
 					for (int ICODE = 0; ICODE < 11; ICODE++) {
@@ -1464,7 +1471,7 @@ public class SurvivalCalculationComplex {
 						if (complexRadiobiologicalParams[ICODE][14] != 0 || complexRadiobiologicalParams[ICODE][15] != 0)
 							Survival[i] *= Math.exp(-1D * crossDoses2[i][ICODE] * ratio * complexRadiobiologicalParams[ICODE][14] - complexRadiobiologicalParams[ICODE][15] * crossDoses2[i][ICODE] * crossDoses2[i][ICODE] * ratio * ratio);
 					}
-
+                                        TCP *= 1 - Survival[i];
 					rand = random.nextDouble();
 					if (rand < Survival[i] && !coldLiving[i]) {
 						allLive++;
@@ -1752,6 +1759,7 @@ public class SurvivalCalculationComplex {
 				PlotOutput[5][PlotPoints] = (tempsurvlabel);                        //SF of Labeled
 				PlotOutput[6][PlotPoints] = (tempsurvunlabel);                      //SF of unlabeled
 				PlotOutput[7][PlotPoints] = (tempsurvall);                          //SF of all
+                                PlotOutput[8][PlotPoints] = TCP; 
 
 				PlotPoints++;
 			}
